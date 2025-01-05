@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from './components/Navbar';
+import About from './pages/About';
+import Footer from './components/Footer';
+import Resume from './pages/Resume';
+import ProjectDetails from './pages/ProjectDetails';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+
+const App: React.FC = () => {
+  // 1) Check system preference on initial load.
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    // Check localStorage first
+    if (typeof window !== 'undefined') {
+      const storedPreference = localStorage.getItem('darkMode');
+      if (storedPreference) {
+        return JSON.parse(storedPreference);
+      }
+      // If no stored preference, fallback to system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    // Update localStorage whenever darkMode changes
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      {/* Wrap the entire app in a container that toggles .dark class */}
+      <div className={darkMode ? 'dark' : ''}>
+        {/* This container ensures our Tailwind dark classes have effect */}
+        <div className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+          {/* Pass down the setter so we can toggle from Navbar or anywhere else */}
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:projectId" element={<ProjectDetails />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<h1>Not Found</h1>} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
