@@ -1,0 +1,127 @@
+{
+  "projectsData": [
+    {
+      "id": "proj-1",
+      "title": "StockCentral",
+      "shortDescription": "A portfolio management app with full-stack architecture.",
+      "imagesCount": 19,
+      "paragraphs": [
+        "StockCentral is a comprehensive portfolio management tool developed to streamline investment tracking and analysis. This full-stack application was designed with scalability and user experience in mind.",
+        "The backend, built with Express.js, provided a robust API layer for data manipulation and retrieval. PostgreSQL was chosen as the database to ensure reliable and efficient storage of large datasets.",
+        "On the frontend, React.js and Tailwind CSS were utilized to create an intuitive and responsive user interface. Special attention was given to accessibility and design consistency throughout the application.",
+        "To ensure smooth deployment and maintainability, the application was containerized using Docker. GitHub Actions were integrated to automate CI/CD pipelines, significantly reducing the time required for testing and deployment.",
+        "The final product delivered a seamless user experience, enabling users to manage and analyze their investment portfolios with ease and precision."
+      ],
+      "techStack": [
+        "Node.js",
+        "Express.js",
+        "React.js",
+        "PostgreSQL",
+        "Docker",
+        "GitHub Actions"
+      ],
+      "githubUrl": "https://github.com/username/pmapp",
+      "liveSiteUrl": "https://portfolio.rajavaram.com"
+    },
+    {
+      "id": "proj-2",
+      "title": "LambdaVision",
+      "shortDescription": "Serverless architecture for video processing and face recognition using AWS Lambda and S3.",
+      "imagesCount": 2,
+      "paragraphs": [
+        "This AWS Lambda Video Processing Pipeline is a serverless system designed to process video files for face recognition. This project focused on scalability and cost-efficiency, leveraging AWS’s suite of serverless tools.",
+        "Using AWS Lambda, I implemented functions to split videos into frames, process each frame for facial analysis, and aggregate results. This approach ensured that the system could scale automatically based on the volume of requests, minimizing operational costs.",
+        "AWS S3 was employed for storage, enabling secure and efficient handling of video files and processed data. The use of event-driven architecture allowed for seamless integration of S3 with Lambda, triggering processing workflows automatically.",
+        "Developing this pipeline involved overcoming challenges related to processing large files within Lambda’s runtime constraints. Optimization techniques, such as parallel processing and selective frame extraction, were employed to address these limitations effectively.",
+        "The resulting system was not only cost-effective but also provided an end-to-end solution for video processing and face recognition, demonstrating the power and flexibility of serverless architecture."
+      ],
+      "techStack": ["AWS Lambda", "AWS S3", "Next.js", "Python"],
+      "githubUrl": "https://github.com/username/lambda-video-pipeline",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-3",
+      "title": "CloudFace",
+      "shortDescription": "A cloud-hosted face recognition app using Flask and AWS.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "CloudFace is a robust face recognition application designed to operate seamlessly on the cloud using Flask and AWS infrastructure. The primary objective of the project was to create a scalable system capable of handling concurrent requests efficiently.",
+        "To achieve this, I configured the application’s web tier using AWS EC2 instances to host the Flask app, dynamically scaling app-tier instances to process incoming requests. This architecture ensured high availability and responsiveness even under heavy load.",
+        "A key challenge was to manage data storage and processing for large-scale images effectively. Leveraging AWS S3 for storing input and output data, combined with SQS for communication between tiers, provided a solution that streamlined data flow and minimized latency.",
+        "The processing logic required precise error handling mechanisms to prevent duplicate request processing. Custom error handlers were developed to ensure the integrity of the operations while maintaining fault tolerance in the system.",
+        "The final implementation delivered a highly scalable face recognition system that was both efficient and reliable, paving the way for further enhancements and integrations in the future."
+      ],
+      "techStack": ["Flask", "Python", "AWS EC2", "AWS S3", "AWS SQS"],
+      "githubUrl": "https://github.com/username/facely",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-4",
+      "title": "StockSentimentAI",
+      "shortDescription": "An ML model leveraging GPT-2 for stock trend prediction.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "StockSentimentAI is a machine learning project aimed at predicting stock market trends based on news sentiment analysis. The project combined state-of-the-art natural language processing techniques with financial data analysis.",
+        "The core of the solution was a GPT-2 classifier fine-tuned to evaluate news articles for sentiment and relevance to stock performance. This provided a foundation for identifying trends and making predictions.",
+        "To enhance accuracy, sentiment scores were combined with additional features such as N-grams and historical stock data. This multi-faceted approach improved the model’s predictive capabilities.",
+        "The implementation involved extensive experimentation with various preprocessing techniques and hyperparameter tuning. Challenges related to data sparsity and noise were addressed through feature engineering and model regularization.",
+        "This project showcased the potential of leveraging AI and NLP for financial predictions, providing valuable insights for traders and analysts."
+      ],
+      "techStack": ["Python", "GPT-2", "HuggingFace Models"],
+      "githubUrl": "https://github.com/username/stock-prediction",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-5",
+      "title": "Wordpress Linkedin Login Plugin",
+      "shortDescription": "A custom WordPress plugin for user registration and authentication using LinkedIn.",
+      "imagesCount": 4,
+      "paragraphs": [
+        "This project aimed to create a custom social login plugin to unify the two-step LinkedIn authentication and profile completion process.",
+        "To achieve this, I developed a registration form that is displayed to users whose profiles are incomplete after LinkedIn's callback successfully verifies their authentication.",
+        "This form ensures that users cannot access the website until they choose a role, which is a prerequisite for accessing content on the platform.",
+        "By implementing this plugin, the manual verification process previously handled by a site admin was completely eliminated.",
+        "The result was a significant improvement in user experience by abstracting potential issues and streamlining the onboarding process."
+      ],
+      "techStack": ["WordPress", "PHP", "HTML/CSS", "JavaScript"],
+      "githubUrl": "https://github.com/username/linkedin-login-plugin",
+      "liveSiteUrl": "https://dev1.contructionlearning.net/linkedin-login"
+    },
+    {
+      "id": "proj-6",
+      "title": "BuildSmartDB",
+      "shortDescription": "A distributed database system with advanced fragmentation and replication strategies for efficient data processing.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "BuildSmartDB is an academic project focused on designing a distributed database system optimized for real-time data processing and analysis in smart buildings.",
+        "The system employs advanced fragmentation techniques to distribute data across multiple nodes, ensuring efficient storage and rapid access to critical information.",
+        "Replication strategies were implemented to enhance data availability and fault tolerance, allowing the system to maintain high performance even in the event of node failures.",
+        "By leveraging Python, PostgreSQL, and MongoDB, the project achieved a 35% improvement in query processing speed, facilitating quicker decision-making based on real-time data inputs.",
+        "Comprehensive testing and optimization were conducted to validate the system's scalability and reliability, demonstrating its potential application in modern smart building infrastructures."
+      ],
+      "techStack": ["Python", "PostgreSQL", "MongoDB"],
+      "githubUrl": "https://github.com/username/smart-building-monitoring",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-7",
+      "title": "Diagnosing Health Project",
+      "shortDescription": "An AI-driven diagnostic tool using generative models and zero-shot prompting for accurate health assessments.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "The Diagnosing Health Project is a personal initiative aimed at developing an AI-driven tool for diagnosing illnesses based on user input. This project leverages the capabilities of generative AI to provide accurate and reliable health assessments.",
+        "Utilizing HuggingFace's open-source models, I implemented generative AI techniques to interpret and analyze user queries related to various health conditions. This approach ensures comprehensive understanding and precise responses.",
+        "A key feature of the project is the context-based zero-shot prompting mechanism, which allows the AI to process and respond to diverse and previously unseen health-related inquiries without the need for additional training data.",
+        "To maintain the integrity and reliability of the diagnostic tool, guardrails were developed and integrated to prevent the AI from providing irrelevant or out-of-scope answers. This ensures that the tool adheres to ethical standards and provides responsible AI usage.",
+        "The project culminated in a functional prototype that demonstrates the potential of generative AI in the healthcare domain, offering a foundation for future enhancements and real-world applications."
+      ],
+      "techStack": [
+        "Generative AI",
+        "HuggingFace Models",
+        "Zero-Shot Prompting"
+      ],
+      "githubUrl": "https://github.com/username/diagnosing-health-project",
+      "liveSiteUrl": ""
+    }
+  ]
+}

@@ -7,6 +7,17 @@ export interface AboutHeroProps {
   githubUrl?: string;
 }
 
+export interface Project {
+  id: string;
+  title: string;
+  shortDescription: string;
+  imagesCount: number;
+  paragraphs: string[];
+  techStack: string[];
+  githubUrl: string;
+  liveSiteUrl?: string;
+}
+
 export interface ProjectCardProps {
   icon: React.ReactNode;
   title: string;
@@ -51,15 +62,4 @@ export interface CertificationItem {
 
 export interface TimelineProps {
   experience: ExperienceItem[];
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  shortDescription: string;
-  images: string[];
-  paragraphs: string[];
-  techStack: string[];
-  githubUrl: string;
-  liveSiteUrl?: string;
 }

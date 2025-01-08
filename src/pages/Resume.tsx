@@ -4,7 +4,7 @@ import React from 'react';
 import EducationBlock from '../components/EducationBlock';
 import ExperienceBlock from '../components/ExperienceBlock';
 import CertificationBlock from '../components/CertificationBlock';
-import resumeData from '../data/ResumeData';
+import resumeData from '../assets/resumeData.json';
 
 const { education, experience, certifications } = resumeData;
 

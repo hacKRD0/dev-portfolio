@@ -1,11 +1,11 @@
 import React from 'react';
 import AboutHero from '../components/AboutHero';
-import profilepic from '../assets/profile.jpeg';
-import { FaGithub } from 'react-icons/fa';
 import ProjectCard from '../components/ProjectCard';
 import Timeline from '../components/Timeline';
 import { Link } from 'react-router-dom';
-import resumeData from '../data/ResumeData';
+import resumeData from '../assets/resumeData.json';
+import { getStackIcons } from '../utils/getStackIcons';
+import getProjectIcon from '../utils/getProjectIcon';
 
 const { experience, projects } = resumeData;
 
@@ -15,12 +15,11 @@ const About: React.FC = () => {
       {/* Hero Section */}
       <AboutHero
         title="Hello! I'm Keshava, a developer based in Phoenix"
-        paragraph="I’m a passionate software engineer with a focus on building meaningful digital experiences.
-                   My journey started with a keen interest in how websites worked under the hood, and
-                   it quickly led me to explore full-stack development. Over the years, I've honed my
-                   skills in JavaScript, React, and Node.js while always being eager to learn the next
-                   cutting-edge technology."
-        imageUrl={profilepic}
+        paragraph="
+        I’m a software developer with a passion for creating innovative solutions. 
+        Whether it's tinkering with backend systems, exploring data science projects, or creating full-stack solutions, I get really excited about building things that are both scalable and innovative. 
+        I enjoy experimenting with different programming languages and cloud technologies, and I find working on AI and data analysis projects particularly fascinating. On top of that, I’m passionate about cloud infrastructure and how it all comes together to solve complex problems.!."
+        imageUrl="/assets/profile.jpeg"
         linkedInUrl="https://www.linkedin.com/in/keshava-rd/"
         githubUrl="https://github.com/hacKRD0"
       />
@@ -35,7 +34,7 @@ const About: React.FC = () => {
         {/* "View Details" link -> /experience */}
         <div className="mt-2 text-left">
           <Link
-            to="/experience"
+            to="/resume"
             className="text-gray-800 dark:text-gray-100 hover:underline"
           >
             View details
@@ -53,10 +52,10 @@ const About: React.FC = () => {
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
-              icon={<FaGithub />}
+              icon={getProjectIcon(project.id)}
               title={project.title}
               description={project.description.join(' ')} // Combine description array into a single string
-              stackIcons={project.stackIcons}
+              stackIcons={getStackIcons(project.techStack)}
               sourceCodeUrl={project.sourceCodeUrl}
               liveSiteUrl={project.liveSiteUrl}
             />

@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           <div className="flex-shrink-0">
             <NavLink
               to="/"
-              className="text-2xl font-bold italic text-gray-800 dark:text-gray-100 font-kalam hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="text-2xl font-bold italic text-gray-800 dark:text-gray-100 font-serif hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               Keshava Rajavaram
             </NavLink>

@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         kalam: ['Kalam', 'cursive'], // Define 'kalam' as a custom font family
+        serif: ['DM Serif Text', 'serif'],
       },
     },
   },

@@ -1,0 +1,205 @@
+{
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "Arizona State University",
+      "degree": "M.Sc Computer Science",
+      "dateRange": "Aug 2023 - Present",
+      "gpa": "4.00/4.00",
+      "description": [
+        "Coursework: Cloud Computing, Semantic Web Mining, Topics in NLP, Distributed Software Development, Distributed Database Systems"
+      ]
+    },
+    {
+      "id": "edu-2",
+      "institution": "Birla Institute of Technology and Science, Pilani, India",
+      "degree": "B.E Electronics and Instrumentation",
+      "dateRange": "Aug 2019 - Jun 2023",
+      "gpa": "8.35/10",
+      "description": [
+        "Coursework: Object Oriented Programming, Data Structures and Algorithms, Operating Systems, Machine Learning"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "designation": "Software Engineer Intern",
+      "company": "Truemates",
+      "dateRange": "Jun 2024 - Present",
+      "description": [
+        "Engineered and deployed backend modules using Express.js, scaling server-side applications to handle 10,000 users and reducing response time by 40%.",
+        "Managed deployment processes for two services on Google App Engine with Unix sockets, using CI/CD pipelines on GitHub to automate staging and production deployments.",
+        "Orchestrated PostgreSQL database migrations, achieving 100% data integrity and reducing downtime by 40%.",
+        "Implemented webhooks to handle subscription renewals for App Store and Google Play subscriptions, eliminating reliance on third-party tools and reducing 100% transaction fees."
+      ]
+    },
+    {
+      "id": "exp-2",
+      "designation": "Data Science Intern",
+      "company": "HERE Technologies",
+      "dateRange": "Jan 2023 - Jun 2023",
+      "description": [
+        "Analyzed data to pinpoint significant EV behavior locations from 3+ vast location datasets.",
+        "Conducted data quality assurance and corrected inconsistencies, improving data accuracy by 25%.",
+        "Launched AWS RDS Postgres instances, conducted query performance analysis and optimization, improving response time by 35%.",
+        "Simulated a comprehensive 6-month EV charging station dataset, showcasing data versatility and scalability."
+      ]
+    },
+    {
+      "id": "exp-3",
+      "designation": "Interim Engineering Intern",
+      "company": "Qualcomm",
+      "dateRange": "May 2022 - Jul 2022",
+      "description": [
+        "Engineered an automated chipset design tracing and validation system, reducing manual validation time by 50%.",
+        "Introduced a source-to-target path-tracing algorithm with pin path validation at every step, increasing error detection rate by 40%.",
+        "Crafted a GUI interface enabling rapid identification of errors and discrepancies, improving debugging speed by 35%."
+      ]
+    },
+    {
+      "id": "exp-4",
+      "designation": "Software Development Intern",
+      "company": "Trikona Conskill",
+      "dateRange": "Jun 2021 - Aug 2021",
+      "description": [
+        "Developed a real-time classroom engagement application using ReactJS and NodeJS.",
+        "Designed and integrated RESTful APIs to enhance the application’s interactivity and responsiveness.",
+        "Improved application performance by 30% through optimized code and efficient data handling."
+      ]
+    }
+  ],
+  "skills": {
+    "programmingLanguages": [
+      "Python",
+      "C/C++",
+      "Java",
+      "JavaScript",
+      "HTML/CSS",
+      "PHP"
+    ],
+    "frameworks": [
+      "Springboot",
+      "ReactJs",
+      "NodeJs",
+      "ExpressJs",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "databases": ["MySQL", "PostgreSQL", "MongoDB"],
+    "cloudPlatforms": ["AWS", "GCP"],
+    "tools": ["Docker", "Git", "JIRA", "Bitrix24", "GitHub Actions"]
+  },
+  "projects": [
+    {
+      "id": "proj-5",
+      "title": "Porfolio Manager",
+      "dateRange": "Nov 2024 - Jan 2024",
+      "description": [
+        "Consolidate and track your stocks portfolio from multiple brokerages in a single platform."
+      ],
+      "techStack": [
+        "NodeJs",
+        "React",
+        "TailwindCSS",
+        "AWS",
+        "Docker",
+        "PostgreSQL"
+      ],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": "https://portfolio.rajavaram.com"
+    },
+    {
+      "id": "proj-1",
+      "title": "Facely",
+      "dateRange": "Mar 2024 - May 2024",
+      "description": [
+        "An app to recognise faces from images using Flask and AWS EC2."
+      ],
+      "techStack": ["Flask", "Python", "AWS"],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-2",
+      "title": "Video-Recog",
+      "dateRange": "May 2024 - Aug 2024",
+      "description": [
+        "An app for detecting faces in a video, built using serverless architecture on Amazon Web Services."
+      ],
+      "techStack": [
+        "Python",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "AWS",
+        "Git",
+        "Docker"
+      ],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-3",
+      "title": "Smart Building Monitoring",
+      "dateRange": "Oct 2023 - Dec 2023",
+      "description": [
+        "Designed a distributed database system to store and analyze smart building metrics."
+      ],
+      "techStack": ["Python", "PostgreSQL", "MongoDB"],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-4",
+      "title": "MovieBooker",
+      "dateRange": "Dec 2024 - Feb 2024",
+      "description": [
+        "A microservices architecture backend for a movie booking platform."
+      ],
+      "techStack": ["SpringBoot", "MySQL", "Kafka", "Docker", "AWS"],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "proj-6",
+      "title": "Personal Portfolio",
+      "dateRange": "Dec 2024 - Feb 2024",
+      "description": [
+        "Showcase your skills and projects with this minimalistic portfolio built using React and TypeScript."
+      ],
+      "techStack": ["React", "TypeScript", "Javascript", "TailwindCSS"],
+      "sourceCodeUrl": "https://github.com",
+      "liveSiteUrl": "https://keshava.rajavaram.com"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "dateIssued": "Aug 2024",
+      "credentialUrl": "https://www.credly.com/badges/60af99bd-d35a-4df0-859f-a0e25c81499d/linked_in_profile"
+    },
+    {
+      "id": "cert-2",
+      "title": "Google Beginner: Introduction to Generative AI Learning Path",
+      "issuer": "Google Cloud Skills Boost",
+      "dateIssued": "Jan 2024",
+      "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/64d5b32a-b9dd-49e1-9b5d-0c629d9845b0"
+    },
+    {
+      "id": "cert-3",
+      "title": "Google Advanced: Generative AI for Developers Learning Path",
+      "issuer": "Google Cloud Skills Boost",
+      "dateIssued": "Jan 2024",
+      "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/64d5b32a-b9dd-49e1-9b5d-0c629d9845b0"
+    },
+    {
+      "id": "cert-4",
+      "title": "Databricks Large Language Models: Application through Production",
+      "issuer": "DataBricks Academy",
+      "dateIssued": "May 2024"
+    }
+  ]
+}

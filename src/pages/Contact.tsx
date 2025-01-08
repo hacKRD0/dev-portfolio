@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
             inline-block
             px-6 py-3
             rounded-sm font-semibold font-kalam
-            transition-all transform
+            transition-all transform delay-100
             bg-gray-800 text-gray-100  /* Light mode button by default */
             dark:bg-gray-100 dark:text-gray-800  /* Swap colors in dark mode */
             hover:-translate-y-2 hover:-translate-x-2     /* Slight upward movement on hover */

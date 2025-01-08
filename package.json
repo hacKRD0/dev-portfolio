@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://keshava.rajavaram.com",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "^9.15.0",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/node": "^22.10.5",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-router-dom": "^5.3.3",

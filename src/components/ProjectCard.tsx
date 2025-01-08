@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProjectCardProps } from '../types/types';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   icon,
@@ -30,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 font-kalam">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 font-serif">
           {title}
         </h3>
 

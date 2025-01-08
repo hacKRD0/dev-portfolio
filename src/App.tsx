@@ -9,6 +9,7 @@ import Resume from './pages/Resume';
 import ProjectDetails from './pages/ProjectDetails';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   // 1) Check system preference on initial load.
@@ -38,6 +39,7 @@ const App: React.FC = () => {
         <div className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
           {/* Pass down the setter so we can toggle from Navbar or anywhere else */}
           <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <ScrollToTop />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<About />} />
