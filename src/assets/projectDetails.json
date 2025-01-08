@@ -20,7 +20,7 @@
         "Docker",
         "GitHub Actions"
       ],
-      "githubUrl": "https://github.com/username/pmapp",
+      "githubUrl": "https://github.com/hacKRD0/StockCentral",
       "liveSiteUrl": "https://portfolio.rajavaram.com"
     },
     {
@@ -36,7 +36,7 @@
         "The resulting system was not only cost-effective but also provided an end-to-end solution for video processing and face recognition, demonstrating the power and flexibility of serverless architecture."
       ],
       "techStack": ["AWS Lambda", "AWS S3", "Next.js", "Python"],
-      "githubUrl": "https://github.com/username/lambda-video-pipeline",
+      "githubUrl": "https://github.com/hacKRD0/LambdaVision",
       "liveSiteUrl": ""
     },
     {
@@ -52,7 +52,7 @@
         "The final implementation delivered a highly scalable face recognition system that was both efficient and reliable, paving the way for further enhancements and integrations in the future."
       ],
       "techStack": ["Flask", "Python", "AWS EC2", "AWS S3", "AWS SQS"],
-      "githubUrl": "https://github.com/username/facely",
+      "githubUrl": "https://github.com/hacKRD0/CloudFace",
       "liveSiteUrl": ""
     },
     {
@@ -68,12 +68,12 @@
         "This project showcased the potential of leveraging AI and NLP for financial predictions, providing valuable insights for traders and analysts."
       ],
       "techStack": ["Python", "GPT-2", "HuggingFace Models"],
-      "githubUrl": "https://github.com/username/stock-prediction",
+      "githubUrl": "https://github.com/hacKRD0/StockSentimentAI",
       "liveSiteUrl": ""
     },
     {
       "id": "proj-5",
-      "title": "Wordpress Linkedin Login Plugin",
+      "title": "Wordpress User Access Plugin",
       "shortDescription": "A custom WordPress plugin for user registration and authentication using LinkedIn.",
       "imagesCount": 4,
       "paragraphs": [
@@ -84,7 +84,7 @@
         "The result was a significant improvement in user experience by abstracting potential issues and streamlining the onboarding process."
       ],
       "techStack": ["WordPress", "PHP", "HTML/CSS", "JavaScript"],
-      "githubUrl": "https://github.com/username/linkedin-login-plugin",
+      "githubUrl": "",
       "liveSiteUrl": "https://dev1.contructionlearning.net/linkedin-login"
     },
     {
@@ -100,27 +100,7 @@
         "Comprehensive testing and optimization were conducted to validate the system's scalability and reliability, demonstrating its potential application in modern smart building infrastructures."
       ],
       "techStack": ["Python", "PostgreSQL", "MongoDB"],
-      "githubUrl": "https://github.com/username/smart-building-monitoring",
-      "liveSiteUrl": ""
-    },
-    {
-      "id": "proj-7",
-      "title": "Diagnosing Health Project",
-      "shortDescription": "An AI-driven diagnostic tool using generative models and zero-shot prompting for accurate health assessments.",
-      "imagesCount": 0,
-      "paragraphs": [
-        "The Diagnosing Health Project is a personal initiative aimed at developing an AI-driven tool for diagnosing illnesses based on user input. This project leverages the capabilities of generative AI to provide accurate and reliable health assessments.",
-        "Utilizing HuggingFace's open-source models, I implemented generative AI techniques to interpret and analyze user queries related to various health conditions. This approach ensures comprehensive understanding and precise responses.",
-        "A key feature of the project is the context-based zero-shot prompting mechanism, which allows the AI to process and respond to diverse and previously unseen health-related inquiries without the need for additional training data.",
-        "To maintain the integrity and reliability of the diagnostic tool, guardrails were developed and integrated to prevent the AI from providing irrelevant or out-of-scope answers. This ensures that the tool adheres to ethical standards and provides responsible AI usage.",
-        "The project culminated in a functional prototype that demonstrates the potential of generative AI in the healthcare domain, offering a foundation for future enhancements and real-world applications."
-      ],
-      "techStack": [
-        "Generative AI",
-        "HuggingFace Models",
-        "Zero-Shot Prompting"
-      ],
-      "githubUrl": "https://github.com/username/diagnosing-health-project",
+      "githubUrl": "https://github.com/hacKRD0/BuildSmartDB",
       "liveSiteUrl": ""
     }
   ]

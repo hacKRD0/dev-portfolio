@@ -27,11 +27,23 @@
       "designation": "Software Engineer Intern",
       "company": "Truemates",
       "dateRange": "Jun 2024 - Present",
+      "shortDescription": "Developing and deploying backend systems for a scalable Christian dating platform, enhancing user features and automating deployment processes.",
       "description": [
         "Engineered and deployed backend modules using Express.js, scaling server-side applications to handle 10,000 users and reducing response time by 40%.",
         "Managed deployment processes for two services on Google App Engine with Unix sockets, using CI/CD pipelines on GitHub to automate staging and production deployments.",
         "Orchestrated PostgreSQL database migrations, achieving 100% data integrity and reducing downtime by 40%.",
-        "Implemented webhooks to handle subscription renewals for App Store and Google Play subscriptions, eliminating reliance on third-party tools and reducing 100% transaction fees."
+        "Implemented webhooks to handle subscription renewals for App Store and Google Play subscriptions, eliminating reliance on third-party tools and reducing 100% transaction fees.",
+        "Developed and deployed backend modules for a scalable Christian dating app, enhancing features like matchmaking, activity tracking, and subscription management.",
+        "Created the Activity feature to track in-app activities and display them to users, enhancing engagement and transparency.",
+        "Built the SalesOps feature to sell one-time bundles by combining items from the in-app product inventory, integrating payment workflows efficiently.",
+        "Enhanced the matchmaking system with exact and mostCompatible matching features, improving match accuracy and user satisfaction.",
+        "Contributed to smaller features that enriched user experience, including gifting, match guessing, reviews, invites, and more.",
+        "Currently working on an AI-feed bot that posts routine content with topic selection based on user interaction, leveraging AI to improve engagement.",
+        "Implemented a CI/CD pipeline using GitHub Actions to automate deployment of services to Google Cloud Platform’s App Engine (GAE).",
+        "Utilized Sequelize ORM to maintain database uniformity and integrity across development, staging, and production environments.",
+        "Managed databases on GCP SQL with PostgreSQL servers and utilized GCP Cloud Storage for hosting user media files.",
+        "Ensured version control and collaborative development using Git, adhering to best practices in branching and code reviews.",
+        "Integrated Firebase authentication for secure user sign-in and token management, with user data stored in Firestore."
       ]
     },
     {
@@ -39,11 +51,13 @@
       "designation": "Data Science Intern",
       "company": "HERE Technologies",
       "dateRange": "Jan 2023 - Jun 2023",
+      "shortDescription": "Conducted comprehensive data analysis and optimization for EV behavior datasets, enhancing data quality and system performance.",
       "description": [
         "Analyzed data to pinpoint significant EV behavior locations from 3+ vast location datasets.",
         "Conducted data quality assurance and corrected inconsistencies, improving data accuracy by 25%.",
         "Launched AWS RDS Postgres instances, conducted query performance analysis and optimization, improving response time by 35%.",
-        "Simulated a comprehensive 6-month EV charging station dataset, showcasing data versatility and scalability."
+        "Simulated a comprehensive 6-month EV charging station dataset, showcasing data versatility and scalability.",
+        "Performed data analysis and pipelining using AWS RDS, PostgreSQL, and Python, enhancing data processing and preparing datasets for machine learning applications."
       ]
     },
     {
@@ -51,6 +65,7 @@
       "designation": "Interim Engineering Intern",
       "company": "Qualcomm",
       "dateRange": "May 2022 - Jul 2022",
+      "shortDescription": "Developed automated systems for chipset design tracing and validation, significantly improving efficiency and error detection.",
       "description": [
         "Engineered an automated chipset design tracing and validation system, reducing manual validation time by 50%.",
         "Introduced a source-to-target path-tracing algorithm with pin path validation at every step, increasing error detection rate by 40%.",
@@ -62,10 +77,15 @@
       "designation": "Software Development Intern",
       "company": "Trikona Conskill",
       "dateRange": "Jun 2021 - Aug 2021",
+      "shortDescription": "Led the development of a real-time classroom engagement application and a custom WordPress plugin, enhancing user management and platform stability.",
       "description": [
         "Developed a real-time classroom engagement application using ReactJS and NodeJS.",
         "Designed and integrated RESTful APIs to enhance the application’s interactivity and responsiveness.",
-        "Improved application performance by 30% through optimized code and efficient data handling."
+        "Improved application performance by 30% through optimized code and efficient data handling.",
+        "Built a custom WordPress plugin using PHP, HTML/CSS, and AJAX for user management, erasing 100% of manual intervention.",
+        "Managed a team of 5 engineers, ensuring bug identification, troubleshooting, and platform stability.",
+        "Refactored codebase to enhance readability by adding comments and adhering to a consistent variable taxonomy.",
+        "Utilized Jira and Bitrix24 to track team progress, addressing blockers 50% quicker."
       ]
     }
   ],
@@ -106,23 +126,23 @@
         "Docker",
         "PostgreSQL"
       ],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/StockCentral",
       "liveSiteUrl": "https://portfolio.rajavaram.com"
     },
     {
       "id": "proj-1",
-      "title": "Facely",
+      "title": "CloudFace",
       "dateRange": "Mar 2024 - May 2024",
       "description": [
         "An app to recognise faces from images using Flask and AWS EC2."
       ],
       "techStack": ["Flask", "Python", "AWS"],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/CloudFace",
       "liveSiteUrl": ""
     },
     {
       "id": "proj-2",
-      "title": "Video-Recog",
+      "title": "LambdaVision",
       "dateRange": "May 2024 - Aug 2024",
       "description": [
         "An app for detecting faces in a video, built using serverless architecture on Amazon Web Services."
@@ -136,29 +156,29 @@
         "Git",
         "Docker"
       ],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/LambdaVision",
       "liveSiteUrl": ""
     },
     {
       "id": "proj-3",
-      "title": "Smart Building Monitoring",
+      "title": "BuildSmartDB",
       "dateRange": "Oct 2023 - Dec 2023",
       "description": [
         "Designed a distributed database system to store and analyze smart building metrics."
       ],
       "techStack": ["Python", "PostgreSQL", "MongoDB"],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/BuildSmartDB",
       "liveSiteUrl": ""
     },
     {
       "id": "proj-4",
-      "title": "MovieBooker",
+      "title": "MovieFlex",
       "dateRange": "Dec 2024 - Feb 2024",
       "description": [
         "A microservices architecture backend for a movie booking platform."
       ],
       "techStack": ["SpringBoot", "MySQL", "Kafka", "Docker", "AWS"],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/MovieFlex",
       "liveSiteUrl": ""
     },
     {
@@ -169,7 +189,7 @@
         "Showcase your skills and projects with this minimalistic portfolio built using React and TypeScript."
       ],
       "techStack": ["React", "TypeScript", "Javascript", "TailwindCSS"],
-      "sourceCodeUrl": "https://github.com",
+      "sourceCodeUrl": "https://github.com/hacKRD0/dev-portfolio",
       "liveSiteUrl": "https://keshava.rajavaram.com"
     }
   ],

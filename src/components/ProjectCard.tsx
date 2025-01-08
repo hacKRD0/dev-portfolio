@@ -1,6 +1,5 @@
 import React from 'react';
 import { ProjectCardProps } from '../types/types';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   icon,

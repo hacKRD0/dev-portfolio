@@ -34,10 +34,8 @@ const Timeline: React.FC<TimelineProps> = ({ experience }) => {
 
             {/* 2-line description */}
             {item.description.length > 0 && (
-              <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
-                {item.description.map((line, idx) => (
-                  <p key={idx}>{line}</p>
-                ))}
+              <div className="mt-2 text-sm text-gray-700 dark:text-gray-300 text-wrap w-3/4">
+                {item.shortDescription}
               </div>
             )}
           </div>

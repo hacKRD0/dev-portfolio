@@ -14,11 +14,11 @@ const About: React.FC = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <AboutHero
-        title="Hello! I'm Keshava, a developer based in Phoenix"
+        title="Hello! I am Keshava."
         paragraph="
-        I’m a software developer with a passion for creating innovative solutions. 
-        Whether it's tinkering with backend systems, exploring data science projects, or creating full-stack solutions, I get really excited about building things that are both scalable and innovative. 
-        I enjoy experimenting with different programming languages and cloud technologies, and I find working on AI and data analysis projects particularly fascinating. On top of that, I’m passionate about cloud infrastructure and how it all comes together to solve complex problems.!."
+        Hello! I’m Keshava Ranga Datta Rajavaram, a passionate full-stack developer currently pursuing my Master’s in Computer Science at Arizona State University. I love building applications that seamlessly blend front-end design with robust back-end functionality, and lately, I’ve been diving into leveraging AI to create innovative solutions.
+        Throughout my journey, I’ve had the opportunity to intern at companies like Truemates, HERE Technologies, and Qualcomm, where I honed my skills in backend development, data science, and cloud technologies. I enjoy tackling complex challenges, whether it's developing scalable APIs, designing responsive user interfaces, or integrating AI models to enhance user experiences.
+        When I’m not coding, I follow the Indian stock market and explore current and historical geopolitics. These interests help me stay curious and continuously learn about the world around me."
         imageUrl="/assets/profile.jpeg"
         linkedInUrl="https://www.linkedin.com/in/keshava-rd/"
         githubUrl="https://github.com/hacKRD0"

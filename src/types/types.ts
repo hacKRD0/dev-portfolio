@@ -45,6 +45,7 @@ export interface EducationItem {
 
 export interface ExperienceItem {
   id: string;
+  shortDescription: string;
   designation: string;
   company: string;
   dateRange: string;

@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 // Use Material Design icons for dark/light mode
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { NavbarProps } from '../types/types';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaRegWindowClose } from 'react-icons/fa';
 
 const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,34 +85,10 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             >
               {isOpen ? (
                 /* Close Icon (X) */
-                <svg
-                  className="h-6 w-6"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                <FaRegWindowClose className="w-6 h-6 fill-gray-900 dark:fill-gray-100" />
               ) : (
                 /* Hamburger Icon */
-                <svg
-                  className="h-6 w-6"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
+                <GiHamburgerMenu className="w-6 h-6 fill-gray-900 dark:fill-gray-100" />
               )}
             </button>
           </div>
@@ -143,10 +121,11 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
                 toggleDarkMode();
                 setIsOpen(false);
               }}
-              className="w-full text-left mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 
+              className="w-1/8 text-left mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 
                          rounded-md bg-white dark:bg-gray-700
                          text-gray-800 dark:text-gray-200
-                         hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                         hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors
+                         "
               aria-label="Toggle Dark Mode (Mobile)"
             >
               {darkMode ? (
