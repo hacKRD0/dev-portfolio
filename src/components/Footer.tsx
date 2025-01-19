@@ -11,13 +11,13 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="container mx-auto px-4 flex flex-col items-center justify-between md:flex-row">
         {/* Left section - Copyright */}
         <div className="text-gray-700 dark:text-gray-300 text-sm mb-4 md:mb-0">
-          © {new Date().getFullYear()} Keshava Rajavaram. All rights reserved.
+          © {new Date().getFullYear()} Keshava Rajavaram.
         </div>
 
         {/* Right section - Social Media Icons */}
         <div className="flex items-center space-x-6">
           <a
-            href="https://linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/keshava-rd/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = () => {
           </a>
 
           <a
-            href="https://github.com/your-github-profile"
+            href="https://github.com/hacKRD0"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"

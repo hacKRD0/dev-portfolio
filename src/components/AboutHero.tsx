@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { AboutHeroProps } from '../types/types';
+import { SiLeetcode } from 'react-icons/si';
 
 const AboutHero: React.FC<AboutHeroProps> = ({
   title,
@@ -8,6 +9,7 @@ const AboutHero: React.FC<AboutHeroProps> = ({
   imageUrl,
   linkedInUrl = 'https://linkedin.com/in/your-linkedin-profile',
   githubUrl = 'https://github.com/your-github-profile',
+  leetcodeUrl = 'https://leetcode.com/u/dattakeshava/',
 }) => {
   return (
     <section
@@ -23,7 +25,7 @@ const AboutHero: React.FC<AboutHeroProps> = ({
             {title}
           </h2>
         )}
-        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-md">
           {paragraph}
         </p>
 
@@ -67,6 +69,25 @@ const AboutHero: React.FC<AboutHeroProps> = ({
           >
             <FaGithub className="text-xl mr-2" />
             View GitHub
+          </a>
+          {/* View Leetcode Button */}
+          <a
+            href={leetcodeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex items-center rounded-md
+              border border-black dark:border-white
+              bg-white text-black
+              dark:bg-gray-800 dark:text-white
+              px-4 py-2
+              transition-colors duration-300
+              hover:bg-black hover:text-white
+              dark:hover:bg-white dark:hover:text-black
+            "
+          >
+            <SiLeetcode className="text-xl mr-2" />
+            View Leetcode
           </a>
         </div>
       </div>

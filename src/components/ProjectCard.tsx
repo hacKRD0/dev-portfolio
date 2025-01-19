@@ -30,12 +30,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 font-serif">
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 font-serif">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-3">
+        <p className="text-md text-gray-600 dark:text-gray-300 mt-1 line-clamp-3">
           {description}
         </p>
       </div>
@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={sourceCodeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-md font-medium text-blue-600 dark:text-blue-400 hover:underline"
           >
             Source Code
           </a>
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={liveSiteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-green-600 dark:text-green-400 hover:underline"
+              className="text-md font-medium text-green-600 dark:text-green-400 hover:underline"
             >
               Live Demo
             </a>

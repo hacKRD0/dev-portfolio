@@ -22,20 +22,32 @@ const Timeline: React.FC<TimelineProps> = ({ experience }) => {
 
           {/* Entry details */}
           <div className="flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
               {item.designation}
             </h3>
-            <span className="text-sm text-gray-600 dark:text-gray-300">
+            <span className="text-md text-gray-600 dark:text-gray-300">
               {item.company}
             </span>
-            <span className="text-sm text-gray-500 dark:text-gray-400 italic">
+            <span className="text-md text-gray-500 dark:text-gray-400 italic">
               {item.dateRange}
             </span>
 
             {/* 2-line description */}
             {item.description.length > 0 && (
-              <div className="mt-2 text-sm text-gray-700 dark:text-gray-300 text-wrap w-3/4">
+              <div className="mt-2 text-md text-gray-700 dark:text-gray-300 text-wrap w-3/4">
                 {item.shortDescription}
+                {/* Project link */}
+                {item.projectLink && (
+                  <a
+                    href={item.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline text-md mt-2"
+                  >
+                    {' '}
+                    View Project
+                  </a>
+                )}
               </div>
             )}
           </div>

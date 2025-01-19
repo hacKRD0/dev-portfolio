@@ -26,6 +26,7 @@
       "id": "exp-1",
       "designation": "Software Engineer Intern",
       "company": "Truemates",
+      "projectLink": "https://truemates.co/",
       "dateRange": "Jun 2024 - Present",
       "shortDescription": "Developing and deploying backend systems for a scalable Christian dating platform, enhancing user features and automating deployment processes.",
       "description": [
@@ -112,9 +113,9 @@
   },
   "projects": [
     {
-      "id": "proj-5",
-      "title": "Porfolio Manager",
-      "dateRange": "Nov 2024 - Jan 2024",
+      "id": "stockcentral",
+      "title": "StockCentral",
+      "dateRange": "Nov 2024 - Present",
       "description": [
         "Consolidate and track your stocks portfolio from multiple brokerages in a single platform."
       ],
@@ -130,18 +131,7 @@
       "liveSiteUrl": "https://portfolio.rajavaram.com"
     },
     {
-      "id": "proj-1",
-      "title": "CloudFace",
-      "dateRange": "Mar 2024 - May 2024",
-      "description": [
-        "An app to recognise faces from images using Flask and AWS EC2."
-      ],
-      "techStack": ["Flask", "Python", "AWS"],
-      "sourceCodeUrl": "https://github.com/hacKRD0/CloudFace",
-      "liveSiteUrl": ""
-    },
-    {
-      "id": "proj-2",
+      "id": "lambdavision",
       "title": "LambdaVision",
       "dateRange": "May 2024 - Aug 2024",
       "description": [
@@ -160,7 +150,29 @@
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-3",
+      "id": "personal-portfolio",
+      "title": "Personal Portfolio",
+      "dateRange": "Dec 2024 - Jan 2025",
+      "description": [
+        "Showcase your skills and projects with this minimalistic portfolio built using React and TypeScript."
+      ],
+      "techStack": ["React", "TypeScript", "Javascript", "TailwindCSS"],
+      "sourceCodeUrl": "https://github.com/hacKRD0/dev-portfolio",
+      "liveSiteUrl": "https://keshava.rajavaram.com"
+    },
+    {
+      "id": "user-access-plugin",
+      "title": "User Access Plugin",
+      "dateRange": "Oct 2023 - Dec 2023",
+      "description": [
+        "Developed a custom wordpress plugin for LinkedIn-based user registration and authentication."
+      ],
+      "techStack": ["PHP", "Javascript"],
+      "sourceCodeUrl": "https://github.com/hacKRD0/WP-User-Access-Plugin",
+      "liveSiteUrl": "https://www.dev1.constructionlearning.net/linkedin-login/"
+    },
+    {
+      "id": "buildsmartdb",
       "title": "BuildSmartDB",
       "dateRange": "Oct 2023 - Dec 2023",
       "description": [
@@ -171,7 +183,18 @@
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-4",
+      "id": "cloudface",
+      "title": "CloudFace",
+      "dateRange": "Feb 2024 - Apr 2024",
+      "description": [
+        "An app to recognise faces from images using Flask and AWS EC2."
+      ],
+      "techStack": ["Flask", "Python", "AWS"],
+      "sourceCodeUrl": "https://github.com/hacKRD0/CloudFace",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "movieflex",
       "title": "MovieFlex",
       "dateRange": "Dec 2024 - Feb 2024",
       "description": [
@@ -182,18 +205,25 @@
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-6",
-      "title": "Personal Portfolio",
-      "dateRange": "Dec 2024 - Feb 2024",
+      "id": "stocksentimentai",
+      "title": "StockSentimentAI",
+      "dateRange": "Mar 2024 - May 2024",
       "description": [
-        "Showcase your skills and projects with this minimalistic portfolio built using React and TypeScript."
+        "A machine learning model using GPT-2 to predict stock trends based on news sentiment analysis."
       ],
-      "techStack": ["React", "TypeScript", "Javascript", "TailwindCSS"],
-      "sourceCodeUrl": "https://github.com/hacKRD0/dev-portfolio",
-      "liveSiteUrl": "https://keshava.rajavaram.com"
+      "techStack": ["Python", "HuggingFace"],
+      "sourceCodeUrl": "https://github.com/hacKRD0/StockSentimentAI",
+      "liveSiteUrl": ""
     }
   ],
   "certifications": [
+    {
+      "id": "cert-4",
+      "title": "Building a RAG Agents with LLMs",
+      "issuer": "NVIDIA Deep Learning Academy",
+      "dateIssued": "Jan 2025",
+      "credentialUrl": "https://learn.nvidia.com/certificates?id=VarWgTZtQlGL3n9qZjEV4w"
+    },
     {
       "id": "cert-1",
       "title": "AWS Certified Cloud Practitioner",
@@ -214,12 +244,66 @@
       "issuer": "Google Cloud Skills Boost",
       "dateIssued": "Jan 2024",
       "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/64d5b32a-b9dd-49e1-9b5d-0c629d9845b0"
+    }
+  ],
+  "competencies": [
+    {
+      "title": "Full-Stack Development",
+      "description": "Proficient in building scalable full-stack web applications with modern frameworks and technologies.",
+      "skills": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Node.js",
+        "Express.js",
+        "Flask",
+        "SpringBoot"
+      ],
+      "relatedExperience": ["Truemates", "Trikona Conskill"],
+      "projects": ["Personal Portfolio", "StockCentral", "MovieFlex"]
     },
     {
-      "id": "cert-4",
-      "title": "Databricks Large Language Models: Application through Production",
-      "issuer": "DataBricks Academy",
-      "dateIssued": "May 2024"
+      "title": "Data Engineering and Analysis",
+      "description": "Expertise in analyzing, modeling, and processing large datasets to extract insights and support decision-making.",
+      "skills": ["Python", "PostgreSQL", "MongoDB", "AWS RDS"],
+      "relatedExperience": ["HERE Technologies", "Qualcomm"],
+      "projects": ["BuildSmartDB"]
+    },
+    {
+      "title": "Cloud and DevOps",
+      "description": "Skilled in deploying and managing applications in cloud environments with CI/CD pipelines.",
+      "skills": ["AWS", "GCP", "Docker", "GitHub Actions"],
+      "relatedExperience": ["Truemates"],
+      "certifications": [
+        "AWS Certified Cloud Practitioner",
+        "Google Generative AI Learning Path"
+      ],
+      "projects": ["LambdaVision", "CloudFace", "MovieFlex"]
+    },
+    {
+      "title": "Artificial Intelligence and Machine Learning",
+      "description": "Developed intelligent systems leveraging AI and ML for practical applications.",
+      "skills": ["Python", "Flask", "HuggingFace Models"],
+      "relatedExperience": ["Truemates"],
+      "certifications": [
+        "NVIDIA Deep Learning Academy: Building RAG Agents with LLMs"
+      ],
+      "projects": ["CloudFace"]
+    },
+    {
+      "title": "Database Management",
+      "description": "Advanced knowledge in designing, optimizing, and maintaining databases.",
+      "skills": ["PostgreSQL", "MySQL", "MongoDB"],
+      "relatedExperience": ["HERE Technologies", "Truemates"],
+      "projects": ["BuildSmartDB", "StockCentral"]
+    },
+    {
+      "title": "Software Engineering Practices",
+      "description": "Strong understanding of software engineering principles, version control, and agile methodologies.",
+      "skills": ["Git", "JIRA", "Bitrix24"],
+      "relatedExperience": ["Trikona Conskill"],
+      "certifications": ["Google Beginner: Generative AI Learning Path"]
     }
   ]
 }

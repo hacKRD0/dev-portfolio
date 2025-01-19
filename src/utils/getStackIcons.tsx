@@ -21,6 +21,8 @@ import {
   SiMysql,
   SiApachekafka,
   SiSpringboot,
+  SiPhp,
+  SiHuggingface,
 } from 'react-icons/si';
 
 export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
@@ -51,6 +53,8 @@ export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
         return <FaJava key={tech} />;
       case 'git':
         return <FaGitAlt key={tech} />;
+      case 'huggingface':
+        return <SiHuggingface key={tech} />;
       case 'next.js':
       case 'nextjs':
         return <SiNextdotjs key={tech} />;
@@ -68,6 +72,8 @@ export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
       case 'spring boot':
       case 'springboot':
         return <SiSpringboot key={tech} />;
+      case 'php':
+        return <SiPhp key={tech} />;
       default:
         return null; // Handle unknown tech stack entries gracefully
     }

@@ -1,7 +1,7 @@
 {
   "projectsData": [
     {
-      "id": "proj-1",
+      "id": "stockcentral",
       "title": "StockCentral",
       "shortDescription": "A portfolio management app with full-stack architecture.",
       "imagesCount": 19,
@@ -12,19 +12,28 @@
         "To ensure smooth deployment and maintainability, the application was containerized using Docker. GitHub Actions were integrated to automate CI/CD pipelines, significantly reducing the time required for testing and deployment.",
         "The final product delivered a seamless user experience, enabling users to manage and analyze their investment portfolios with ease and precision."
       ],
+      "summary": [
+        "Developed a portfolio management tool to consolidate and track investments across multiple brokerages.",
+        "Designed a PostgreSQL database schema and implemented an API layer using the Express.js framework.",
+        "Built a responsive and dynamic user interface using React and TailwindCSS.",
+        "Integrated Firebase for secure user authentication, management, and social login functionality.",
+        "Containerized the application with Docker to ensure smooth deployment and easy maintenance.",
+        "Implemented a CI/CD pipeline using GitHub Actions for automated version releases."
+      ],
       "techStack": [
         "Node.js",
         "Express.js",
         "React.js",
         "PostgreSQL",
         "Docker",
-        "GitHub Actions"
+        "GitHub Actions",
+        "Firebase"
       ],
       "githubUrl": "https://github.com/hacKRD0/StockCentral",
       "liveSiteUrl": "https://portfolio.rajavaram.com"
     },
     {
-      "id": "proj-2",
+      "id": "lambdavision",
       "title": "LambdaVision",
       "shortDescription": "Serverless architecture for video processing and face recognition using AWS Lambda and S3.",
       "imagesCount": 2,
@@ -35,12 +44,41 @@
         "Developing this pipeline involved overcoming challenges related to processing large files within Lambda’s runtime constraints. Optimization techniques, such as parallel processing and selective frame extraction, were employed to address these limitations effectively.",
         "The resulting system was not only cost-effective but also provided an end-to-end solution for video processing and face recognition, demonstrating the power and flexibility of serverless architecture."
       ],
+      "summary": [
+        "Developed LambdaVision, a tool designed for face recognition from short video clips.",
+        "Built a clean, responsive frontend using the Next.js framework.",
+        "Utilized Clerk for secure user authentication and account management.",
+        "Implemented a robust backend video-processing pipeline using AWS Lambda functions as REST APIs for processing face recognition requests, fetching history, and managing records.",
+        "Leveraged AWS S3 for efficient and scalable storage of user-uploaded video data."
+      ],
       "techStack": ["AWS Lambda", "AWS S3", "Next.js", "Python"],
       "githubUrl": "https://github.com/hacKRD0/LambdaVision",
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-3",
+      "id": "user-access-plugin",
+      "title": "User Access Plugin",
+      "shortDescription": "A custom WordPress plugin for user registration and authentication using LinkedIn.",
+      "imagesCount": 4,
+      "paragraphs": [
+        "This project aimed to create a custom social login plugin to unify the two-step LinkedIn authentication and profile completion process.",
+        "To achieve this, I developed a registration form that is displayed to users whose profiles are incomplete after LinkedIn's callback successfully verifies their authentication.",
+        "This form ensures that users cannot access the website until they choose a role, which is a prerequisite for accessing content on the platform.",
+        "By implementing this plugin, the manual verification process previously handled by a site admin was completely eliminated.",
+        "The result was a significant improvement in user experience by abstracting potential issues and streamlining the onboarding process."
+      ],
+      "summary": [
+        "Created a custom WordPress plugin for LinkedIn-based user registration and authentication.",
+        "Designed a profile completion form to enforce user role selection before accessing the platform.",
+        "Eliminated manual site admin verification by automating the onboarding process.",
+        "Improved user experience by streamlining authentication and role management workflows."
+      ],
+      "techStack": ["WordPress", "PHP", "HTML/CSS", "JavaScript"],
+      "githubUrl": "",
+      "liveSiteUrl": "https://dev1.contructionlearning.net/linkedin-login"
+    },
+    {
+      "id": "cloudface",
       "title": "CloudFace",
       "shortDescription": "A cloud-hosted face recognition app using Flask and AWS.",
       "imagesCount": 0,
@@ -51,12 +89,19 @@
         "The processing logic required precise error handling mechanisms to prevent duplicate request processing. Custom error handlers were developed to ensure the integrity of the operations while maintaining fault tolerance in the system.",
         "The final implementation delivered a highly scalable face recognition system that was both efficient and reliable, paving the way for further enhancements and integrations in the future."
       ],
+      "summary": [
+        "Designed and implemented a cloud-hosted face recognition system using Flask and AWS.",
+        "Utilized AWS EC2 instances to host the application with dynamic scaling for handling high traffic.",
+        "Leveraged AWS S3 for efficient storage of input and output image data.",
+        "Implemented robust error handling and fault-tolerant mechanisms for reliable performance.",
+        "Streamlined communication between tiers using AWS SQS to minimize latency and optimize data flow."
+      ],
       "techStack": ["Flask", "Python", "AWS EC2", "AWS S3", "AWS SQS"],
       "githubUrl": "https://github.com/hacKRD0/CloudFace",
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-4",
+      "id": "stocksentimentai",
       "title": "StockSentimentAI",
       "shortDescription": "An ML model leveraging GPT-2 for stock trend prediction.",
       "imagesCount": 0,
@@ -67,28 +112,19 @@
         "The implementation involved extensive experimentation with various preprocessing techniques and hyperparameter tuning. Challenges related to data sparsity and noise were addressed through feature engineering and model regularization.",
         "This project showcased the potential of leveraging AI and NLP for financial predictions, providing valuable insights for traders and analysts."
       ],
+      "summary": [
+        "Developed StockSentimentAI, an ML model for predicting stock trends based on news sentiment analysis.",
+        "Fine-tuned a GPT-2 classifier to evaluate news articles for sentiment and relevance to stock performance.",
+        "Enhanced predictions by combining sentiment scores with N-grams and historical stock data.",
+        "Addressed data sparsity issues through feature engineering and model optimization.",
+        "Demonstrated the potential of AI and NLP in financial trend prediction for traders and analysts."
+      ],
       "techStack": ["Python", "GPT-2", "HuggingFace Models"],
       "githubUrl": "https://github.com/hacKRD0/StockSentimentAI",
       "liveSiteUrl": ""
     },
     {
-      "id": "proj-5",
-      "title": "Wordpress User Access Plugin",
-      "shortDescription": "A custom WordPress plugin for user registration and authentication using LinkedIn.",
-      "imagesCount": 4,
-      "paragraphs": [
-        "This project aimed to create a custom social login plugin to unify the two-step LinkedIn authentication and profile completion process.",
-        "To achieve this, I developed a registration form that is displayed to users whose profiles are incomplete after LinkedIn's callback successfully verifies their authentication.",
-        "This form ensures that users cannot access the website until they choose a role, which is a prerequisite for accessing content on the platform.",
-        "By implementing this plugin, the manual verification process previously handled by a site admin was completely eliminated.",
-        "The result was a significant improvement in user experience by abstracting potential issues and streamlining the onboarding process."
-      ],
-      "techStack": ["WordPress", "PHP", "HTML/CSS", "JavaScript"],
-      "githubUrl": "",
-      "liveSiteUrl": "https://dev1.contructionlearning.net/linkedin-login"
-    },
-    {
-      "id": "proj-6",
+      "id": "buildsmartdb",
       "title": "BuildSmartDB",
       "shortDescription": "A distributed database system with advanced fragmentation and replication strategies for efficient data processing.",
       "imagesCount": 0,
@@ -99,8 +135,36 @@
         "By leveraging Python, PostgreSQL, and MongoDB, the project achieved a 35% improvement in query processing speed, facilitating quicker decision-making based on real-time data inputs.",
         "Comprehensive testing and optimization were conducted to validate the system's scalability and reliability, demonstrating its potential application in modern smart building infrastructures."
       ],
+      "summary": [
+        "Developed BuildSmartDB, a distributed database system for real-time data processing in smart buildings.",
+        "Implemented advanced fragmentation techniques to ensure efficient data distribution across multiple nodes.",
+        "Integrated replication strategies to enhance fault tolerance and ensure data availability during node failures.",
+        "Achieved a 35% improvement in query processing speed by leveraging Python, PostgreSQL, and MongoDB.",
+        "Validated scalability and reliability through rigorous testing and optimization."
+      ],
       "techStack": ["Python", "PostgreSQL", "MongoDB"],
       "githubUrl": "https://github.com/hacKRD0/BuildSmartDB",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "movieflex",
+      "title": "MovieFlex",
+      "shortDescription": "A microservices architecture backend for a movie booking platform.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "MovieFlex is a robust backend platform built for a movie booking service. The system is designed using a microservices architecture for scalability and maintainability. It facilitates movie booking, payment processing, and user management via a set of independent services.",
+        "The core backend was implemented using Spring Boot, which ensures ease of development and integration. MySQL is used for data persistence, while Kafka is employed for managing real-time event-driven communication between services.",
+        "Docker containers were used to deploy the services, and the platform is hosted on AWS to ensure high availability and scalability. The microservices architecture enables flexible expansion, making it easier to integrate new features and improve system performance over time."
+      ],
+      "summary": [
+        "Built a backend microservices architecture for a movie booking platform.",
+        "Utilized Spring Boot for the backend services and MySQL for data persistence.",
+        "Implemented Kafka for real-time communication between microservices.",
+        "Containerized the application using Docker for efficient deployment and scalability.",
+        "Deployed the application on AWS to ensure high availability and resilience."
+      ],
+      "techStack": ["SpringBoot", "MySQL", "Kafka", "Docker", "AWS"],
+      "githubUrl": "https://github.com/hacKRD0/MovieFlex",
       "liveSiteUrl": ""
     }
   ]

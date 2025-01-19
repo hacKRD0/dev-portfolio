@@ -10,6 +10,7 @@ const ProjectDetails: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [images, setImages] = useState<string[]>([]);
   const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const project = projectsData.find((p) => p.id === projectId);
 
@@ -39,8 +40,23 @@ const ProjectDetails: React.FC = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-gray-900 text-gray-100 dark:bg-gray-50 dark:text-gray-800 flex items-center justify-center">
-        <p>Coming Soon.</p>
+      <div className="relative min-h-screen bg-gray-900 text-gray-100 dark:bg-gray-50 dark:text-gray-800">
+        {/* Back to Projects Link */}
+        <div className="absolute top-4 left-4">
+          <Link
+            to="/projects"
+            className="text-md text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            &larr; Back to Projects
+          </Link>
+        </div>
+
+        {/* Content */}
+        <div className="flex items-center justify-center min-h-full px-4 py-10">
+          <div className="text-center">
+            <p>Coming Soon.</p>
+          </div>
+        </div>
       </div>
     );
   }
@@ -61,7 +77,7 @@ const ProjectDetails: React.FC = () => {
         <div className="w-full mb-4 self-start justify-start">
           <Link
             to="/projects"
-            className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-md text-blue-600 dark:text-blue-400 hover:underline"
           >
             &larr; Back to Projects
           </Link>
@@ -71,6 +87,22 @@ const ProjectDetails: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           {/* Title */}
           <h1 className="text-3xl font-bold mb-6">{project.title}</h1>
+
+          {/* Tech stack */}
+          {/* Tech Stack */}
+          <div className="mb-6 max-w-3xl text-center">
+            <h2 className="text-lg font-semibold mb-4">Tech Stack Used:</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {project.techStack.map((tech, idx) => (
+                <div
+                  key={idx}
+                  className="text-md font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md shadow-sm"
+                >
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Carousel (if images exist) */}
           {images && images.length > 0 && (
@@ -127,24 +159,40 @@ const ProjectDetails: React.FC = () => {
 
           {/* Paragraphs / Achievements / Learnings */}
           <div className="mb-6 max-w-3xl">
-            {project.paragraphs.map((para, idx) => (
-              <p
-                key={idx}
-                className="mb-6 text-gray-700 dark:text-gray-300 text-left"
-              >
-                {para}
-              </p>
-            ))}
-          </div>
+            <h2 className="text-lg font-semibold mb-4">Project Details</h2>
+            <div className="text-left border border-gray-300 dark:border-gray-700 rounded-lg p-4 bg-gray-100 dark:bg-gray-800">
+              {/* Short Summary */}
+              {!isExpanded && (
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 mb-4">
+                  {project.summary.map((point, idx) => (
+                    <li key={idx} className="mb-2">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
-          {/* Tech stack */}
-          <div className="mb-6 max-w-3xl text-left">
-            <h2 className="text-lg font-semibold mb-2">Tech Stack Used:</h2>
-            <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300">
-              {project.techStack.map((tech, idx) => (
-                <li key={idx}>{tech}</li>
-              ))}
-            </ul>
+              {/* Full Description */}
+              {isExpanded && (
+                <div className="text-gray-700 dark:text-gray-300 text-left">
+                  {project.paragraphs.map((para, idx) => (
+                    <p key={idx} className="mb-4">
+                      {para}
+                    </p>
+                  ))}
+                </div>
+              )}
+
+              {/* Read More / Read Less Button */}
+              <div className="text-center mt-4">
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="inline-block px-6 py-2 text-md font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none transition-colors"
+                >
+                  {isExpanded ? 'Read Less' : 'Read More'}
+                </button>
+              </div>
+            </div>
           </div>
 
           {/* Links (GitHub, Live Site) */}

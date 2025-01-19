@@ -25,12 +25,12 @@ const Projects: React.FC = () => {
                 {/* Link to details page */}
                 <Link
                   to={`/projects/${project.id}`}
-                  className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                  className="text-blue-600 dark:text-blue-400 hover:underline text-md"
                 >
                   View Details
                 </Link>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+              <p className="text-md text-gray-600 dark:text-gray-300 mt-2">
                 {project.shortDescription}
               </p>
             </li>

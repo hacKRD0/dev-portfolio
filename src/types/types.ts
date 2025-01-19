@@ -5,6 +5,7 @@ export interface AboutHeroProps {
   imageUrl: string;
   linkedInUrl?: string;
   githubUrl?: string;
+  leetcodeUrl?: string;
 }
 
 export interface Project {
@@ -13,6 +14,7 @@ export interface Project {
   shortDescription: string;
   imagesCount: number;
   paragraphs: string[];
+  summary: string[];
   techStack: string[];
   githubUrl: string;
   liveSiteUrl?: string;
@@ -32,8 +34,6 @@ export interface NavbarProps {
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-// src/types.ts
-
 export interface EducationItem {
   id: string;
   institution: string;
@@ -50,7 +50,7 @@ export interface ExperienceItem {
   company: string;
   dateRange: string;
   description: string[];
-  projectLinks?: string[]; // Optional field for project URLs
+  projectLink?: string; // Optional field for project URLs
 }
 
 export interface CertificationItem {

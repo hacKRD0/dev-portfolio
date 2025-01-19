@@ -5,6 +5,8 @@ import EducationBlock from '../components/EducationBlock';
 import ExperienceBlock from '../components/ExperienceBlock';
 import CertificationBlock from '../components/CertificationBlock';
 import resumeData from '../assets/resumeData.json';
+import resumePDF from '../assets/Keshava_Rajavaram_Resume.pdf';
+import { FaDownload } from 'react-icons/fa';
 
 const { education, experience, certifications } = resumeData;
 
@@ -14,7 +16,6 @@ const Resume: React.FC = () => {
       <div className="container mx-auto px-4 py-10">
         {/* PAGE TITLE */}
         <h1 className="text-3xl font-bold mb-8">My Resume</h1>
-
         {/* EDUCATION SECTION */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Education</h2>
@@ -24,7 +25,6 @@ const Resume: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* EXPERIENCE SECTION */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Experience</h2>
@@ -38,7 +38,6 @@ const Resume: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CERTIFICATIONS SECTION */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
@@ -52,15 +51,18 @@ const Resume: React.FC = () => {
         {/* DOWNLOAD RESUME */}
         <section className="flex justify-end">
           <a
-            href="/resume.pdf"
-            download="My_Resume.pdf"
+            href={resumePDF}
+            download="Keshava_Rajavaram_Resume.pdf"
             className="
-              inline-block px-6 py-3
-              bg-blue-600 hover:bg-blue-700
-              text-white rounded-md
-              shadow-md transition-colors
-            "
+      inline-flex items-center gap-2 px-6 py-3
+      bg-gradient-to-r from-blue-600 to-indigo-700
+      text-white text-lg font-semibold rounded-lg
+      shadow-md transition-all
+      transform hover:scale-105 hover:shadow-lg
+      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+    "
           >
+            <FaDownload className="w-5 h-5" /> {/* Icon for download */}
             Download Resume
           </a>
         </section>
