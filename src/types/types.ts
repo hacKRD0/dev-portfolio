@@ -64,3 +64,12 @@ export interface CertificationItem {
 export interface TimelineProps {
   experience: ExperienceItem[];
 }
+
+export interface SkillSet {
+  programmingLanguages: string[];
+  frameworks: string[];
+  databases: string[];
+  cloudPlatforms: string[];
+  tools: string[];
+  integrations: string[];
+}

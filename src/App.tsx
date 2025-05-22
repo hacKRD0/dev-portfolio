@@ -9,6 +9,7 @@ import Resume from './pages/Resume';
 import ProjectDetails from './pages/ProjectDetails';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import CompetencyPage from './pages/CompetencyPage';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -47,6 +48,7 @@ const App: React.FC = () => {
               <Route path="/resume" element={<Resume />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:projectId" element={<ProjectDetails />} />
+              <Route path="/competencies/:title" element={<CompetencyPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>

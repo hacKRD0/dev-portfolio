@@ -4,7 +4,7 @@
       "id": "edu-1",
       "institution": "Arizona State University",
       "degree": "M.Sc Computer Science",
-      "dateRange": "Aug 2023 - Present",
+      "dateRange": "Aug 2023 - May 2025",
       "gpa": "4.00/4.00",
       "description": [
         "Coursework: Cloud Computing, Semantic Web Mining, Topics in NLP, Distributed Software Development, Distributed Database Systems"
@@ -26,14 +26,15 @@
       "id": "exp-0",
       "designation": "Software Engineer Intern",
       "company": "FlairX",
-      "dateRange": "Mar 2025 - Present",
+      "dateRange": "Mar 2025 - May 2025",
       "shortDescription": "Engineering scalable backend systems and APIs for interview benchmarking and scheduling.",
       "description": [
-        "Developed backend APIs for a benchmark dashboard comparing candidate interviews across 100+ job postings.",
-        "Enabled multi-host scheduling to support 40+ concurrent interviews per day, reducing wait times by 75%.",
         "Resolved a critical TypeORM migration issue causing silent column drops, preventing data loss across production tables.",
-        "Improved backend observability by implementing structured logging with Winston and archiving logs to AWS S3.",
-        "Collaborating with cross-functional teams using JIRA and PostgreSQL to enhance platform performance."
+        "Enabled multi-host scheduling to support 40+ concurrent interviews (Zoom SDK) per day, reducing wait times by 75%.",
+        "Implemented automated SMS (Twilio) and email (SendGrid) reminder jobs to notify candidates and interviewers of upcoming interviews, reducing no-shows and last-minute reschedules by 30%.",
+        "Developed backend APIs for a benchmark dashboard comparing candidate interviews across 100+ job postings.",
+        "Improved backend observability by implementing structured logging with Winston, reducing debug time by 40% and persisting logs to AWS S3 for long-term access.",
+        "Collaborated with cross-functional teams using JIRA and PostgreSQL to enhance platform performance."
       ]
     },
     {
@@ -41,7 +42,7 @@
       "designation": "Software Engineer Intern",
       "company": "Truemates",
       "projectLink": "https://truemates.co/",
-      "dateRange": "Jun 2024 - Present",
+      "dateRange": "Jun 2024 - Feb 2025",
       "shortDescription": "Developing and deploying backend systems for a scalable Christian dating platform, enhancing user features and automating deployment processes.",
       "description": [
         "Engineered and deployed backend modules using Express.js, scaling server-side applications to handle 10,000 users and reducing response time by 40%.",
@@ -59,6 +60,22 @@
         "Managed databases on GCP SQL with PostgreSQL servers and utilized GCP Cloud Storage for hosting user media files.",
         "Ensured version control and collaborative development using Git, adhering to best practices in branching and code reviews.",
         "Integrated Firebase authentication for secure user sign-in and token management, with user data stored in Firestore."
+      ]
+    },
+    {
+      "id": "exp-4",
+      "designation": "Software Development Intern",
+      "company": "Trikona Conskill",
+      "projectLink": "https://construction-world.org/",
+      "dateRange": "May 2024 - Aug 2024",
+      "shortDescription": "Engineered scalable user management systems and led cross-functional development across Go, React, and WordPress to streamline platform operations and engagement.",
+      "description": [
+        "Developed a user-management and directory modules for Trikona Conskill using Go and React.",
+        "Improved application performance by 30% through optimized code and efficient data handling.",
+        "Built a custom WordPress plugin using PHP, HTML/CSS, and AJAX for user management, erasing 100% of manual intervention.",
+        "Managed a team of 5 engineers, ensuring bug identification, troubleshooting, and platform stability.",
+        "Refactored codebase to enhance readability by adding comments and adhering to a consistent variable taxonomy.",
+        "Utilized Jira and Bitrix24 to track team progress, addressing blockers 50% quicker."
       ]
     },
     {
@@ -86,22 +103,6 @@
         "Introduced a source-to-target path-tracing algorithm with pin path validation at every step, increasing error detection rate by 40%.",
         "Crafted a GUI interface enabling rapid identification of errors and discrepancies, improving debugging speed by 35%."
       ]
-    },
-    {
-      "id": "exp-4",
-      "designation": "Software Development Intern",
-      "company": "Trikona Conskill",
-      "dateRange": "Jun 2021 - Aug 2021",
-      "shortDescription": "Led the development of a real-time classroom engagement application and a custom WordPress plugin, enhancing user management and platform stability.",
-      "description": [
-        "Developed a real-time classroom engagement application using ReactJS and NodeJS.",
-        "Designed and integrated RESTful APIs to enhance the application\u2019s interactivity and responsiveness.",
-        "Improved application performance by 30% through optimized code and efficient data handling.",
-        "Built a custom WordPress plugin using PHP, HTML/CSS, and AJAX for user management, erasing 100% of manual intervention.",
-        "Managed a team of 5 engineers, ensuring bug identification, troubleshooting, and platform stability.",
-        "Refactored codebase to enhance readability by adding comments and adhering to a consistent variable taxonomy.",
-        "Utilized Jira and Bitrix24 to track team progress, addressing blockers 50% quicker."
-      ]
     }
   ],
   "skills": {
@@ -126,18 +127,37 @@
       "Tailwind CSS"
     ],
     "databases": ["MongoDB", "MySQL", "PostgreSQL"],
-    "cloudPlatforms": ["AWS", "GCP"],
+    "cloudPlatforms": ["EC2", "S3", "Lambda", "GAE", "GCF", "Cloudflare Workers", "AI Gateway", "Firebase"],
     "tools": [
-      "Bitrix24",
-      "Docker",
       "Git",
+      "Docker",
       "GitHub Actions",
-      "JIRA",
       "Postman",
-      "VSCode"
-    ]
+      "JIRA",
+      "VSCode",
+      "Bitrix24"
+    ],
+    "integrations": ["Zoom SDK", "Twilio", "SendGrid", "Mailjet", "OpenAI API"]
   },
   "projects": [
+    {
+      "id": "trikona",
+      "title": "Trikona",
+      "dateRange": "Mar 2025 - Present",
+      "description": [
+        "A role-based networking platform that connects students, professionals, corporates, and colleges. Features include LinkedIn-based registration, secure authentication, detailed user directories, and profile management. Built with a React + TypeScript frontend and a Go-based backend using clean architecture and PostgreSQL."
+      ],
+      "techStack": [
+        "Go",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "PostgreSQL",
+        "Vite"
+      ],
+      "sourceCodeUrl": "https://github.com/hacKRD0/trikona-backend-services",
+      "liveSiteUrl": "https://trikona-frontend.pages.dev/"
+    },
     {
       "id": "pollyglot",
       "title": "Pollyglot",
@@ -295,14 +315,15 @@
       "title": "Full-Stack Development",
       "description": "Proficient in building scalable full-stack web applications with modern frameworks and technologies.",
       "skills": [
-        "React",
-        "Next.js",
+        "Go",
         "TypeScript",
-        "TailwindCSS",
         "Node.js",
         "Express.js",
         "Flask",
-        "SpringBoot"
+        "SpringBoot",
+        "React",
+        "Redux Toolkit",
+        "Tailwind CSS"
       ],
       "relatedExperience": ["Truemates", "Trikona Conskill"],
       "projects": ["Personal Portfolio", "StockCentral", "MovieFlex"]

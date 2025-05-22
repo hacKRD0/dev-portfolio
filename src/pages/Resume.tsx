@@ -4,68 +4,118 @@ import React from 'react';
 import EducationBlock from '../components/EducationBlock';
 import ExperienceBlock from '../components/ExperienceBlock';
 import CertificationBlock from '../components/CertificationBlock';
+import SkillsBlock from '../components/SkillsBlock';
 import resumeData from '../assets/resumeData.json';
 import resumePDF from '../assets/Keshava_Rajavaram_Resume.pdf';
-import { FaDownload } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi'; // Using FiDownload instead of FaDownload
 
 const { education, experience, certifications } = resumeData;
 
 const Resume: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-      <div className="container mx-auto px-4 py-10">
-        {/* PAGE TITLE */}
-        <h1 className="text-3xl font-bold mb-8">My Resume</h1>
-        {/* EDUCATION SECTION */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <div className="flex flex-col gap-6">
-            {education.map((edu) => (
-              <EducationBlock key={edu.id} education={edu} />
-            ))}
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        {/* PAGE HEADER */}
+        <div className="flex flex-row justify-between items-center mb-10">
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">My Resume</h1>
+          <a
+            href={resumePDF}
+            download="Keshava_Rajavaram_Resume.pdf"
+            className="
+              inline-flex items-center justify-center
+              px-4 py-2 rounded-md
+              bg-blue-600 text-white
+              hover:bg-blue-700
+              dark:bg-blue-700 dark:hover:bg-blue-600
+              transition-colors duration-200
+              text-sm font-medium
+              shadow-sm hover:shadow-md
+              whitespace-nowrap
+              h-10
+            "
+            aria-label="Download Resume"
+          >
+            <FiDownload className="sm:mr-2" />
+            <span className="hidden sm:inline">Download PDF</span>
+          </a>
+        </div>
+
+        {/* SKILLS SECTION */}
+        <section className="mb-16">
+          <div className="relative mb-8 text-center">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+            </div>
+            <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+                Skills & Technologies
+              </h2>
+            </div>
           </div>
+          <SkillsBlock skills={resumeData.skills} />
         </section>
+
         {/* EXPERIENCE SECTION */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-            Over the years I've had the opportunity to work with the following
-            organizations:
+        <section className="mb-16">
+          <div className="relative mb-8 text-center">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+            </div>
+            <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+                Experience
+              </h2>
+            </div>
+          </div>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
+            Over the years I've had the opportunity to work with the following organizations:
           </p>
-          <div className="flex flex-col">
+          <div className="space-y-6">
             {experience.map((exp) => (
               <ExperienceBlock key={exp.id} experience={exp} />
             ))}
           </div>
         </section>
+
+        {/* EDUCATION SECTION */}
+        <section className="mb-16">
+          <div className="relative mb-8 text-center">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+            </div>
+            <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+                Education
+              </h2>
+            </div>
+          </div>
+          <div className="space-y-6">
+            {education.map((edu) => (
+              <EducationBlock key={edu.id} education={edu} />
+            ))}
+          </div>
+        </section>
+
         {/* CERTIFICATIONS SECTION */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
-          <div className="flex flex-col gap-4">
+        <section className="mb-16">
+          <div className="relative mb-8 text-center">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+            </div>
+            <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+                Certifications
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {certifications.map((cert) => (
               <CertificationBlock key={cert.id} certification={cert} />
             ))}
           </div>
         </section>
 
-        {/* DOWNLOAD RESUME */}
-        <section className="flex justify-end">
-          <a
-            href={resumePDF}
-            download="Keshava_Rajavaram_Resume.pdf"
-            className="
-      inline-flex items-center gap-2 px-6 py-3
-      bg-gradient-to-r from-blue-600 to-indigo-700
-      text-white text-lg font-semibold rounded-lg
-      shadow-md transition-all
-      transform hover:scale-105 hover:shadow-lg
-      focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-    "
-          >
-            <FaDownload className="w-5 h-5" /> {/* Icon for download */}
-            Download Resume
-          </a>
-        </section>
+        {/* Download button has been moved to the header */}
       </div>
     </div>
   );

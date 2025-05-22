@@ -1,6 +1,77 @@
 {
   "projectsData": [
     {
+      "id": "trikona-user-management",
+      "title": "Trikona - User Management",
+      "shortDescription": "A full-stack authentication and user management system with LinkedIn OAuth, JWT, and role-based routing.",
+      "imagesCount": 4,
+      "paragraphs": [
+        "The User Management Service handles registration, login, and profile management for all user roles (Student, Professional, Corporate, College) in the Trikona platform. Built with Go on the backend using clean architecture, it supports secure password-based authentication, LinkedIn OAuth login, email verification, and password reset flows. JWT tokens are used for session management and role-based access control.",
+        "The frontend, developed in React with TypeScript and Redux Toolkit, provides a responsive and user-friendly interface for login, registration, and profile editing. It handles client-side validation, toast-based feedback, and form flows depending on the selected role. Authentication state is managed with RTK Query and persisted across sessions.",
+        "Protected routes ensure that users can only access pages relevant to their roles. The LinkedIn OAuth flow integrates a post-login profile completion form for selecting the appropriate role before granting access.",
+        "The service includes error boundary components, loading states, and structured toast notifications. Mailjet is used for sending transactional emails for account verification and password recovery. All interactions are API-driven with consistent error handling on both client and server."
+      ],
+      "summary": [
+        "Built a secure authentication and user management system in Go using clean architecture.",
+        "Implemented LinkedIn OAuth, email verification, and password reset flows.",
+        "Integrated JWT authentication with role-based access control on protected backend routes.",
+        "Created React components for login, registration, and profile forms with responsive design.",
+        "Managed authentication state with Redux Toolkit and RTK Query.",
+        "Added protected frontend routes and LinkedIn callback handling with role enforcement.",
+        "Used Mailjet to deliver verification and reset emails."
+      ],
+      "techStack": [
+        "Go",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "RTK Query",
+        "JWT",
+        "Tailwind CSS",
+        "Mailjet",
+        "LinkedIn OAuth",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "githubUrl": "https://github.com/hacKRD0/trikona-backend-services",
+      "liveSiteUrl": "https://trikona-frontend.pages.dev/"
+    },
+    {
+      "id": "trikona-directory-service",
+      "title": "Trikona - User Directory",
+      "shortDescription": "A modular directory service for discovering and managing user profiles across roles with advanced filtering and pagination.",
+      "imagesCount": 5,
+      "paragraphs": [
+        "The Directory Service enables viewing, searching, and filtering user profiles categorized as Students, Professionals, Corporates, and Colleges. On the backend, it follows clean architecture in Go with separate domains and repositories for each role. Filtering logic supports parameters like skills, experience, education, industry, location, and more, all handled via REST API endpoints with pagination and caching.",
+        "Master data such as countries, states, skills, industries, and branches are managed centrally and exposed through APIs. The backend uses GORM with PostgreSQL, supports dynamic querying, and provides robust error handling with custom error types and logs.",
+        "The frontend is built with React and TypeScript using Redux Toolkit and RTK Query for state and data management. It features a FilterSidebar component that allows users to refine search results by multi-select dropdowns powered by searchable APIs (e.g., `getStateMasters`, `getSkillMasters`).",
+        "Each directory page is optimized for performance with lazy loading of profile cards, debounced filter changes, and responsive layouts. Users can view rich profile details, search using compound filters, and navigate paginated results. All filters are synced with query params to ensure deep linking and consistent UX."
+      ],
+      "summary": [
+        "Developed modular backend APIs for student, professional, corporate, and college directories in Go.",
+        "Implemented advanced filtering and pagination using dynamic query building with GORM.",
+        "Created master data APIs for countries, skills, industries, and states with caching.",
+        "Built filterable, paginated directory pages in React using Redux Toolkit and RTK Query.",
+        "Integrated multi-select searchable dropdowns for skills, location, and industries.",
+        "Ensured query param synchronization for filters to enable deep linking and reload consistency.",
+        "Optimized UI performance with lazy loading and debounced search inputs."
+      ],
+      "techStack": [
+        "Go",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "RTK Query",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Docker",
+        "GORM",
+        "REST API"
+      ],
+      "githubUrl": "https://github.com/hacKRD0/trikona-backend-services",
+      "liveSiteUrl": "https://trikona-frontend.pages.dev/"
+    },
+    {
       "id": "pollyglot",
       "title": "Pollyglot",
       "shortDescription": "A translator app utilizing Hugging Face and Cloudflare for real-time translations.",

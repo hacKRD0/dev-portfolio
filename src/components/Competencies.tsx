@@ -1,79 +1,59 @@
 import React from 'react';
-import { FaLaptopCode, FaCloud, FaDatabase } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { competencies } from '../data/competenciesData';
 
 const CompetenciesSection: React.FC = () => {
-  const competencies = [
-    {
-      icon: <FaLaptopCode className="w-10 h-10 text-pink-500" />,
-      title: 'Full-Stack Development',
-      description:
-        'Experienced in designing and building full-stack web applications using modern technologies.',
-      skills: [
-        'React',
-        'Node.js',
-        'TypeScript',
-        'JavaScript',
-        'TailwindCSS',
-        'Express.js',
-        'Flask',
-        'SpringBoot',
-      ],
-    },
-    {
-      icon: <FaDatabase className="w-10 h-10 text-blue-500" />,
-      title: 'AI Engineering',
-      description:
-        'Enthusiastic about AI and its potential to transform industries and create smart solutions.',
-      skills: [
-        'TypeScript',
-        'Python',
-        'OpenAI API',
-        'Langchain',
-        'HuggingFace',
-        'Supabase',
-      ],
-    },
-    {
-      icon: <FaCloud className="w-10 h-10 text-orange-500" />,
-      title: 'Cloud Technologies',
-      description:
-        'Skilled in cloud platforms with expertise in deploying scalable applications and managing DevOps pipelines.',
-      skills: ['AWS', 'GCP', 'Cloudflare', 'Docker', 'CI/CD', 'GitHub Actions'],
-    },
-  ];
+  const navigate = useNavigate();
+
+  const handleCardClick = (competencyTitle: string) => {
+    navigate(`/competencies/${encodeURIComponent(competencyTitle.toLowerCase().replace(/\s+/g, '-'))}`);
+  };
 
   return (
     <section className="container mx-auto px-4 py-10">
-      {/* <h2 className="text-3xl font-bold mb-10 text-center text-gray-800 dark:text-gray-100">
-        My Expertise
-      </h2> */}
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {competencies.map((competency, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center border border-gray-300 dark:border-gray-700 rounded-lg p-6 bg-white dark:bg-gray-800 shadow-md"
-          >
-            {/* Icon */}
-            {competency.icon}
+        {competencies.map((competency, index) => {
+          const IconComponent = competency.icon;
+          return (
+            <div
+              key={index}
+              onClick={() => handleCardClick(competency.title)}
+              className="flex flex-col items-center text-center border border-gray-300 dark:border-gray-700 rounded-lg p-6 bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow cursor-pointer transform hover:-translate-y-1"
+            >
+              {/* Icon */}
+              <div className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full">
+                <IconComponent className={`w-10 h-10 ${competency.iconColor}`} />
+              </div>
 
-            {/* Title */}
-            <h3 className="mt-4 text-xl font-bold text-gray-800 dark:text-gray-100">
-              {competency.title}
-            </h3>
+              {/* Title */}
+              <h3 className="mt-4 text-xl font-bold text-gray-800 dark:text-gray-100">
+                {competency.title}
+              </h3>
 
-            {/* Description */}
-            <p className="mt-2 text-md text-gray-600 dark:text-gray-300">
-              {competency.description}
-            </p>
+              {/* Description */}
+              <p className="mt-2 text-md text-gray-600 dark:text-gray-300 flex-grow">
+                {competency.description}
+              </p>
 
-            {/* Skills in Sentence Format */}
-            <p className="mt-4 text-md text-gray-600 dark:text-gray-300">
-              <span className="font-semibold">Skills:</span>{' '}
-              {competency.skills.join(', ')}
-            </p>
-          </div>
-        ))}
+              {/* Skills */}
+              <div className="mt-4 flex flex-wrap justify-center gap-2 w-full">
+                {competency.skills.slice(0, 4).map((skill, idx) => (
+                  <span 
+                    key={idx}
+                    className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs text-gray-700 dark:text-gray-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
+                {competency.skills.length > 4 && (
+                  <span className="text-xs text-gray-500 dark:text-gray-400 self-center">
+                    +{competency.skills.length - 4} more
+                  </span>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

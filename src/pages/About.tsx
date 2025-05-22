@@ -12,51 +12,77 @@ const { experience, projects } = resumeData;
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col items-center">
       {/* Hero Section */}
       <AboutHero
         title="Hello! I am Keshava."
         paragraph="
-        Hello! I’m Keshava Ranga Datta Rajavaram, a passionate full-stack developer currently pursuing my Master’s in Computer Science at Arizona State University. I love building applications that seamlessly blend front-end design with robust back-end functionality, and lately, I’ve been diving into leveraging AI to create innovative solutions.
-        Throughout my journey, I’ve had the opportunity to intern at companies like Truemates, HERE Technologies, and Qualcomm, where I honed my skills in backend development, data science, and cloud technologies. I enjoy tackling complex challenges, whether it's developing scalable APIs, designing responsive user interfaces, or integrating AI models to enhance user experiences.
-        When I’m not coding, I follow the Indian stock market and explore current and historical geopolitics. These interests help me stay curious and continuously learn about the world around me."
+        I’m a full-stack developer with a Master’s degree in Computer Science from Arizona State University. I specialize in building robust, scalable applications that integrate intuitive front-end experiences with efficient and secure back-end systems.
+
+My professional journey includes internships and project work at companies like HERE Technologies, Qualcomm, and FlairX—where I engineered backend APIs for interview benchmarking, improved infrastructure observability, and optimized performance across production services. I thrive on solving complex technical challenges, from developing RESTful APIs to deploying distributed systems.
+
+I also bring a strong focus on AI engineering, having developed end-to-end solutions using Hugging Face Transformers, GPT-2, and Retrieval-Augmented Generation (RAG) architectures. Projects like Popchoice and StockSentimentAI reflect my ability to fine-tune language models, build recommendation systems, and deploy ML pipelines in production. Whether it’s working with LLMs, computer vision, or zero-shot prompting, I enjoy pushing the boundaries of what AI can do in real-world applications.
+
+Beyond development, I’m an avid follower of the Indian stock market and a student of geopolitics—interests that keep me curious and continuously expanding my worldview."
         imageUrl="/assets/profile.jpeg"
         linkedInUrl="https://www.linkedin.com/in/keshava-rd/"
         githubUrl="https://github.com/hacKRD0"
       />
 
       {/* Skills & Competencies Section */}
-      <section className="container mx-auto px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-          Skills & Competencies
-        </h2>
+      <section className="w-full max-w-6xl px-4 py-10">
+        <div className="relative mb-8 text-center">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+          </div>
+          <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+              Skills & Competencies
+            </h2>
+          </div>
+        </div>
         <CompetenciesSection />
       </section>
 
       {/* Experience Timeline Section */}
-      <section className="container mx-auto px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-          Work Experience
-        </h2>
-        <Timeline experience={experience} />
-
-        {/* "View Details" link -> /experience */}
-        <div className="mt-2 text-left">
-          <Link
-            to="/resume"
-            className="text-gray-800 dark:text-gray-100 hover:underline"
-          >
-            View details
-          </Link>
+      <section className="w-full max-w-6xl px-4 py-10">
+        <div className="relative mb-8 text-center">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+          </div>
+          <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4 gap-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+              Work Experience
+            </h2>
+            <Link
+              to="/resume"
+              className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 px-3 py-1 rounded-full border border-blue-100 dark:border-gray-700 bg-white dark:bg-gray-900"
+            >
+              View All <span className="ml-1">→</span>
+            </Link>
+          </div>
         </div>
+        <Timeline experience={experience} />
       </section>
 
       {/* Projects Section */}
-      <section className="container mx-auto px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
-          My Projects
-        </h2>
-
+      <section className="w-full max-w-6xl px-4 py-10">
+        <div className="relative mb-8 text-center">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gray-200 dark:border-gray-700"></div>
+          </div>
+          <div className="relative inline-flex items-center bg-white dark:bg-gray-900 px-4 gap-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-gray-100">
+              Projects
+            </h2>
+            <Link
+              to="/projects"
+              className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 px-3 py-1 rounded-full border border-blue-100 dark:border-gray-700 bg-white dark:bg-gray-900"
+            >
+              View All <span className="ml-1">→</span>
+            </Link>
+          </div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
           {projects.map((project) => (
             <ProjectCard
@@ -69,16 +95,6 @@ const About: React.FC = () => {
               liveSiteUrl={project.liveSiteUrl}
             />
           ))}
-        </div>
-
-        {/* "View Details" link -> /projects */}
-        <div className="mt-4 text-left">
-          <Link
-            to="/projects"
-            className="text-gray-800 dark:text-gray-100 hover:underline"
-          >
-            View details
-          </Link>
         </div>
       </section>
     </div>
