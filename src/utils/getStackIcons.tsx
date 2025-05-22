@@ -23,6 +23,9 @@ import {
   SiSpringboot,
   SiPhp,
   SiHuggingface,
+  SiCloudflare,
+  SiCloudflareworkers,
+  SiCloudflarepages,
 } from 'react-icons/si';
 
 export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
@@ -74,6 +77,12 @@ export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
         return <SiSpringboot key={tech} />;
       case 'php':
         return <SiPhp key={tech} />;
+      case 'cloudflare':
+        return <SiCloudflare key={tech} />;
+      case 'cloudflare-workers':
+        return <SiCloudflareworkers key={tech} />;
+      case 'cloudflare-pages':
+        return <SiCloudflarepages key={tech} />;
       default:
         return null; // Handle unknown tech stack entries gracefully
     }

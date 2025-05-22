@@ -1,6 +1,36 @@
 {
   "projectsData": [
     {
+      "id": "pollyglot",
+      "title": "Pollyglot",
+      "shortDescription": "A translator app utilizing Hugging Face and Cloudflare for real-time translations.",
+      "imagesCount": 5,
+      "paragraphs": [
+        "Pollyglot is a real-time translation app that leverages Hugging Face inference endpoints to translate text from English to Spanish, French, and Japanese. The project was developed using Vite, React, and Tailwind CSS, providing a responsive and intuitive user interface.",
+        "The app uses a Cloudflare Worker to handle translation requests, routing them to specific Hugging Face models tailored for each target language. To improve performance and security, a Cloudflare AI Gateway was integrated to manage API calls, rate limiting, and caching.",
+        "The frontend was deployed on Cloudflare Pages, which automatically handles continuous integration and deployment, ensuring that the user interface is always up to date with every code push. The entire application was containerized with Cloudflare tools to simplify deployment and maintenance."
+      ],
+      "summary": [
+        "Developed Pollyglot, a translator app for real-time translations from English to Spanish, French, and Japanese.",
+        "Created a responsive chat interface using Vite, React, and Tailwind CSS.",
+        "Used Cloudflare Worker to handle translation requests, ensuring optimized API calls to Hugging Face models.",
+        "Implemented Cloudflare AI Gateway for rate limiting, caching, and securing API endpoints.",
+        "Deployed the frontend using Cloudflare Pages with CI/CD setup for automatic updates.",
+        "Streamlined deployment using Cloudflare CLI and Wrangler to create and deploy Cloudflare Workers."
+      ],
+      "techStack": [
+        "Vite",
+        "React",
+        "Tailwind CSS",
+        "Cloudflare Worker",
+        "Hugging Face",
+        "Cloudflare Pages",
+        "Cloudflare AI Gateway"
+      ],
+      "githubUrl": "https://github.com/hacKRD0/Pollyglot",
+      "liveSiteUrl": "https://pollyglot-esf.pages.dev/"
+    },
+    {
       "id": "stockcentral",
       "title": "StockCentral",
       "shortDescription": "A portfolio management app with full-stack architecture.",

@@ -23,6 +23,20 @@
   ],
   "experience": [
     {
+      "id": "exp-0",
+      "designation": "Software Engineer Intern",
+      "company": "FlairX",
+      "dateRange": "Mar 2025 - Present",
+      "shortDescription": "Engineering scalable backend systems and APIs for interview benchmarking and scheduling.",
+      "description": [
+        "Developed backend APIs for a benchmark dashboard comparing candidate interviews across 100+ job postings.",
+        "Enabled multi-host scheduling to support 40+ concurrent interviews per day, reducing wait times by 75%.",
+        "Resolved a critical TypeORM migration issue causing silent column drops, preventing data loss across production tables.",
+        "Improved backend observability by implementing structured logging with Winston and archiving logs to AWS S3.",
+        "Collaborating with cross-functional teams using JIRA and PostgreSQL to enhance platform performance."
+      ]
+    },
+    {
       "id": "exp-1",
       "designation": "Software Engineer Intern",
       "company": "Truemates",
@@ -40,7 +54,7 @@
         "Enhanced the matchmaking system with exact and mostCompatible matching features, improving match accuracy and user satisfaction.",
         "Contributed to smaller features that enriched user experience, including gifting, match guessing, reviews, invites, and more.",
         "Currently working on an AI-feed bot that posts routine content with topic selection based on user interaction, leveraging AI to improve engagement.",
-        "Implemented a CI/CD pipeline using GitHub Actions to automate deployment of services to Google Cloud Platform’s App Engine (GAE).",
+        "Implemented a CI/CD pipeline using GitHub Actions to automate deployment of services to Google Cloud Platform\u2019s App Engine (GAE).",
         "Utilized Sequelize ORM to maintain database uniformity and integrity across development, staging, and production environments.",
         "Managed databases on GCP SQL with PostgreSQL servers and utilized GCP Cloud Storage for hosting user media files.",
         "Ensured version control and collaborative development using Git, adhering to best practices in branching and code reviews.",
@@ -81,7 +95,7 @@
       "shortDescription": "Led the development of a real-time classroom engagement application and a custom WordPress plugin, enhancing user management and platform stability.",
       "description": [
         "Developed a real-time classroom engagement application using ReactJS and NodeJS.",
-        "Designed and integrated RESTful APIs to enhance the application’s interactivity and responsiveness.",
+        "Designed and integrated RESTful APIs to enhance the application\u2019s interactivity and responsiveness.",
         "Improved application performance by 30% through optimized code and efficient data handling.",
         "Built a custom WordPress plugin using PHP, HTML/CSS, and AJAX for user management, erasing 100% of manual intervention.",
         "Managed a team of 5 engineers, ensuring bug identification, troubleshooting, and platform stability.",
@@ -92,26 +106,56 @@
   ],
   "skills": {
     "programmingLanguages": [
-      "Python",
       "C/C++",
+      "Go",
+      "HTML/CSS",
       "Java",
       "JavaScript",
-      "HTML/CSS",
-      "PHP"
+      "PHP",
+      "Python",
+      "TypeScript"
     ],
     "frameworks": [
-      "Springboot",
-      "ReactJs",
-      "NodeJs",
       "ExpressJs",
+      "Gin",
       "Next.js",
+      "NodeJs",
+      "ReactJs",
+      "Sequelize ORM",
+      "Springboot",
       "Tailwind CSS"
     ],
-    "databases": ["MySQL", "PostgreSQL", "MongoDB"],
+    "databases": ["MongoDB", "MySQL", "PostgreSQL"],
     "cloudPlatforms": ["AWS", "GCP"],
-    "tools": ["Docker", "Git", "JIRA", "Bitrix24", "GitHub Actions"]
+    "tools": [
+      "Bitrix24",
+      "Docker",
+      "Git",
+      "GitHub Actions",
+      "JIRA",
+      "Postman",
+      "VSCode"
+    ]
   },
   "projects": [
+    {
+      "id": "pollyglot",
+      "title": "Pollyglot",
+      "dateRange": "Jan 2025 - Feb 2025",
+      "description": [
+        "Chatbot app for real-time translations from English to Spanish, French, and Japanese."
+      ],
+      "techStack": [
+        "HuggingFace",
+        "React",
+        "TailwindCSS",
+        "Cloudflare",
+        "Cloudflare-workers",
+        "Cloudflare-pages"
+      ],
+      "sourceCodeUrl": "https://github.com/hacKRD0/Pollyglot",
+      "liveSiteUrl": "https://pollyglot-esf.pages.dev/"
+    },
     {
       "id": "stockcentral",
       "title": "StockCentral",

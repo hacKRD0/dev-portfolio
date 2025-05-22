@@ -5,6 +5,7 @@ import { FaRegBuilding } from 'react-icons/fa';
 import { BiCameraMovie } from 'react-icons/bi';
 import { AiOutlineStock } from 'react-icons/ai';
 import { FiBarChart } from 'react-icons/fi';
+import { MdGTranslate } from 'react-icons/md';
 
 const getProjectIcon = (id: string) => {
   switch (id) {
@@ -24,6 +25,8 @@ const getProjectIcon = (id: string) => {
       return <FaWordpress />;
     case 'stocksentimentai':
       return <FiBarChart />;
+    case 'pollyglot':
+      return <MdGTranslate />;
     default:
       return <FaGithub />;
   }

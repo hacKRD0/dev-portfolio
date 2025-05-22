@@ -25,11 +25,12 @@ const CompetenciesSection: React.FC = () => {
       description:
         'Enthusiastic about AI and its potential to transform industries and create smart solutions.',
       skills: [
+        'TypeScript',
         'Python',
         'OpenAI API',
         'Langchain',
         'HuggingFace',
-        'Transformers',
+        'Supabase',
       ],
     },
     {
@@ -37,7 +38,7 @@ const CompetenciesSection: React.FC = () => {
       title: 'Cloud Technologies',
       description:
         'Skilled in cloud platforms with expertise in deploying scalable applications and managing DevOps pipelines.',
-      skills: ['AWS', 'GCP', 'Docker', 'CI/CD', 'GitHub Actions'],
+      skills: ['AWS', 'GCP', 'Cloudflare', 'Docker', 'CI/CD', 'GitHub Actions'],
     },
   ];
 
