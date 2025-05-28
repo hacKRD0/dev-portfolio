@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 // Use Material Design icons for dark/light mode
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import { MdDarkMode, MdLightMode, MdEmail, MdPhone } from 'react-icons/md';
 import { NavbarProps } from '../types/types';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaRegWindowClose } from 'react-icons/fa';
@@ -15,6 +15,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
     { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const email = 'keshava.rajavaram@gmail.com';
+  const phoneNumber = '+14807962223'; // Format: +1 (country code) followed by number
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
@@ -54,6 +57,26 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
               </NavLink>
             ))}
 
+            {/* Contact Info */}
+            <div className="hidden md:flex items-center space-x-4">
+              <a 
+                href={`mailto:${email}`} 
+                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                aria-label="Email me"
+              >
+                <MdEmail className="w-5 h-5 mr-1" />
+                <span className="text-sm">{email}</span>
+              </a>
+              <a 
+                href={`tel:${phoneNumber}`} 
+                className="flex items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                aria-label="Call me"
+              >
+                <MdPhone className="w-5 h-5 mr-1" />
+                <span className="text-sm">{phoneNumber.replace(/(\+\d{1})(\d{3})(\d{3})(\d{4})/, '$1 ($2) $3-$4')}</span>
+              </a>
+            </div>
+
             {/* Dark Mode Toggle (Rectangular Button) */}
             <button
               onClick={toggleDarkMode}
@@ -64,10 +87,8 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
               aria-label="Toggle Dark Mode"
             >
               {darkMode ? (
-                /* If currently dark, show "light mode" icon */
                 <MdLightMode className="w-5 h-5" />
               ) : (
-                /* If currently light, show "dark mode" icon */
                 <MdDarkMode className="w-5 h-5" />
               )}
             </button>
@@ -100,19 +121,39 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
         <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
           <div className="px-2 py-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <NavLink
-                key={link.name}
-                to={link.path}
-                className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-medium
-                   text-gray-600 dark:text-gray-200
-                   hover:text-gray-900 dark:hover:text-white
-                   ${isActive ? 'font-semibold text-gray-900 dark:text-white' : ''}`
-                }
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </NavLink>
+              <React.Fragment key={link.name}>
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `block px-3 py-2 rounded-md text-base font-medium ${
+                      isActive
+                        ? 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
+                        : 'text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`
+                  }
+                  onClick={handleMenuToggle}
+                >
+                  {link.name}
+                </NavLink>
+                {link.name === 'Contact' && (
+                  <div className="ml-6 space-y-2 mt-1 mb-2">
+                    <a 
+                      href={`mailto:${email}`} 
+                      className="flex items-center px-3 py-2 text-sm rounded-md bg-gray-50 dark:bg-gray-700/50 text-blue-600 dark:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                    >
+                      <MdEmail className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="truncate">{email}</span>
+                    </a>
+                    <a 
+                      href={`tel:${phoneNumber}`} 
+                      className="flex items-center px-3 py-2 text-sm rounded-md bg-gray-50 dark:bg-gray-700/50 text-blue-600 dark:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
+                    >
+                      <MdPhone className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span>{phoneNumber.replace(/(\+\d{1})(\d{3})(\d{3})(\d{4})/, '$1 ($2) $3-$4')}</span>
+                    </a>
+                  </div>
+                )}
+              </React.Fragment>
             ))}
 
             {/* Dark Mode Toggle in Mobile Menu (Rectangular Button) */}
