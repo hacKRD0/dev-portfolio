@@ -14,16 +14,17 @@ const ProjectDetails: React.FC = () => {
 
   const project = projectsData.find((p) => p.id === projectId);
 
+  // 👇 Vite / CRA (webpack) – works for files in src/assets/images/**
   useEffect(() => {
-    if (project) {
-      // Dynamically generate image URLs based on imagesCount
-      const imagePath = `/images/${project.id}`;
-      const loadedImages = Array.from(
-        { length: project.imagesCount },
-        (_, index) => `${imagePath}/${index + 1}.png`
-      );
-      setImages(loadedImages);
-    }
+    if (!project) return;
+
+    // 🔑 Let the bundler fingerprint & copy the asset for you
+    const loaded = Array.from({ length: project.imagesCount }, (_, i) =>
+      //   ../assets/images/<project-id>/<n>.png  →  dist/assets/<hash>.png
+      new URL(`../assets/images/${project.id}/${i + 1}.png`, import.meta.url).href
+    );
+
+    setImages(loaded);
   }, [project]);
 
   useEffect(() => {

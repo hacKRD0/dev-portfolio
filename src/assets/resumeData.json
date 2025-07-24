@@ -23,6 +23,20 @@
   ],
   "experience": [
     {
+      "id": "exp-5",
+      "designation": "AI Engineer",
+      "company": "Trikona Conskill",
+      "projectLink": "https://constructionlearning.net/",
+      "dateRange": "May 2025 – Present",
+      "shortDescription": "Architecting an LLM-powered career advisor that pinpoints skill gaps and recommends tailored courses to accelerate user career goals.",
+      "description": [
+        "Prototyping an AI career-advisor service that parses user profiles with transformer-based NLP models and benchmarks skills against target job requirements.",
+        "Designing a recommendation engine that maps identified gaps to courses in the LMS catalogue, delivering personalized learning paths.",
+        "Building a skills-to-course knowledge graph and vector-search index (Python, LangChain, pgvector) for real-time gap analysis.",
+        "Partnering with subject-matter experts to refine competency taxonomies and define metrics for continuous recommendation-quality improvement."
+      ]
+    },    
+    {
       "id": "exp-0",
       "designation": "Software Engineer Intern",
       "company": "FlairX",
@@ -39,7 +53,7 @@
     },
     {
       "id": "exp-1",
-      "designation": "Software Engineer Intern",
+      "designation": "Backend Developer Intern",
       "company": "Truemates",
       "projectLink": "https://truemates.co/",
       "dateRange": "Jun 2024 - Feb 2025",
@@ -64,18 +78,16 @@
     },
     {
       "id": "exp-4",
-      "designation": "Software Development Intern",
+      "designation": "Software Developer",
       "company": "Trikona Conskill",
-      "projectLink": "https://construction-world.org/",
-      "dateRange": "May 2024 - Aug 2024",
-      "shortDescription": "Engineered scalable user management systems and led cross-functional development across Go, React, and WordPress to streamline platform operations and engagement.",
+      "projectLink": "https://constructionlearning.net/",
+      "dateRange": "Jul 2023 – Apr 2025",
+      "shortDescription": "Led React/WordPress development of core platform modules and managed a 5-engineer team, delivering scalable, user-centric features.",
       "description": [
-        "Developed a user-management and directory modules for Trikona Conskill using Go and React.",
-        "Improved application performance by 30% through optimized code and efficient data handling.",
-        "Built a custom WordPress plugin using PHP, HTML/CSS, and AJAX for user management, erasing 100% of manual intervention.",
-        "Managed a team of 5 engineers, ensuring bug identification, troubleshooting, and platform stability.",
-        "Refactored codebase to enhance readability by adding comments and adhering to a consistent variable taxonomy.",
-        "Utilized Jira and Bitrix24 to track team progress, addressing blockers 50% quicker."
+        "Designed end-to-end feature flows and authored SRS documentation for role-based user management, job board, LMS, membership, and directory modules.",
+        "Built directory and user-management UIs in React, integrating with custom WordPress PHP REST APIs.",
+        "Introduced CI reviews and best-practice coding standards, improving release reliability and maintainability.",
+        "Mentored and coordinated a five-person engineering pod, steering bug triage and safeguarding 99.9% platform uptime."
       ]
     },
     {
@@ -141,11 +153,45 @@
   },
   "projects": [
     {
+      "id": "fashion-finder",
+      "title": "Fashion Finder",
+      "dateRange": "Jun 2025 – Jul 2025",
+      "description": [
+        "Video pipeline that spots fashion items, matches them to a product catalog with CLIP-FAISS, and tags overall style vibes."
+      ],
+      "techStack": [
+        "Python",
+        "PyTorch",
+        "YOLOv8",
+        "CLIP",
+        "FAISS",
+        "HuggingFace"
+      ],
+      "sourceCodeUrl": "https://github.com/hacKRD0/fashion-finder",
+      "liveSiteUrl": ""
+    },   
+    {
+      "id": "disease-diagnosis",
+      "title": "Disease Diagnosis Fine-Tuning",
+      "dateRange": "Apr 2025 – Jun 2025",
+      "description": [
+        "LoRA-tuned DistilBERT diagnoses diseases from symptom text using HuggingFace Transformers."
+      ],
+      "techStack": [
+        "Python",
+        "HuggingFace",
+        "LoRA",
+        "Pandas"
+      ],
+      "sourceCodeUrl": "https://github.com/hacKRD0/disease-diagnosis-finetuning",
+      "liveSiteUrl": ""
+    },     
+    {
       "id": "trikona",
       "title": "Trikona",
-      "dateRange": "Mar 2025 - Present",
+      "dateRange": "Mar 2025 - Jun 2025",
       "description": [
-        "A role-based networking platform that connects students, professionals, corporates, and colleges. Features include LinkedIn-based registration, secure authentication, detailed user directories, and profile management. Built with a React + TypeScript frontend and a Go-based backend using clean architecture and PostgreSQL."
+        "Role-based network linking students, pros, corporates, and colleges via LinkedIn login, directories and profiles."
       ],
       "techStack": [
         "Go",

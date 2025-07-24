@@ -98,7 +98,7 @@ const AboutHero: React.FC<AboutHeroProps> = ({
         <img
           src={imageUrl}
           alt="About me"
-          className="rounded-lg shadow-md w-full max-w-sm md:max-w-md"
+          className="rounded-full shadow-md w-full max-w-sm md:max-w-md"
         />
       </div>
     </section>

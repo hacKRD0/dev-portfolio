@@ -17,16 +17,11 @@ const About: React.FC = () => {
       <AboutHero
         title="Hello! I am Keshava."
         paragraph="
-        I’m a full-stack developer with a Master’s degree in Computer Science from Arizona State University. I specialize in building robust, scalable applications that integrate intuitive front-end experiences with efficient and secure back-end systems.
-
-My professional journey includes internships and project work at companies like HERE Technologies, Qualcomm, and FlairX—where I engineered backend APIs for interview benchmarking, improved infrastructure observability, and optimized performance across production services. I thrive on solving complex technical challenges, from developing RESTful APIs to deploying distributed systems.
-
-I also bring a strong focus on AI engineering, having developed end-to-end solutions using Hugging Face Transformers, GPT-2, and Retrieval-Augmented Generation (RAG) architectures. Projects like Popchoice and StockSentimentAI reflect my ability to fine-tune language models, build recommendation systems, and deploy ML pipelines in production. Whether it’s working with LLMs, computer vision, or zero-shot prompting, I enjoy pushing the boundaries of what AI can do in real-world applications.
-
-Beyond development, I’m an avid follower of the Indian stock market and a student of geopolitics—interests that keep me curious and continuously expanding my worldview."
-        imageUrl="/assets/profile.jpeg"
+        I'm a full-stack developer with a Master’s in Computer Science from ASU, experienced in building scalable apps with intuitive UIs and secure backends. At HERE Technologies, Qualcomm, FlairX, and Trikona, I’ve developed APIs, improved observability, and led performance optimizations. I focus heavily on AI engineering—building solutions with Hugging Face Transformers, GPT-2, LoRA fine-tuning, and RAG. Projects like Fashion Finder and StockSentimentAI showcase my work in LLMs, recommender systems, and production ML pipelines. I’m driven by real-world AI challenges and stay curious through interests in the Indian stock market and geopolitics."
+        imageUrl="/assets/dp.jpeg"
         linkedInUrl="https://www.linkedin.com/in/keshava-rd/"
         githubUrl="https://github.com/hacKRD0"
+        leetcodeUrl="https://leetcode.com/u/dattakeshava/"
       />
 
       {/* Skills & Competencies Section */}

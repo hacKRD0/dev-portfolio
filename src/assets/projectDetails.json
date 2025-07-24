@@ -1,10 +1,78 @@
 {
   "projectsData": [
     {
+      "id": "fashion-finder",
+      "title": "Fashion Finder",
+      "shortDescription": "End-to-end computer-vision pipeline that detects fashion items in videos, matches them to a catalog with CLIP + FAISS, and classifies overall style vibes.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "Fashion Finder is an automated pipeline that ingests fashion-centric videos and produces structured insights: it pinpoints every clothing, shoe, bag, or accessory in each frame, pairs those items with the closest products in a catalog, and tags the content with high-level \"vibes\" such as streetwear or business-casual.",
+        "Object detection is handled by a fine-tuned YOLOv8n model trained specifically on fashion imagery. Frames are streamed through the detector in configurable batches, yielding tight bounding boxes and class labels for all visible apparel and accessories.",
+        "Each detected crop is embedded with the CLIP vision encoder and compared against a FAISS vector index of product imagery. The pipeline returns the most visually similar catalog items along with distance scores, enabling instant shop-the-look experiences or inventory analytics.",
+        "To capture the overarching style, captions or hashtags are fed into a zero-shot BART classifier that assigns one to three \"vibe\" labels with confidence scores. The CLI supports single-video or directory-wide batch processing, frame skipping for speedups, and rich debug artefacts—including cropped detections, matched product thumbnails, and JSON summaries—for rapid iteration and QA."
+      ],
+      "summary": [
+        "Implemented a full video-to-insight pipeline combining detection, retrieval, and classification.",
+        "Detected fashion items frame-by-frame with a YOLOv8n model fine-tuned on clothing datasets.",
+        "Generated CLIP embeddings and used FAISS to match items against a product catalog.",
+        "Applied BART zero-shot classification to label content with fashion \"vibes\".",
+        "Provided CLI for single or batch video processing, frame-skip tuning, and per-component runs.",
+        "Emitted debug crops, matched product images, and structured JSON for downstream consumption.",
+        "Optimized throughput with batched inference and configurable thresholds for confidence and IoU."
+      ],
+      "techStack": [
+        "Python",
+        "PyTorch",
+        "YOLOv8",
+        "CLIP",
+        "FAISS",
+        "BART",
+        "Transformers",
+        "OpenCV",
+        "NumPy",
+        "tqdm"
+      ],
+      "githubUrl": "https://github.com/hacKRD0/fashion-finder",
+      "liveSiteUrl": ""
+    },
+    {
+      "id": "disease-diagnosis-finetuning",
+      "title": "Disease Diagnosis Fine-Tuning",
+      "shortDescription": "Parameter-efficient LoRA fine-tuning of DistilBERT to predict diseases from free-text symptom descriptions.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "Disease Diagnosis Fine-Tuning is an end-to-end workflow that equips a compact language model (DistilBERT) to output the most likely medical condition given a patient’s symptom narrative. The task is framed as conditional language modelling, prompting the model with \"Symptoms:\" followed by \"Disease:\" to elicit the correct label.",
+        "Data ingestion starts with raw CSVs containing numeric class IDs. A preprocessing script converts these to textual labels, builds train/validation splits, and stores them in `data/processed/`. Label mappings live in JSON for easy extension to new conditions.",
+        "Training is orchestrated by Hydra configuration files. The script loads datasets via 🤗 Datasets, applies prompt templates, masks prompt tokens from loss, then fine-tunes DistilBERT with 8-rank LoRA adapters using PEFT and Accelerate—yielding a memory-lean model that fits on an 8 GB GPU.",
+        "After training, an inference pipeline generates predictions on the validation set, comparing base versus fine-tuned accuracy, confusion matrices, and full classification reports. Outputs are written to JSON/CSV for downstream analysis."
+      ],
+      "summary": [
+        "Cast symptom-to-disease mapping as conditional language modelling with prompt engineering.",
+        "Preprocessed raw datasets into text-label CSVs and JSON label maps via an ingestion script.",
+        "Fine-tuned DistilBERT with LoRA adapters using HuggingFace Trainer and PEFT for 90 %+ GPU memory savings.",
+        "Hydra-driven config system enables reproducible hyper-parameter sweeps (LR, batch size, LoRA rank).",
+        "Evaluation script computes accuracy, confusion matrix, and classification report for base vs tuned models.",
+        "Lightweight dependency stack—Transformers, Datasets, PEFT, Hydra—keeps the repo easy to set up.",
+        "CLI commands wrap preprocessing, training, and inference for seamless experimentation."
+      ],
+      "techStack": [
+        "Python",
+        "Transformers",
+        "HuggingFace Datasets",
+        "PEFT / LoRA",
+        "Hydra",
+        "Accelerate",
+        "Pandas",
+        "scikit-learn"
+      ],
+      "githubUrl": "https://github.com/hacKRD0/disease-diagnosis-finetuning",
+      "liveSiteUrl": ""
+    },      
+    {
       "id": "trikona-user-management",
       "title": "Trikona - User Management",
       "shortDescription": "A full-stack authentication and user management system with LinkedIn OAuth, JWT, and role-based routing.",
-      "imagesCount": 4,
+      "imagesCount": 3,
       "paragraphs": [
         "The User Management Service handles registration, login, and profile management for all user roles (Student, Professional, Corporate, College) in the Trikona platform. Built with Go on the backend using clean architecture, it supports secure password-based authentication, LinkedIn OAuth login, email verification, and password reset flows. JWT tokens are used for session management and role-based access control.",
         "The frontend, developed in React with TypeScript and Redux Toolkit, provides a responsive and user-friendly interface for login, registration, and profile editing. It handles client-side validation, toast-based feedback, and form flows depending on the selected role. Authentication state is managed with RTK Query and persisted across sessions.",
@@ -40,7 +108,7 @@
       "id": "trikona-directory-service",
       "title": "Trikona - User Directory",
       "shortDescription": "A modular directory service for discovering and managing user profiles across roles with advanced filtering and pagination.",
-      "imagesCount": 5,
+      "imagesCount": 3,
       "paragraphs": [
         "The Directory Service enables viewing, searching, and filtering user profiles categorized as Students, Professionals, Corporates, and Colleges. On the backend, it follows clean architecture in Go with separate domains and repositories for each role. Filtering logic supports parameters like skills, experience, education, industry, location, and more, all handled via REST API endpoints with pagination and caching.",
         "Master data such as countries, states, skills, industries, and branches are managed centrally and exposed through APIs. The backend uses GORM with PostgreSQL, supports dynamic querying, and provides robust error handling with custom error types and logs.",
