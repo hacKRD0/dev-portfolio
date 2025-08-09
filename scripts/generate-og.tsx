@@ -14,7 +14,7 @@ import CodeOverlay from '../src/og/CodeOverlay';
 const WIDTH = 1200, HEIGHT = 630;
 
 async function renderToPng(element: JSX.Element, outPath: string) {
-  const fontData = readFileSync('assets/fonts/Inter-SemiBold.ttf'); // adjust path/font
+  const fontData = readFileSync('public/assets/fonts/Inter_28pt-SemiBold.ttf'); // adjust path/font
   const svg = await satori(element, {
     width: WIDTH,
     height: HEIGHT,

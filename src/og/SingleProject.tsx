@@ -13,7 +13,7 @@ export default function SingleProject({
       <Box style={{ flexDirection: 'column', gap: 24, justifyContent: 'center', width: '100%' }}>
         <Title>{project}</Title>
         <Sub>{oneLiner}</Sub>
-        <Sub>keshava.rajavaram.com/projects/{project.toLowerCase()}</Sub>
+        <Sub>{`keshava.rajavaram.com/projects/${project.toLowerCase()}`}</Sub>
       </Box>
     </Container>
   );

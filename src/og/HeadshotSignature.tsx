@@ -3,8 +3,8 @@ import { Container, Name, Sub, Box } from './shared';
 
 export default function HeadshotSignature({
   name = 'Keshava Rajavaram',
-  role = 'AI Engineering · Systems · DX',
-  headshotUrl = '/headshot.jpg', // place file in /public/headshot.jpg
+  role = 'AI Engineering · Systems · Full-Stack Developer',
+  headshotUrl = 'https://keshava.rajavaram.com/assets/dp.jpeg', // place file in /public/headshot.jpg
 }: { name?: string; role?: string; headshotUrl?: string }) {
   return (
     <Container>
