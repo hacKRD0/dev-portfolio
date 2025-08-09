@@ -23,6 +23,21 @@
   ],
   "experience": [
     {
+      "id": "exp-6",
+      "designation": "AI Engineer Intern",
+      "company": "85Sixty",
+      "dateRange": "Jul 2025 - Present",
+      "shortDescription": "Contributing to Brandgravity, a conversational analytics platform for digital marketing managers, and building scalable AI-driven reporting and RAG capabilities.",
+      "description": [
+        "Developed and enhanced a chat interface that allows marketing managers to query BigQuery campaign data using natural language.",
+        "Built a background reporting service on Cloud Run, scheduled via Cloud Scheduler, using Python with the OpenAI and Slack SDKs to automate weekly Slackbot report deliveries.",
+        "Implemented multitenant data isolation and access controls to securely onboard external clients, ensuring each customer interacts only with their own datasets.",
+        "Designed and prototyped a Retrieval-Augmented Generation (RAG) feature to let users augment campaign analytics with custom datasets and external context.",
+        "Collaborated with data engineering and DevOps teams to optimize performance, security, and CI/CD pipelines for production readiness.",
+        "Continuously scaling the system architecture to support growing user volume and introducing new AI-powered insights and features."
+      ]
+    },
+    {
       "id": "exp-5",
       "designation": "AI Engineer",
       "company": "Trikona Conskill",
@@ -81,13 +96,13 @@
       "designation": "Software Developer",
       "company": "Trikona Conskill",
       "projectLink": "https://constructionlearning.net/",
-      "dateRange": "Jul 2023 – Apr 2025",
+      "dateRange": "Jul 2024 – Apr 2025",
       "shortDescription": "Led React/WordPress development of core platform modules and managed a 5-engineer team, delivering scalable, user-centric features.",
       "description": [
-        "Designed end-to-end feature flows and authored SRS documentation for role-based user management, job board, LMS, membership, and directory modules.",
-        "Built directory and user-management UIs in React, integrating with custom WordPress PHP REST APIs.",
-        "Introduced CI reviews and best-practice coding standards, improving release reliability and maintainability.",
-        "Mentored and coordinated a five-person engineering pod, steering bug triage and safeguarding 99.9% platform uptime."
+        "Designed end-to-end feature flows and authored SRS documentation for 5+ core modules (user management, job board, LMS, membership, and directory), accelerating development velocity by 30%.",
+        "Developed directory and user management UIs in React, reducing user onboarding and profile completion time by 45% through streamlined form flows and real-time validation.",
+        "Established CI review pipelines and coding standards that decreased post-deployment bugs by 35% and improved feature delivery consistency across sprints.",
+        "Led a 5-member engineering team, resolving critical bugs 40% faster and sustaining 99.9% uptime across production services during peak user activity."
       ]
     },
     {

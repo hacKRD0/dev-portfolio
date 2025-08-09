@@ -43,20 +43,24 @@ export const competencies: Competency[] = [
     description: 'Enthusiastic about AI and its potential to transform industries and create smart solutions.',
     skills: [
       'Python',
+      'AI SDK',
+      'OpenAI API',
       'NLP',
       'LLMs',
       'RAG',
       'Machine Learning',
       'Computer Vision',
       'Hugging Face',
-      'GPT-2',
       'Transformers',
-      'Zero-shot Prompting'
+      'Prompt Engineering',
+      'Serverless AI',
+      'Vector Stores',
+      'LoRA',
     ],
     paragraphs: [
-      'My expertise in AI engineering spans natural language processing (NLP), recommendation systems, computer vision, and prompt-based AI, with an emphasis on real-world deployment. In Popchoice, I built a RAG-powered movie recommendation engine that uses Hugging Face Transformers and OpenAI embeddings to deliver highly personalized suggestions. These embeddings were stored in Supabase and retrieved using Cloudflare Workers for rate-limited API interactions—showcasing embedding management and vector similarity at scale.',
-      'In StockSentimentAI, I developed a sentiment-based stock trend predictor using a fine-tuned GPT-2 model. I engineered preprocessing pipelines, combined sentiment scores with n-grams and stock data, and applied rigorous model evaluation techniques—resulting in a robust AI application for financial insights. My work in LambdaVision and CloudFace further demonstrates my fluency in computer vision and cloud-based AI workflows. These projects featured face recognition models triggered by Lambda functions or scaled EC2 instances, integrated into end-to-end systems handling video/image data.',
-      'I’ve also explored ethical and context-sensitive AI via my Diagnosing Health project, where I used zero-shot prompting with Hugging Face models and built guardrails to filter irrelevant outputs, promoting safe AI interaction. Collectively, my AI engineering work reflects a strong foundation in both ML research and practical deployment across NLP, vision, and recommendation domains—supported by certifications from NVIDIA, AWS, and Google.',
+      'My expertise in AI engineering spans natural language processing (NLP), recommendation systems, computer vision, and prompt-based AI, with an emphasis on real-world deployment. At 85Sixty, I’m building Brandgravity—a conversational analytics platform that lets marketers query BigQuery datasets in natural language. I implemented Python microservices on Cloud Run, prototyped RAG workflows to augment campaign insights, and automated weekly Slack and SMS report deliveries using the OpenAI and Slack SDKs—demonstrating scalable vector retrieval, multitenant data isolation, and production observability.',
+      'In StockSentimentAI, I developed a sentiment-based stock trend predictor by fine-tuning GPT-2 with LoRA adapters. I engineered preprocessing pipelines, combined sentiment scores with n-grams and historical market data, and applied rigorous evaluation metrics to ensure robust financial insights. My work on LambdaVision and CloudFace further showcases cloud-native computer vision workflows—triggering face recognition via AWS Lambda and EC2, handling large video/image streams, and optimizing inference for low latency.',
+      'I’ve also explored ethical and context-sensitive AI in my Disease Diagnosis Fine-Tuning project, where I used zero-shot prompting with DistilBERT and built guardrails to filter irrelevant or unsafe outputs. This work underscores my commitment to safe, reliable AI interactions. Collectively, my AI engineering projects reflect a strong foundation in transformer-based models, vector search architectures, and serverless deployment—backed by hands-on certifications from NVIDIA, AWS, and Google.'
     ]
   },
   {
