@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Container, Box, Title, Sub } from './shared';
 
 const Node = ({ label }: { label: string }) => (

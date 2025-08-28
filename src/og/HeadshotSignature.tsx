@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Container, Name, Sub, Box } from './shared';
 
 export default function HeadshotSignature({

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Container, Title, Box, Tag } from './shared';
 
 export default function StackBadges({

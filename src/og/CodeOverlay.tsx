@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Container, Title, Sub, Box } from './shared';
 
 const sample = `func handler(w http.ResponseWriter, r *http.Request) {

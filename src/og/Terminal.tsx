@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Container, Box } from './shared';
 
 export default function Terminal({
