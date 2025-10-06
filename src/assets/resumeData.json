@@ -29,28 +29,13 @@
       "dateRange": "Jul 2025 - Present",
       "shortDescription": "Contributing to Brandgravity, a conversational analytics platform for digital marketing managers, and building scalable AI-driven reporting and RAG capabilities.",
       "description": [
-        "Developed and enhanced a chat interface that allows marketing managers to query BigQuery campaign data using natural language.",
-        "Built a background reporting service on Cloud Run, scheduled via Cloud Scheduler, using Python with the OpenAI and Slack SDKs to automate weekly Slackbot report deliveries.",
-        "Implemented multitenant data isolation and access controls to securely onboard external clients, ensuring each customer interacts only with their own datasets.",
-        "Designed and prototyped a Retrieval-Augmented Generation (RAG) feature to let users augment campaign analytics with custom datasets and external context.",
-        "Collaborated with data engineering and DevOps teams to optimize performance, security, and CI/CD pipelines for production readiness.",
-        "Continuously scaling the system architecture to support growing user volume and introducing new AI-powered insights and features."
+        "Enhanced a Next.js + Vercel AI SDK chat application with multitenant organization splitting and a secure org selector, ensuring 100% client data isolation while enabling internal users to manage 15+ client datasets seamlessly",
+        "Automated weekly Slackbot reports via Cloud Run + Cloud Scheduler, integrating OpenAI and Slack SDKs; reduced manual reporting effort for internal teams by 50% and accelerated reporting by 2x",
+        "Improved prompting and RAG based context management pipelines, boosting response accuracy by 30% and increasing reliability of client-specific insights.",
+        "Built an evaluation & observability stack (OpenTelemetry tracing + Langfuse evals + in-app feedback) that made model accuracy measurable and cut the feedback→optimize→test cycle by 90%",
+        "Standardized data-pipeline packaging/deploys with GCP Artifact Registry images on Cloud Run, making new client datasets chat-ready in 15–30 minutes."
       ]
-    },
-    {
-      "id": "exp-5",
-      "designation": "AI Engineer",
-      "company": "Trikona Conskill",
-      "projectLink": "https://constructionlearning.net/",
-      "dateRange": "May 2025 – Present",
-      "shortDescription": "Architecting an LLM-powered career advisor that pinpoints skill gaps and recommends tailored courses to accelerate user career goals.",
-      "description": [
-        "Prototyping an AI career-advisor service that parses user profiles with transformer-based NLP models and benchmarks skills against target job requirements.",
-        "Designing a recommendation engine that maps identified gaps to courses in the LMS catalogue, delivering personalized learning paths.",
-        "Building a skills-to-course knowledge graph and vector-search index (Python, LangChain, pgvector) for real-time gap analysis.",
-        "Partnering with subject-matter experts to refine competency taxonomies and define metrics for continuous recommendation-quality improvement."
-      ]
-    },    
+    },   
     {
       "id": "exp-0",
       "designation": "Software Engineer Intern",
