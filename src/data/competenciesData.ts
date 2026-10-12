@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaCloud, FaBrain } from 'react-icons/fa';
+import { FaLaptopCode, FaCloud, FaBrain, FaDatabase } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
 export interface Competency {
@@ -12,122 +12,88 @@ export interface Competency {
 
 export const competencies: Competency[] = [
   {
-    icon: FaLaptopCode,
-    iconColor: 'text-pink-500',
-    title: 'Full-Stack Development',
-    description: 'Experienced in building scalable, production-ready web applications with modern architectures and best practices.',
-    skills: [
-      'Go',
-      'TypeScript',
-      'Node.js',
-      'Express.js',
-      'Flask',
-      'SpringBoot',
-      'React',
-      'TailwindCSS',
-      'Redux Toolkit',
-      'PostgreSQL',
-      'Docker'
-    ],
-    paragraphs: [
-      'I specialize in designing and delivering scalable full-stack applications with modern architectures and technologies across both frontend and backend domains. At FlairX, I contributed to a high-stakes web application by building TypeScript-based APIs and integrating them with a React + Redux Toolkit frontend. I enhanced platform scalability by supporting concurrent interview scheduling, implemented structured logging, and ensured long-term observability with AWS S3 integration.',
-      'I architected and built Trikona, a comprehensive platform with modules for user management and directory services. The system features a Go backend with clean architecture, JWT authentication, and role-based access control. The React/TypeScript frontend uses Redux Toolkit and RTK Query for state management, with responsive UIs built using Tailwind CSS. I implemented secure authentication flows including LinkedIn OAuth, email verification, and password reset functionality using Mailjet.',
-      'For StockCentral, I developed a full-stack portfolio management application using Node.js, Express, and PostgreSQL. The platform includes real-time data visualization, secure user authentication with Firebase, and a responsive React frontend. I containerized the application with Docker and set up CI/CD pipelines using GitHub Actions, enabling seamless deployment and updates. The system handles complex financial data relationships and provides intuitive interfaces for portfolio analysis.',
-      'My experience extends to building modular, maintainable codebases with proper separation of concerns. I follow test-driven development practices and implement comprehensive error handling, logging, and monitoring. I optimize applications for performance through code splitting, lazy loading, and efficient data fetching strategies. My full-stack expertise allows me to bridge the gap between frontend and backend development, ensuring seamless integration and optimal system architecture.'
-    ]
-  },
-  {
     icon: FaBrain,
     iconColor: 'text-purple-500',
     title: 'AI Engineering',
-    description: 'Enthusiastic about AI and its potential to transform industries and create smart solutions.',
+    description: 'Production multi-agent systems, evaluation, RAG, and observability for clinical, analytics, and talent products.',
     skills: [
       'Python',
-      'AI SDK',
-      'OpenAI API',
-      'NLP',
-      'LLMs',
+      'OpenAI SDK',
+      'Vercel AI SDK',
+      'Langfuse',
+      'OpenTelemetry',
       'RAG',
-      'Machine Learning',
-      'Computer Vision',
-      'Hugging Face',
-      'Transformers',
-      'Prompt Engineering',
-      'Serverless AI',
-      'Vector Stores',
-      'LoRA',
+      'Google ADK',
+      'Streamlit',
+      'FastAPI',
+      'BigQuery',
     ],
     paragraphs: [
-      'My expertise in AI engineering spans natural language processing (NLP), recommendation systems, computer vision, and prompt-based AI, with an emphasis on real-world deployment. At 85Sixty, I’m building Brandgravity—a conversational analytics platform that lets marketers query BigQuery datasets in natural language. I implemented Python microservices on Cloud Run, prototyped RAG workflows to augment campaign insights, and automated weekly Slack and SMS report deliveries using the OpenAI and Slack SDKs—demonstrating scalable vector retrieval, multitenant data isolation, and production observability.',
-      'In StockSentimentAI, I developed a sentiment-based stock trend predictor by fine-tuning GPT-2 with LoRA adapters. I engineered preprocessing pipelines, combined sentiment scores with n-grams and historical market data, and applied rigorous evaluation metrics to ensure robust financial insights. My work on LambdaVision and CloudFace further showcases cloud-native computer vision workflows—triggering face recognition via AWS Lambda and EC2, handling large video/image streams, and optimizing inference for low latency.',
-      'I’ve also explored ethical and context-sensitive AI in my Disease Diagnosis Fine-Tuning project, where I used zero-shot prompting with DistilBERT and built guardrails to filter irrelevant or unsafe outputs. This work underscores my commitment to safe, reliable AI interactions. Collectively, my AI engineering projects reflect a strong foundation in transformer-based models, vector search architectures, and serverless deployment—backed by hands-on certifications from NVIDIA, AWS, and Google.'
+      'At DaVita I design the orchestrator for a nephrologist-facing clinical multi-agent chatbot. Queries route to specialized domain agents based on intent and context. Structured schemas, controlled tool calling, prompt and context engineering, and callback-driven fallbacks keep the system safe enough for clinical use, and PostgreSQL session history supports audit and continuity. A Streamlit evaluation dashboard with LLM-as-judge scoring and human review cut feedback cycles by 90%+. Agent-level latency, token, and execution metrics cut multi-agent workflow latency by 60%. Load testing and process-safe database writes made the API reliable for 500+ concurrent users. Prototypes run on Google ADK and GCP Agent Engine.',
+      'At 85SIXTY I built a production agent platform for analytics chat, automated reporting, prompt management, evaluation, and feedback. The chatbot uses Next.js, React, the Vercel AI SDK, and BigQuery, with streaming answers and tool-based retrieval. A planner-analyzer-summarizer architecture handles complex questions. Python reporting agents write results to Cloud Storage and post Slack Block Kit messages, and Langfuse plus OpenTelemetry cover prompt versions, traces, and evals. Multi-tenant isolation gives each client its own BigQuery dataset and Cloud Run pipeline.',
+      'SREAI applies the same pattern to site reliability: Bedrock embeddings make a medium-sized repository searchable in under 3 minutes, and an SQS and Lambda log pipeline returns a root-cause report in under 60 seconds. Fashion Finder pairs YOLOv8 detection with CLIP, FAISS, and a BART style classifier. At Trikona I am building a multi-agent career advisor that scores profiles, jobs, and courses against one skill-competency model.'
+    ]
+  },
+  {
+    icon: FaLaptopCode,
+    iconColor: 'text-pink-500',
+    title: 'Full-Stack Development',
+    description: 'End-to-end product engineering across React, Go, and Node services, from onboarding flows to portfolio tools.',
+    skills: [
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Go',
+      'Node.js',
+      'Express.js',
+      'PostgreSQL',
+      'Redis',
+      'Tailwind CSS',
+    ],
+    paragraphs: [
+      'As founding engineer at Trikona I own the product systems behind a construction talent network aimed at 5K+ users: professional identity, profiles, resumes, credentials, and role-based onboarding for professionals, students, corporates, colleges, SMEs, and administrators. LinkedIn onboarding and Digital Walk-In hiring cover application, shortlisting, scheduling, and structured interview rounds. Bridge APIs keep products, memberships, job permissions, learning access, and entitlements aligned to one source of truth. The Go services use clean architecture, JWT, and role checks; the React and TypeScript client uses Redux Toolkit and RTK Query.',
+      'At Truemates I built the production dating backend with Node.js, Express.js, Sequelize, PostgreSQL, and Redis: matchmaking, activity tracking, SalesOps, gifting, reviews, and invitations. Apple and Google subscription webhooks use the official verification libraries, so renewals no longer depend on a paid third-party validator. At FlairX I raised interview capacity from 8 to 40+ concurrent sessions, cut candidate wait times by 75%, and shipped benchmark APIs covering every active job posting.',
+      'StockCentral is the same shape of work as a personal product: React screens, an Express API, and a PostgreSQL model for uploads, stocks, sectors, CSV ingest, validation, search, and filtering. Earlier services — Pollyglot on Cloudflare, MovieFlex on Spring Boot and Kafka, and this portfolio — are where I practiced splitting a UI, an API, and a data store without losing the path a user actually takes.'
     ]
   },
   {
     icon: FaCloud,
     iconColor: 'text-blue-500',
     title: 'Cloud & DevOps',
-    description: 'Skilled in deploying and managing applications in cloud environments with CI/CD pipelines.',
+    description: 'Cloud Run, AWS serverless, Cloudflare edge, and CI/CD used to ship and recover production systems.',
     skills: [
+      'Google Cloud',
       'AWS',
-      'GCP',
       'Cloudflare',
       'Docker',
-      'Kubernetes',
-      'CI/CD',
       'GitHub Actions',
-      'Serverless',
-      'Terraform',
-      'PostgreSQL'
+      'Linux',
+      'Nginx',
     ],
     paragraphs: [
-      'I have extensive hands-on experience architecting, deploying, and optimizing scalable cloud-based systems across AWS, Google Cloud Platform (GCP), and Cloudflare. At FlairX, I architected structured logging pipelines and enabled archival to AWS S3, significantly improving backend observability. I also addressed infrastructure risks by diagnosing TypeORM schema issues that affected production data. While at TrueMates, I automated deployment pipelines using GitHub Actions and GCP’s App Engine, handling CI/CD for multiple backend services and managing PostgreSQL via GCP SQL. I also leveraged Cloud Storage for hosting user-uploaded media and integrated Firebase Authentication for scalable user management.',
-      `My personal projects further showcase my cloud proficiency. In Pollyglot, I built a real-time translation app using Cloudflare Workers and Cloudflare AI Gateway for rate-limiting and caching API calls to Hugging Face. I automated deployment via Cloudflare Pages and integrated a CI/CD pipeline for rapid frontend updates. In LambdaVision, I implemented a fully serverless architecture on AWS using Lambda functions to split, analyze, and manage video files stored on S3, demonstrating advanced use of event-driven architectures. For CloudFace, I built a dynamic auto-scaling system with EC2, S3, and SQS to process facial recognition requests in a distributed fashion, ensuring fault tolerance and performance. Across projects, I've consistently delivered resilient, cost-efficient infrastructure using Docker, CI/CD pipelines, and cloud-native tooling tailored to workload needs.`,
+      'At Trikona I containerized a WordPress multisite across PHP-FPM, Nginx, MariaDB, Redis, and WP-CLI. Bind-mounted local development plus GitHub Actions images published to GHCR cut full production restoration time by about 80%. A separate Dockerized remote environment, with isolated Git worktrees, lets coding agents implement and validate against a realistic stack while people review from any device. At DaVita I worked through IAM, deployment, and API integration blockers with frontend, BFF, and DevOps so an Agent Engine prototype could reach Alpha, and I load-tested the AI API until it held 500+ concurrent users.',
+      'At 85SIXTY, CDC-style Cloud Run ingestion from Azure MSSQL into BigQuery dropped pipeline runtime from about 45 minutes to about 10 and memory from 8 GB to 2 GB. Reporting fans out through Pub/Sub to Cloud Run workers, with Neon locking, retries, backoff, and dead-letter queues so a message cannot run twice or disappear. Each client gets an isolated BigQuery dataset and pipeline. At Truemates, GitHub Actions deployed services to GCP, with Cloud SQL, Firestore, Firebase Authentication, and Cloud Storage holding production data and media.',
+      'SREAI splits the hot path and the heavy path: Cloudflare Workers, D1, and KV serve repository lookups at under 20 ms P99, while Lambda, S3, and SQS run indexing and log analysis. LambdaVision and CloudFace are the earlier serverless versions of that idea — Lambda and S3 for video frames, EC2, S3, and SQS for image recognition. FlairX logs land in S3 after Winston structures them, which cut debugging time by 40%.'
     ]
   },
-  
-  // {
-  //   icon: FaDatabase,
-  //   iconColor: 'text-green-500',
-  //   title: 'Database Management',
-  //   description: 'Proficient in designing and optimizing database systems for performance and scalability.',
-  //   skills: [
-  //     'PostgreSQL',
-  //     'MongoDB',
-  //     'Redis',
-  //     'SQL',
-  //     'Database Design',
-  //     'Performance Tuning',
-  //     'Data Modeling',
-  //     'ETL'
-  //   ],
-  //   paragraphs: [
-  //     'Designed and implemented efficient database schemas for both relational and NoSQL databases.',
-  //     'Optimized complex SQL queries and database performance through indexing and query optimization.',
-  //     'Implemented database migration strategies and version control for schema changes.',
-  //     'Worked with both SQL and NoSQL databases, choosing the right tool for specific use cases.'
-  //   ]
-  // },
-  // {
-  //   icon: FaServer,
-  //   iconColor: 'text-red-500',
-  //   title: 'Backend Development',
-  //   description: 'Specialized in building robust and scalable server-side applications.',
-  //   skills: [
-  //     'Go',
-  //     'Node.js',
-  //     'Python',
-  //     'Microservices',
-  //     'REST',
-  //     'gRPC',
-  //     'GraphQL',
-  //     'Message Queues'
-  //   ],
-  //   paragraphs: [
-  //     'Architected and implemented scalable microservices using Go and Node.js.',
-  //     'Designed and developed RESTful and GraphQL APIs following best practices.',
-  //     'Implemented message queue systems for asynchronous processing and event-driven architectures.',
-  //     'Ensured application security through proper authentication, authorization, and data validation.'
-  //   ]
-  // }
+  {
+    icon: FaDatabase,
+    iconColor: 'text-green-500',
+    title: 'Data Engineering',
+    description: 'CDC pipelines, read-optimized models, and query work that keep analytics and directories fast.',
+    skills: [
+      'PostgreSQL',
+      'BigQuery',
+      'Redis',
+      'Neon',
+      'Supabase',
+      'pgvector',
+      'SQL',
+    ],
+    paragraphs: [
+      'The 85SIXTY ingestion job is a CDC-style copy from Azure MSSQL into BigQuery. Reworking that path cut runtime from about 45 minutes to about 10 and the memory footprint from 8 GB to 2 GB, which is what made per-client Cloud Run pipelines practical. Neon holds the locks that keep the Pub/Sub reporting workers from double-processing a job. Vector search shows up again in SREAI, where Bedrock embeddings back repository lookup, and in Fashion Finder, where FAISS matches CLIP crops to a catalog.',
+      'On Trikona, discovery and search do not hit the transactional tables directly. Read-optimized profile models and CDC-style synchronization keep directory filters, recommendations, and listings off expensive joins. PostgreSQL is also the system of record for DaVita chatbot sessions, so a clinical conversation can be resumed and audited. At Truemates, Sequelize migrations and Cloud SQL kept the dating data model consistent across environments, with Redis in front of hot reads.',
+      'Earlier, at HERE Technologies, I clustered 7K+ EV GPS traces with DBSCAN and GeoPandas and surfaced 6+ candidate charging-station locations. Charging-data QA, synthetic data, and PostgreSQL tuning improved accuracy by 25%, completeness by 14%, and query response time by 35%. BuildSmartDB was the academic version of the same concern: fragment and replicate smart-building metrics so a query does not depend on one node.'
+    ]
+  },
 ];

@@ -2,20 +2,20 @@
   "education": [
     {
       "id": "edu-1",
-      "institution": "Arizona State University",
-      "degree": "M.Sc Computer Science",
+      "institution": "Arizona State University, Tempe",
+      "degree": "M.S. Computer Science",
       "dateRange": "Aug 2023 - May 2025",
-      "gpa": "4.00/4.00",
+      "gpa": "4.0/4.0",
       "description": [
         "Coursework: Cloud Computing, Semantic Web Mining, Topics in NLP, Distributed Software Development, Distributed Database Systems"
       ]
     },
     {
       "id": "edu-2",
-      "institution": "Birla Institute of Technology and Science, Pilani, India",
-      "degree": "B.E Electronics and Instrumentation",
+      "institution": "Birla Institute of Technology and Science, Hyderabad",
+      "degree": "B.E. Electronics and Instrumentation",
       "dateRange": "Aug 2019 - Jun 2023",
-      "gpa": "8.35/10",
+      "gpa": "8.35/10.0",
       "description": [
         "Coursework: Object Oriented Programming, Data Structures and Algorithms, Operating Systems, Machine Learning"
       ]
@@ -23,71 +23,86 @@
   ],
   "experience": [
     {
-      "id": "exp-6",
-      "designation": "AI Engineer Intern",
-      "company": "85Sixty",
-      "dateRange": "Jul 2025 - Present",
-      "shortDescription": "Contributing to Brandgravity, a conversational analytics platform for digital marketing managers, and building scalable AI-driven reporting and RAG capabilities.",
+      "id": "exp-davita",
+      "designation": "AI Engineer",
+      "company": "DaVita",
+      "dateRange": "Jan 2026 - Present",
+      "shortDescription": "Designing a nephrologist-facing clinical multi-agent chatbot, plus the evaluation, safety, and observability systems around it.",
+      "techStack": ["Python", "Streamlit", "PostgreSQL", "Google Cloud", "Google ADK", "OpenTelemetry"],
       "description": [
-        "Enhanced a Next.js + Vercel AI SDK chat application with multitenant organization splitting and a secure org selector, ensuring 100% client data isolation while enabling internal users to manage 15+ client datasets seamlessly",
-        "Automated weekly Slackbot reports via Cloud Run + Cloud Scheduler, integrating OpenAI and Slack SDKs; reduced manual reporting effort for internal teams by 50% and accelerated reporting by 2x",
-        "Improved prompting and RAG based context management pipelines, boosting response accuracy by 30% and increasing reliability of client-specific insights.",
-        "Built an evaluation & observability stack (OpenTelemetry tracing + Langfuse evals + in-app feedback) that made model accuracy measurable and cut the feedback→optimize→test cycle by 90%",
-        "Standardized data-pipeline packaging/deploys with GCP Artifact Registry images on Cloud Run, making new client datasets chat-ready in 15–30 minutes."
+        "Reduced AI evaluation feedback cycles by 90%+ with a repeatable evaluation framework: a custom Streamlit dashboard, LLM-as-judge scoring, and human-in-the-loop validation.",
+        "Reduced multi-agent workflow latency by 60% by instrumenting agent-level latency, token usage, execution metrics, and bottleneck dashboards.",
+        "Enabled reliable support for 500+ concurrent users by leading AI API load testing and fixing database contention, multi-worker write conflicts, and client SDK cold-start latency with process-safe writes and lower-level SDK integrations.",
+        "Designed the core orchestrator for a clinical multi-agent chatbot, routing queries to specialized domain agents based on intent, context, and downstream execution requirements.",
+        "Improved reliability and safety with structured input/output schemas, controlled tool calling, prompt and context engineering, standardized error codes, and callback-driven fallbacks, cutting error-detection turnaround from hours to minutes.",
+        "Implemented PostgreSQL-backed session persistence so historical chatbot sessions stay available for continuity, auditability, and compliance.",
+        "Prototyped workflows with Google ADK and GCP Agent Engine, and partnered with frontend, BFF, DevOps, and product teams to clear IAM, deployment, and API-integration blockers for Alpha."
       ]
-    },   
+    },
+    {
+      "id": "exp-4",
+      "designation": "Founding Engineer, Platform & AI",
+      "company": "Trikona",
+      "projectLink": "https://constructionlearning.net/",
+      "dateRange": "Jul 2025 - Present",
+      "shortDescription": "Leading platform architecture, delivery environments, and a multi-agent career advisor for a construction talent ecosystem.",
+      "techStack": ["Docker", "Nginx", "MariaDB", "Redis", "WordPress", "GitHub Actions", "React", "PostgreSQL"],
+      "description": [
+        "Cut full production restoration time by about 80% by containerizing the WordPress multisite stack across PHP-FPM, Nginx, MariaDB, Redis, and WP-CLI, with bind-mounted local development and GitHub Actions pipelines that publish immutable images to GHCR.",
+        "Built a VPS-hosted remote AI development environment with Dockerized stacks and isolated Git worktrees so coding agents can implement, test, and validate against a realistic environment while people supervise from any device.",
+        "Set up AI-assisted engineering review: daily code-change summaries, specialized performance and security reviewers, and continuously refined repository guardrails that feed recurring issues back to developers and coding agents.",
+        "Led technical direction across architecture, engineering standards, environments, CI/CD, performance, code review, and an AI-assisted SDLC, turning product priorities into executable plans.",
+        "Built core professional identity, profile, resume, credential, and role-based onboarding for professionals, students, corporates, colleges, SMEs, and administrators, designed for 5K+ users.",
+        "Designed read-optimized profile models and CDC-style synchronization so discovery and search stay separate from transactional data, reducing expensive joins for filtering, recommendations, and directories.",
+        "Engineered bridge APIs and canonical source-of-truth services that synchronize products, memberships, job permissions, learning access, and platform entitlements across modules.",
+        "Developed role-aware authentication, jobs, learning, membership, event, and recruitment workflows, including LinkedIn onboarding and Digital Walk-In hiring from application through structured interview rounds.",
+        "Spearheading Placement Season and a multi-agent AI Career Advisor that evaluates profiles, jobs, and courses against a unified skill-competency model for career guidance, job-fit, learning recommendations, and skill-gap analysis."
+      ]
+    },
+    {
+      "id": "exp-6",
+      "designation": "AI Engineer",
+      "company": "85SIXTY",
+      "dateRange": "Jul 2025 - Jan 2026",
+      "shortDescription": "Built a production AI agent platform for analytics chat, automated reporting, evaluation, observability, and multi-tenant data pipelines.",
+      "techStack": ["Next.js", "React", "Vercel AI SDK", "BigQuery", "Python", "Google Cloud", "Pub/Sub", "Neon", "Langfuse", "OpenTelemetry", "Slack"],
+      "description": [
+        "Designed and implemented a production AI agent platform spanning analytics chat, automated reporting, prompt management, evaluation, observability, and user-feedback workflows.",
+        "Built a full-stack analytics chatbot with Next.js, React, the Vercel AI SDK, and BigQuery, supporting natural-language queries, streaming responses, model selection, and secure tool-based data retrieval.",
+        "Developed a planner-analyzer-summarizer multi-agent architecture to improve the structure, reasoning, and reliability of answers to complex analytics questions.",
+        "Reduced data-pipeline runtime from about 45 minutes to about 10 minutes, and memory from 8 GB to 2 GB, with CDC-style Cloud Run ingestion from Azure MSSQL into BigQuery.",
+        "Architected a Pub/Sub fanout reporting system with Cloud Run workers, Neon DB locking, acknowledgements, retries, exponential backoff, and dead-letter queues to prevent duplicate execution.",
+        "Built Python reporting agents that wrote analytics reports to Cloud Storage, delivered formatted output through Slack Block Kit, and captured structured user feedback for later analysis.",
+        "Integrated Langfuse and OpenTelemetry for prompt versioning, tracing, evaluation, and observability, and stood up multi-tenant infrastructure with isolated BigQuery datasets and Cloud Run pipelines per client."
+      ]
+    },
     {
       "id": "exp-0",
       "designation": "Software Engineer Intern",
       "company": "FlairX",
       "dateRange": "Mar 2025 - May 2025",
-      "shortDescription": "Engineering scalable backend systems and APIs for interview benchmarking and scheduling.",
+      "shortDescription": "Scaled interview operations and hiring analytics, and made production debugging safer and faster.",
+      "techStack": ["TypeScript", "PostgreSQL", "Twilio", "SendGrid", "AWS S3", "TypeORM", "Zoom SDK"],
       "description": [
-        "Resolved a critical TypeORM migration issue causing silent column drops, preventing data loss across production tables.",
-        "Enabled multi-host scheduling to support 40+ concurrent interviews (Zoom SDK) per day, reducing wait times by 75%.",
-        "Implemented automated SMS (Twilio) and email (SendGrid) reminder jobs to notify candidates and interviewers of upcoming interviews, reducing no-shows and last-minute reschedules by 30%.",
-        "Developed backend APIs for a benchmark dashboard comparing candidate interviews across 100+ job postings.",
-        "Improved backend observability by implementing structured logging with Winston, reducing debug time by 40% and persisting logs to AWS S3 for long-term access.",
-        "Collaborated with cross-functional teams using JIRA and PostgreSQL to enhance platform performance."
+        "Scaled interview capacity from 8 to 40+ concurrent sessions and reduced candidate wait times by 75% with multi-host scheduling workflows.",
+        "Reduced interview no-shows and last-minute reschedules by 30% by automating SMS and email reminders with Twilio and SendGrid.",
+        "Built backend APIs for a benchmark analytics dashboard covering 100% of active job postings so recruiters can analyze interview and hiring performance.",
+        "Reduced debugging time by 40% with structured Winston logging and S3 log archival, and fixed a TypeORM migration defect that risked data loss across 10+ production tables."
       ]
     },
     {
       "id": "exp-1",
-      "designation": "Backend Developer Intern",
+      "designation": "Software Engineer Intern",
       "company": "Truemates",
       "projectLink": "https://truemates.co/",
-      "dateRange": "Jun 2024 - Feb 2025",
-      "shortDescription": "Developing and deploying backend systems for a scalable Christian dating platform, enhancing user features and automating deployment processes.",
+      "dateRange": "Jun 2024 - Mar 2025",
+      "shortDescription": "Built backend services for a production dating platform, including subscriptions, matchmaking, and GCP delivery.",
+      "techStack": ["Node.js", "Express.js", "Sequelize", "PostgreSQL", "Redis", "Firebase", "Google Cloud"],
       "description": [
-        "Engineered and deployed backend modules using Express.js, scaling server-side applications to handle 10,000 users and reducing response time by 40%.",
-        "Managed deployment processes for two services on Google App Engine with Unix sockets, using CI/CD pipelines on GitHub to automate staging and production deployments.",
-        "Orchestrated PostgreSQL database migrations, achieving 100% data integrity and reducing downtime by 40%.",
-        "Implemented webhooks to handle subscription renewals for App Store and Google Play subscriptions, eliminating reliance on third-party tools and reducing 100% transaction fees.",
-        "Developed and deployed backend modules for a scalable Christian dating app, enhancing features like matchmaking, activity tracking, and subscription management.",
-        "Created the Activity feature to track in-app activities and display them to users, enhancing engagement and transparency.",
-        "Built the SalesOps feature to sell one-time bundles by combining items from the in-app product inventory, integrating payment workflows efficiently.",
-        "Enhanced the matchmaking system with exact and mostCompatible matching features, improving match accuracy and user satisfaction.",
-        "Contributed to smaller features that enriched user experience, including gifting, match guessing, reviews, invites, and more.",
-        "Currently working on an AI-feed bot that posts routine content with topic selection based on user interaction, leveraging AI to improve engagement.",
-        "Implemented a CI/CD pipeline using GitHub Actions to automate deployment of services to Google Cloud Platform\u2019s App Engine (GAE).",
-        "Utilized Sequelize ORM to maintain database uniformity and integrity across development, staging, and production environments.",
-        "Managed databases on GCP SQL with PostgreSQL servers and utilized GCP Cloud Storage for hosting user media files.",
-        "Ensured version control and collaborative development using Git, adhering to best practices in branching and code reviews.",
-        "Integrated Firebase authentication for secure user sign-in and token management, with user data stored in Firestore."
-      ]
-    },
-    {
-      "id": "exp-4",
-      "designation": "Software Developer",
-      "company": "Trikona Conskill",
-      "projectLink": "https://constructionlearning.net/",
-      "dateRange": "Jul 2024 – Apr 2025",
-      "shortDescription": "Led React/WordPress development of core platform modules and managed a 5-engineer team, delivering scalable, user-centric features.",
-      "description": [
-        "Designed end-to-end feature flows and authored SRS documentation for 5+ core modules (user management, job board, LMS, membership, and directory), accelerating development velocity by 30%.",
-        "Developed directory and user management UIs in React, reducing user onboarding and profile completion time by 45% through streamlined form flows and real-time validation.",
-        "Established CI review pipelines and coding standards that decreased post-deployment bugs by 35% and improved feature delivery consistency across sprints.",
-        "Led a 5-member engineering team, resolving critical bugs 40% faster and sustaining 99.9% uptime across production services during peak user activity."
+        "Developed backend services with Node.js, Express.js, Sequelize, PostgreSQL, Redis, Firebase, and Google Cloud Platform.",
+        "Built Apple and Google subscription webhooks with official verification libraries, removing third-party subscription-validation costs while supporting secure auto-renewal.",
+        "Shipped matchmaking, activity tracking, SalesOps, gifting, reviews, invitations, and related product capabilities across the platform backend.",
+        "Established GitHub Actions CI/CD for GCP deployments and managed production data and media with Cloud SQL, Firestore, Firebase Authentication, and Cloud Storage."
       ]
     },
     {
@@ -95,13 +110,11 @@
       "designation": "Data Science Intern",
       "company": "HERE Technologies",
       "dateRange": "Jan 2023 - Jun 2023",
-      "shortDescription": "Conducted comprehensive data analysis and optimization for EV behavior datasets, enhancing data quality and system performance.",
+      "shortDescription": "Used EV GPS traces and charging data to surface station locations and improve dataset quality and query speed.",
+      "techStack": ["Python", "PostgreSQL", "Pandas", "scikit-learn"],
       "description": [
-        "Analyzed data to pinpoint significant EV behavior locations from 3+ vast location datasets.",
-        "Conducted data quality assurance and corrected inconsistencies, improving data accuracy by 25%.",
-        "Launched AWS RDS Postgres instances, conducted query performance analysis and optimization, improving response time by 35%.",
-        "Simulated a comprehensive 6-month EV charging station dataset, showcasing data versatility and scalability.",
-        "Performed data analysis and pipelining using AWS RDS, PostgreSQL, and Python, enhancing data processing and preparing datasets for machine learning applications."
+        "Clustered 7K+ EV GPS traces with DBSCAN and GeoPandas to identify high-traffic route hubs and surface 6+ candidate charging-station locations.",
+        "Improved dataset accuracy by 25%, completeness by 14%, and PostgreSQL query response time by 35% through charging-data QA, synthetic data generation, and database performance optimization."
       ]
     },
     {
@@ -109,55 +122,120 @@
       "designation": "Interim Engineering Intern",
       "company": "Qualcomm",
       "dateRange": "May 2022 - Jul 2022",
-      "shortDescription": "Developed automated systems for chipset design tracing and validation, significantly improving efficiency and error detection.",
+      "shortDescription": "Automated chipset design path tracing and pin-level validation, with a GUI for spotting discrepancies.",
       "description": [
-        "Engineered an automated chipset design tracing and validation system, reducing manual validation time by 50%.",
-        "Introduced a source-to-target path-tracing algorithm with pin path validation at every step, increasing error detection rate by 40%.",
-        "Crafted a GUI interface enabling rapid identification of errors and discrepancies, improving debugging speed by 35%."
+        "Reduced chipset-design validation time by 50% by engineering an automated source-to-target path-tracing and validation system.",
+        "Improved error-detection efficiency by 40% and debugging speed by 35% through pin-level traversal validation and a GUI for identifying design discrepancies."
       ]
     }
   ],
   "skills": {
+    "aiEngineering": [
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "RAG",
+      "Structured Tool Calling",
+      "Prompt & Context Engineering",
+      "LLM Evaluation",
+      "LLM-as-Judge",
+      "Human-in-the-Loop",
+      "MCP",
+      "Vector Search",
+      "Langfuse",
+      "OpenTelemetry",
+      "Google ADK",
+      "Vercel AI SDK",
+      "OpenAI SDK"
+    ],
     "programmingLanguages": [
-      "C/C++",
-      "Go",
-      "HTML/CSS",
-      "Java",
-      "JavaScript",
-      "PHP",
       "Python",
-      "TypeScript"
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "SQL"
     ],
     "frameworks": [
-      "ExpressJs",
-      "Gin",
+      "React",
       "Next.js",
-      "NodeJs",
-      "ReactJs",
-      "Sequelize ORM",
-      "Springboot",
-      "Tailwind CSS"
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Streamlit"
     ],
-    "databases": ["MongoDB", "MySQL", "PostgreSQL"],
-    "cloudPlatforms": ["EC2", "S3", "Lambda", "GAE", "GCF", "Cloudflare Workers", "AI Gateway", "Firebase"],
-    "tools": [
-      "Git",
+    "databases": [
+      "PostgreSQL",
+      "BigQuery",
+      "Redis",
+      "Firestore",
+      "Neon",
+      "Supabase",
+      "pgvector",
+      "MongoDB",
+      "MySQL"
+    ],
+    "cloudPlatforms": [
+      "Google Cloud",
+      "Cloud Run",
+      "Vertex AI",
+      "Pub/Sub",
+      "Cloud Storage",
+      "Cloud SQL",
+      "AWS",
+      "AWS Lambda",
+      "Amazon S3",
+      "Amazon SQS",
+      "Amazon EC2",
+      "Amazon RDS",
+      "Cloudflare Workers",
+      "Cloudflare Pages",
       "Docker",
       "GitHub Actions",
-      "Postman",
-      "JIRA",
-      "VSCode",
-      "Bitrix24"
+      "Linux",
+      "Nginx"
     ],
-    "integrations": ["Zoom SDK", "Twilio", "SendGrid", "Mailjet", "OpenAI API"]
+    "tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Postman",
+      "JIRA"
+    ],
+    "integrations": [
+      "Slack",
+      "Twilio",
+      "SendGrid",
+      "Zoom SDK",
+      "Firebase"
+    ]
   },
   "projects": [
+    {
+      "id": "sreai",
+      "title": "SREAI",
+      "dateRange": "2025",
+      "description": [
+        "AI SRE platform for repository onboarding, semantic code search, automated docs, log analysis, and root-cause reports."
+      ],
+      "techStack": [
+        "React",
+        "Cloudflare Workers",
+        "Cloudflare D1",
+        "AWS Lambda",
+        "Amazon S3",
+        "Amazon SQS",
+        "Amazon Bedrock"
+      ],
+      "sourceCodeUrl": "",
+      "liveSiteUrl": ""
+    },
     {
       "id": "fashion-finder",
       "title": "Fashion Finder",
       "dateRange": "Jun 2025 – Jul 2025",
       "description": [
-        "Video pipeline that spots fashion items, matches them to a product catalog with CLIP-FAISS, and tags overall style vibes."
+        "Detects fashion items in video, matches them to a catalog with CLIP and FAISS, and classifies overall style from captions."
       ],
       "techStack": [
         "Python",
@@ -165,33 +243,34 @@
         "YOLOv8",
         "CLIP",
         "FAISS",
-        "HuggingFace"
+        "OpenCV",
+        "Hugging Face"
       ],
       "sourceCodeUrl": "https://github.com/hacKRD0/fashion-finder",
       "liveSiteUrl": ""
-    },   
+    },
     {
       "id": "disease-diagnosis",
       "title": "Disease Diagnosis Fine-Tuning",
       "dateRange": "Apr 2025 – Jun 2025",
       "description": [
-        "LoRA-tuned DistilBERT diagnoses diseases from symptom text using HuggingFace Transformers."
+        "LoRA-tuned DistilBERT diagnoses diseases from symptom text using Hugging Face Transformers."
       ],
       "techStack": [
         "Python",
-        "HuggingFace",
+        "Hugging Face",
         "LoRA",
         "Pandas"
       ],
       "sourceCodeUrl": "https://github.com/hacKRD0/disease-diagnosis-finetuning",
       "liveSiteUrl": ""
-    },     
+    },
     {
       "id": "trikona",
       "title": "Trikona",
       "dateRange": "Mar 2025 - Jun 2025",
       "description": [
-        "Role-based network linking students, pros, corporates, and colleges via LinkedIn login, directories and profiles."
+        "Role-based talent network for students, professionals, corporates, and colleges, with LinkedIn onboarding, directories, and profiles."
       ],
       "techStack": [
         "Go",
@@ -209,15 +288,14 @@
       "title": "Pollyglot",
       "dateRange": "Jan 2025 - Feb 2025",
       "description": [
-        "Chatbot app for real-time translations from English to Spanish, French, and Japanese."
+        "Real-time translator from English to Spanish, French, and Japanese, served from Cloudflare Workers."
       ],
       "techStack": [
-        "HuggingFace",
+        "Hugging Face",
         "React",
-        "TailwindCSS",
-        "Cloudflare",
-        "Cloudflare-workers",
-        "Cloudflare-pages"
+        "Tailwind CSS",
+        "Cloudflare Workers",
+        "Cloudflare Pages"
       ],
       "sourceCodeUrl": "https://github.com/hacKRD0/Pollyglot",
       "liveSiteUrl": "https://pollyglot-esf.pages.dev/"
@@ -227,15 +305,15 @@
       "title": "StockCentral",
       "dateRange": "Nov 2024 - Present",
       "description": [
-        "Consolidate and track your stocks portfolio from multiple brokerages in a single platform."
+        "Full-stack portfolio manager for uploads, stock and sector organization, CSV processing, search, and filtering."
       ],
       "techStack": [
-        "NodeJs",
         "React",
-        "TailwindCSS",
-        "AWS",
+        "Express.js",
+        "PostgreSQL",
         "Docker",
-        "PostgreSQL"
+        "AWS EC2",
+        "GitHub Actions"
       ],
       "sourceCodeUrl": "https://github.com/hacKRD0/StockCentral",
       "liveSiteUrl": "https://portfolio.rajavaram.com"
@@ -245,16 +323,15 @@
       "title": "LambdaVision",
       "dateRange": "May 2024 - Aug 2024",
       "description": [
-        "An app for detecting faces in a video, built using serverless architecture on Amazon Web Services."
+        "Serverless face detection for short videos, with a Next.js client and an AWS Lambda and S3 processing pipeline."
       ],
       "techStack": [
         "Python",
         "Next.js",
         "TypeScript",
-        "TailwindCSS",
-        "AWS",
-        "Git",
-        "Docker"
+        "Tailwind CSS",
+        "AWS Lambda",
+        "Amazon S3"
       ],
       "sourceCodeUrl": "https://github.com/hacKRD0/LambdaVision",
       "liveSiteUrl": ""
@@ -264,9 +341,9 @@
       "title": "Personal Portfolio",
       "dateRange": "Dec 2024 - Jan 2025",
       "description": [
-        "Showcase your skills and projects with this minimalistic portfolio built using React and TypeScript."
+        "This site: a typed React portfolio for projects, experience, and competencies, deployed as a static app."
       ],
-      "techStack": ["React", "TypeScript", "Javascript", "TailwindCSS"],
+      "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS"],
       "sourceCodeUrl": "https://github.com/hacKRD0/dev-portfolio",
       "liveSiteUrl": "https://keshava.rajavaram.com"
     },
@@ -275,9 +352,9 @@
       "title": "User Access Plugin",
       "dateRange": "Oct 2023 - Dec 2023",
       "description": [
-        "Developed a custom wordpress plugin for LinkedIn-based user registration and authentication."
+        "WordPress plugin that finishes LinkedIn sign-in with role selection before a user can enter the site."
       ],
-      "techStack": ["PHP", "Javascript"],
+      "techStack": ["PHP", "JavaScript", "WordPress"],
       "sourceCodeUrl": "https://github.com/hacKRD0/WP-User-Access-Plugin",
       "liveSiteUrl": "https://www.dev1.constructionlearning.net/linkedin-login/"
     },
@@ -286,7 +363,7 @@
       "title": "BuildSmartDB",
       "dateRange": "Oct 2023 - Dec 2023",
       "description": [
-        "Designed a distributed database system to store and analyze smart building metrics."
+        "Distributed database for smart-building metrics, with fragmentation and replication across PostgreSQL and MongoDB."
       ],
       "techStack": ["Python", "PostgreSQL", "MongoDB"],
       "sourceCodeUrl": "https://github.com/hacKRD0/BuildSmartDB",
@@ -297,9 +374,9 @@
       "title": "CloudFace",
       "dateRange": "Feb 2024 - Apr 2024",
       "description": [
-        "An app to recognise faces from images using Flask and AWS EC2."
+        "Cloud face recognition on Flask, with EC2 workers, S3 storage, and SQS between the web and app tiers."
       ],
-      "techStack": ["Flask", "Python", "AWS"],
+      "techStack": ["Flask", "Python", "AWS EC2", "Amazon S3", "Amazon SQS"],
       "sourceCodeUrl": "https://github.com/hacKRD0/CloudFace",
       "liveSiteUrl": ""
     },
@@ -308,9 +385,9 @@
       "title": "MovieFlex",
       "dateRange": "Dec 2024 - Feb 2024",
       "description": [
-        "A microservices architecture backend for a movie booking platform."
+        "Movie-booking backend split into Spring Boot services, with MySQL, Kafka, and Docker."
       ],
-      "techStack": ["SpringBoot", "MySQL", "Kafka", "Docker", "AWS"],
+      "techStack": ["Spring Boot", "MySQL", "Kafka", "Docker", "AWS"],
       "sourceCodeUrl": "https://github.com/hacKRD0/MovieFlex",
       "liveSiteUrl": ""
     },
@@ -319,27 +396,33 @@
       "title": "StockSentimentAI",
       "dateRange": "Mar 2024 - May 2024",
       "description": [
-        "A machine learning model using GPT-2 to predict stock trends based on news sentiment analysis."
+        "GPT-2 classifier that scores news sentiment and combines it with market features to estimate stock trend."
       ],
-      "techStack": ["Python", "HuggingFace"],
+      "techStack": ["Python", "Hugging Face", "Pandas"],
       "sourceCodeUrl": "https://github.com/hacKRD0/StockSentimentAI",
       "liveSiteUrl": ""
     }
   ],
   "certifications": [
     {
-      "id": "cert-4",
-      "title": "Building a RAG Agents with LLMs",
-      "issuer": "NVIDIA Deep Learning Academy",
-      "dateIssued": "Jan 2025",
-      "credentialUrl": "https://learn.nvidia.com/certificates?id=VarWgTZtQlGL3n9qZjEV4w"
-    },
-    {
       "id": "cert-1",
       "title": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services",
       "dateIssued": "Aug 2024",
       "credentialUrl": "https://www.credly.com/badges/60af99bd-d35a-4df0-859f-a0e25c81499d/linked_in_profile"
+    },
+    {
+      "id": "cert-5",
+      "title": "AI Engineer Learning Path",
+      "issuer": "Scrimba",
+      "dateIssued": ""
+    },
+    {
+      "id": "cert-4",
+      "title": "Building RAG Agents with LLMs",
+      "issuer": "NVIDIA Deep Learning Academy",
+      "dateIssued": "Jan 2025",
+      "credentialUrl": "https://learn.nvidia.com/certificates?id=VarWgTZtQlGL3n9qZjEV4w"
     },
     {
       "id": "cert-2",
@@ -354,67 +437,6 @@
       "issuer": "Google Cloud Skills Boost",
       "dateIssued": "Jan 2024",
       "credentialUrl": "https://www.cloudskillsboost.google/public_profiles/64d5b32a-b9dd-49e1-9b5d-0c629d9845b0"
-    }
-  ],
-  "competencies": [
-    {
-      "title": "Full-Stack Development",
-      "description": "Proficient in building scalable full-stack web applications with modern frameworks and technologies.",
-      "skills": [
-        "Go",
-        "TypeScript",
-        "Node.js",
-        "Express.js",
-        "Flask",
-        "SpringBoot",
-        "React",
-        "Redux Toolkit",
-        "Tailwind CSS"
-      ],
-      "relatedExperience": ["Truemates", "Trikona Conskill"],
-      "projects": ["Personal Portfolio", "StockCentral", "MovieFlex"]
-    },
-    {
-      "title": "Data Engineering and Analysis",
-      "description": "Expertise in analyzing, modeling, and processing large datasets to extract insights and support decision-making.",
-      "skills": ["Python", "PostgreSQL", "MongoDB", "AWS RDS"],
-      "relatedExperience": ["HERE Technologies", "Qualcomm"],
-      "projects": ["BuildSmartDB"]
-    },
-    {
-      "title": "Cloud and DevOps",
-      "description": "Skilled in deploying and managing applications in cloud environments with CI/CD pipelines.",
-      "skills": ["AWS", "GCP", "Docker", "GitHub Actions"],
-      "relatedExperience": ["Truemates"],
-      "certifications": [
-        "AWS Certified Cloud Practitioner",
-        "Google Generative AI Learning Path"
-      ],
-      "projects": ["LambdaVision", "CloudFace", "MovieFlex"]
-    },
-    {
-      "title": "Artificial Intelligence and Machine Learning",
-      "description": "Developed intelligent systems leveraging AI and ML for practical applications.",
-      "skills": ["Python", "Flask", "HuggingFace Models"],
-      "relatedExperience": ["Truemates"],
-      "certifications": [
-        "NVIDIA Deep Learning Academy: Building RAG Agents with LLMs"
-      ],
-      "projects": ["CloudFace"]
-    },
-    {
-      "title": "Database Management",
-      "description": "Advanced knowledge in designing, optimizing, and maintaining databases.",
-      "skills": ["PostgreSQL", "MySQL", "MongoDB"],
-      "relatedExperience": ["HERE Technologies", "Truemates"],
-      "projects": ["BuildSmartDB", "StockCentral"]
-    },
-    {
-      "title": "Software Engineering Practices",
-      "description": "Strong understanding of software engineering principles, version control, and agile methodologies.",
-      "skills": ["Git", "JIRA", "Bitrix24"],
-      "relatedExperience": ["Trikona Conskill"],
-      "certifications": ["Google Beginner: Generative AI Learning Path"]
     }
   ]
 }

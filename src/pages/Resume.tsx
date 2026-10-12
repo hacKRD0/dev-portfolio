@@ -68,7 +68,7 @@ const Resume: React.FC = () => {
             </div>
           </div>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-center max-w-3xl mx-auto">
-            Over the years I've had the opportunity to work with the following organizations:
+            Production engineering across healthcare, analytics, talent technology, and startups.
           </p>
           <div className="space-y-6">
             {experience.map((exp) => (

@@ -3,6 +3,7 @@
 import React from 'react';
 import { ExperienceItem } from '../types/types';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import TechPill from './TechPill';
 
 interface ExperienceBlockProps {
   experience: ExperienceItem;
@@ -58,6 +59,16 @@ const ExperienceBlock: React.FC<ExperienceBlockProps> = ({ experience }) => {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {experience.techStack && experience.techStack.length > 0 && (
+        <div className="px-5 pb-4">
+          <div className="flex flex-wrap gap-2">
+            {experience.techStack.map((tech) => (
+              <TechPill key={tech} tech={tech} />
+            ))}
+          </div>
         </div>
       )}
 

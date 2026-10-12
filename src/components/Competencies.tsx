@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { competencies } from '../data/competenciesData';
+import TechPill from './TechPill';
 
 const CompetenciesSection: React.FC = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const CompetenciesSection: React.FC = () => {
 
   return (
     <section className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {competencies.map((competency, index) => {
           const IconComponent = competency.icon;
           return (
@@ -37,13 +38,8 @@ const CompetenciesSection: React.FC = () => {
 
               {/* Skills */}
               <div className="mt-4 flex flex-wrap justify-center gap-2 w-full">
-                {competency.skills.slice(0, 4).map((skill, idx) => (
-                  <span 
-                    key={idx}
-                    className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs text-gray-700 dark:text-gray-300"
-                  >
-                    {skill}
-                  </span>
+                {competency.skills.slice(0, 4).map((skill) => (
+                  <TechPill key={skill} tech={skill} />
                 ))}
                 {competency.skills.length > 4 && (
                   <span className="text-xs text-gray-500 dark:text-gray-400 self-center">

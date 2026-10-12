@@ -1,7 +1,7 @@
 import { Container, Title, Box, Tag } from './shared';
 
 export default function StackBadges({
-  tech = ['React', 'Node', 'Go', 'PostgreSQL', 'AWS', 'GCP'],
+  tech = ['Python', 'TypeScript', 'React', 'Next.js', 'Go', 'PostgreSQL', 'GCP', 'AWS'],
 }: { tech?: string[] }) {
   return (
     <Container>
