@@ -1,5 +1,6 @@
 import React from 'react';
 import { Competency } from '../data/competenciesData';
+import TechPill from './TechPill';
 
 interface CompetencyDetailProps {
   competency: Competency;
@@ -29,13 +30,13 @@ const CompetencyDetail: React.FC<CompetencyDetailProps> = ({ competency }) => {
           Key Skills
         </h2>
         <div className="flex flex-wrap justify-center gap-3 mb-6">
-          {competency.skills.map((skill, index) => (
-            <span
-              key={index}
-              className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
-            >
-              {skill}
-            </span>
+          {competency.skills.map((skill) => (
+            <TechPill
+              key={skill}
+              tech={skill}
+              size="md"
+              className="bg-blue-50 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 border-blue-100 dark:border-blue-800"
+            />
           ))}
         </div>
       </div>

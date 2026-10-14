@@ -1,9 +1,42 @@
 {
   "projectsData": [
     {
+      "id": "sreai",
+      "title": "SREAI",
+      "shortDescription": "AI SRE platform for GitHub onboarding, semantic code search, automated documentation, log analysis, and root-cause reports.",
+      "imagesCount": 0,
+      "paragraphs": [
+        "SREAI is an AI-powered site-reliability platform for bringing a GitHub repository online, searching it semantically, generating documentation, and turning logs into a root-cause report. The product surface is a React app. Repository metadata and edge lookups sit on Cloudflare Workers, D1, and KV, while heavier indexing and analysis run on AWS Lambda, S3, and SQS, with Amazon Bedrock providing embeddings and generation.",
+        "Repository indexing embeds code with Bedrock and makes a medium-sized repository searchable in under 3 minutes. Edge-backed repository lookups stay under 20 ms at P99, so navigation and retrieval do not wait on the indexing path.",
+        "Log-to-RCA is an asynchronous pipeline. Events land on SQS, Lambda workers run vector search, and retries, idempotency keys, and dead-letter queues keep the pipeline from dropping work silently. Actionable root-cause reports come back in under 60 seconds.",
+        "The same Bedrock path writes repository documentation and architecture diagrams in Markdown and Mermaid. That generated context is aimed at cutting new-developer onboarding time by about 40%."
+      ],
+      "summary": [
+        "Built an AI SRE platform with React, Cloudflare Workers, D1, and KV, plus AWS Lambda, S3, SQS, and Amazon Bedrock.",
+        "Indexed repositories with Bedrock embeddings so medium-sized repos are searchable in under 3 minutes, with edge lookups under 20 ms P99.",
+        "Automated log-to-root-cause analysis with SQS, Lambda, vector search, retries, idempotency, and dead-letter queues, returning reports in under 60 seconds with zero silent drops.",
+        "Generated repository documentation and architecture diagrams in Markdown and Mermaid, targeting about a 40% reduction in new-developer onboarding time."
+      ],
+      "techStack": [
+        "React",
+        "Cloudflare Workers",
+        "Cloudflare D1",
+        "Cloudflare KV",
+        "AWS Lambda",
+        "Amazon S3",
+        "Amazon SQS",
+        "Amazon Bedrock",
+        "Vector Search",
+        "Markdown",
+        "Mermaid"
+      ],
+      "githubUrl": "",
+      "liveSiteUrl": ""
+    },
+    {
       "id": "fashion-finder",
       "title": "Fashion Finder",
-      "shortDescription": "End-to-end computer-vision pipeline that detects fashion items in videos, matches them to a catalog with CLIP + FAISS, and classifies overall style vibes.",
+      "shortDescription": "Computer-vision pipeline that detects fashion items in video with YOLOv8, matches crops to a catalog with CLIP and FAISS, and classifies style from captions.",
       "imagesCount": 0,
       "paragraphs": [
         "Fashion Finder is an automated pipeline that ingests fashion-centric videos and produces structured insights: it pinpoints every clothing, shoe, bag, or accessory in each frame, pairs those items with the closest products in a catalog, and tags the content with high-level \"vibes\" such as streetwear or business-casual.",
@@ -18,7 +51,8 @@
         "Applied BART zero-shot classification to label content with fashion \"vibes\".",
         "Provided CLI for single or batch video processing, frame-skip tuning, and per-component runs.",
         "Emitted debug crops, matched product images, and structured JSON for downstream consumption.",
-        "Optimized throughput with batched inference and configurable thresholds for confidence and IoU."
+        "Optimized throughput with frame skipping, batched inference, and configurable confidence and IoU thresholds.",
+        "Wrote matched image crops and structured JSON debug output so detections and catalog matches can be reviewed without rerunning the full video."
       ],
       "techStack": [
         "Python",
@@ -71,10 +105,10 @@
     {
       "id": "trikona-user-management",
       "title": "Trikona - User Management",
-      "shortDescription": "A full-stack authentication and user management system with LinkedIn OAuth, JWT, and role-based routing.",
+      "shortDescription": "Authentication and profile system for Trikona roles, with LinkedIn onboarding, JWT sessions, and access designed around a 5K+ user talent network.",
       "imagesCount": 3,
       "paragraphs": [
-        "The User Management Service handles registration, login, and profile management for all user roles (Student, Professional, Corporate, College) in the Trikona platform. Built with Go on the backend using clean architecture, it supports secure password-based authentication, LinkedIn OAuth login, email verification, and password reset flows. JWT tokens are used for session management and role-based access control.",
+        "The User Management Service handles registration, login, and profile management for Trikona roles: students, professionals, corporates, colleges, SMEs, and administrators. Built with Go on the backend using clean architecture, it supports password authentication, LinkedIn onboarding, email verification, and password reset. JWT tokens carry the session and role used for access control. The model is shaped for a talent network expected to pass 5K users.",
         "The frontend, developed in React with TypeScript and Redux Toolkit, provides a responsive and user-friendly interface for login, registration, and profile editing. It handles client-side validation, toast-based feedback, and form flows depending on the selected role. Authentication state is managed with RTK Query and persisted across sessions.",
         "Protected routes ensure that users can only access pages relevant to their roles. The LinkedIn OAuth flow integrates a post-login profile completion form for selecting the appropriate role before granting access.",
         "The service includes error boundary components, loading states, and structured toast notifications. Mailjet is used for sending transactional emails for account verification and password recovery. All interactions are API-driven with consistent error handling on both client and server."
@@ -107,10 +141,10 @@
     {
       "id": "trikona-directory-service",
       "title": "Trikona - User Directory",
-      "shortDescription": "A modular directory service for discovering and managing user profiles across roles with advanced filtering and pagination.",
+      "shortDescription": "Directory for discovering Trikona profiles, with read-optimized models, CDC-style sync, and filters for skills, location, and industry.",
       "imagesCount": 3,
       "paragraphs": [
-        "The Directory Service enables viewing, searching, and filtering user profiles categorized as Students, Professionals, Corporates, and Colleges. On the backend, it follows clean architecture in Go with separate domains and repositories for each role. Filtering logic supports parameters like skills, experience, education, industry, location, and more, all handled via REST API endpoints with pagination and caching.",
+        "The Directory Service is how people find students, professionals, corporates, and colleges on Trikona. The Go backend keeps a domain and repository per role. Read-optimized profile models and CDC-style synchronization keep high-frequency discovery and search off the transactional tables, which avoids expensive joins when the directory filters, recommends, or lists people. Filters cover skills, experience, education, industry, location, and related fields, exposed as paginated REST endpoints with caching.",
         "Master data such as countries, states, skills, industries, and branches are managed centrally and exposed through APIs. The backend uses GORM with PostgreSQL, supports dynamic querying, and provides robust error handling with custom error types and logs.",
         "The frontend is built with React and TypeScript using Redux Toolkit and RTK Query for state and data management. It features a FilterSidebar component that allows users to refine search results by multi-select dropdowns powered by searchable APIs (e.g., `getStateMasters`, `getSkillMasters`).",
         "Each directory page is optimized for performance with lazy loading of profile cards, debounced filter changes, and responsive layouts. Users can view rich profile details, search using compound filters, and navigate paginated results. All filters are synced with query params to ensure deep linking and consistent UX."
@@ -172,31 +206,32 @@
     {
       "id": "stockcentral",
       "title": "StockCentral",
-      "shortDescription": "A portfolio management app with full-stack architecture.",
+      "shortDescription": "Portfolio manager for uploads, stock and sector organization, CSV processing, validation, search, and filtering, deployed with Docker and GitHub Actions.",
       "imagesCount": 19,
       "paragraphs": [
-        "StockCentral is a comprehensive portfolio management tool developed to streamline investment tracking and analysis. This full-stack application was designed with scalability and user experience in mind.",
-        "The backend, built with Express.js, provided a robust API layer for data manipulation and retrieval. PostgreSQL was chosen as the database to ensure reliable and efficient storage of large datasets.",
-        "On the frontend, React.js and Tailwind CSS were utilized to create an intuitive and responsive user interface. Special attention was given to accessibility and design consistency throughout the application.",
-        "To ensure smooth deployment and maintainability, the application was containerized using Docker. GitHub Actions were integrated to automate CI/CD pipelines, significantly reducing the time required for testing and deployment.",
-        "The final product delivered a seamless user experience, enabling users to manage and analyze their investment portfolios with ease and precision."
+        "StockCentral consolidates holdings from multiple brokerages into one portfolio workspace. Users upload portfolios, manage stocks and sectors, and reorganize positions without leaving the app.",
+        "The Express.js API and PostgreSQL schema cover portfolio uploads, stock and sector records, CSV ingest, validation, search, filtering, and dynamic grouping. Input validation and service-level error handling keep bad rows out of the database and return a clear failure instead of a partial write.",
+        "The React and Tailwind CSS client is built from reusable views for upload, browse, and organize flows. Firebase handles authentication so the API only serves the signed-in portfolio.",
+        "Docker packages the app for a consistent runtime on AWS EC2. GitHub Actions builds and releases it, so a schema or UI change follows the same path from pull request to the live site at portfolio.rajavaram.com."
       ],
       "summary": [
-        "Developed a portfolio management tool to consolidate and track investments across multiple brokerages.",
-        "Designed a PostgreSQL database schema and implemented an API layer using the Express.js framework.",
-        "Built a responsive and dynamic user interface using React and TailwindCSS.",
-        "Integrated Firebase for secure user authentication, management, and social login functionality.",
-        "Containerized the application with Docker to ensure smooth deployment and easy maintenance.",
-        "Implemented a CI/CD pipeline using GitHub Actions for automated version releases."
+        "Built a full-stack portfolio manager with React, Express.js, PostgreSQL, Docker, and AWS EC2.",
+        "Designed REST APIs and relational models for uploads, stocks, sectors, CSV processing, validation, search, filtering, and dynamic organization.",
+        "Split the backend into modular services with input validation and explicit error handling on every write path.",
+        "Built reusable React screens for end-to-end portfolio workflows.",
+        "Authenticated users with Firebase.",
+        "Automated build and release with GitHub Actions."
       ],
       "techStack": [
+        "React",
         "Node.js",
         "Express.js",
-        "React.js",
         "PostgreSQL",
         "Docker",
         "GitHub Actions",
-        "Firebase"
+        "Firebase",
+        "AWS EC2",
+        "Tailwind CSS"
       ],
       "githubUrl": "https://github.com/hacKRD0/StockCentral",
       "liveSiteUrl": "https://portfolio.rajavaram.com"
@@ -243,8 +278,8 @@
         "Improved user experience by streamlining authentication and role management workflows."
       ],
       "techStack": ["WordPress", "PHP", "HTML/CSS", "JavaScript"],
-      "githubUrl": "",
-      "liveSiteUrl": "https://dev1.contructionlearning.net/linkedin-login"
+      "githubUrl": "https://github.com/hacKRD0/WP-User-Access-Plugin",
+      "liveSiteUrl": "https://www.dev1.constructionlearning.net/linkedin-login/"
     },
     {
       "id": "cloudface",

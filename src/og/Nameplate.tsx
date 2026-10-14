@@ -2,7 +2,7 @@ import { Container, Name, Sub, Box } from './shared';
 
 export default function Nameplate({
   name = 'Keshava Rajavaram',
-  tagline = 'AI Engineer · Full-Stack Developer',
+  tagline = 'AI & Full-Stack Engineer',
 }: { name?: string; tagline?: string }) {
   return (
     <Container>

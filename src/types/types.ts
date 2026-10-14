@@ -50,7 +50,8 @@ export interface ExperienceItem {
   company: string;
   dateRange: string;
   description: string[];
-  projectLink?: string; // Optional field for project URLs
+  projectLink?: string;
+  techStack?: string[];
 }
 
 export interface CertificationItem {
@@ -66,10 +67,11 @@ export interface TimelineProps {
 }
 
 export interface SkillSet {
+  aiEngineering?: string[];
   programmingLanguages: string[];
   frameworks: string[];
   databases: string[];
   cloudPlatforms: string[];
   tools: string[];
-  integrations: string[];
+  integrations?: string[];
 }

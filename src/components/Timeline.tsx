@@ -2,6 +2,7 @@ import React from 'react';
 import { ExperienceItem } from '../types/types';
 import { FaExternalLinkAlt, FaBriefcase } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import TechPill from './TechPill';
 
 interface TimelineProps {
   experience: ExperienceItem[];
@@ -102,16 +103,11 @@ const Timeline: React.FC<TimelineProps> = ({ experience }) => {
                     </p>
                   )}
 
-                  {('techStack' in item) && Array.isArray(item.techStack) && item.techStack.length > 0 && (
+                  {item.techStack && item.techStack.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
                       <div className="flex flex-wrap gap-2">
-                        {(item.techStack as string[]).map((tech: string, techIndex: number) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 text-xs font-medium bg-gray-50 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-gray-600 hover:bg-blue-50 hover:border-blue-200 dark:hover:bg-blue-900/20 dark:hover:border-blue-700 transition-colors"
-                          >
-                            {tech}
-                          </span>
+                        {item.techStack.map((tech) => (
+                          <TechPill key={tech} tech={tech} />
                         ))}
                       </div>
                     </div>

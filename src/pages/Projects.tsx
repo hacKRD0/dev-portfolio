@@ -2,6 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { projectsData } from '../assets/projectDetails.json';
+import getProjectIcon from '../utils/getProjectIcon';
+import TechPill from '../components/TechPill';
 
 const Projects: React.FC = () => {
   return (
@@ -26,6 +28,9 @@ const Projects: React.FC = () => {
               "
             >
               <div className="p-6 flex-1 flex flex-col">
+                <div className="text-3xl text-gray-700 dark:text-gray-100 mb-3">
+                  {getProjectIcon(project.id)}
+                </div>
                 <div className="flex justify-between items-start mb-3">
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
                     {project.title}
@@ -35,6 +40,12 @@ const Projects: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-300 flex-1 mb-4">
                   {project.shortDescription}
                 </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.techStack.map((tech) => (
+                    <TechPill key={tech} tech={tech} />
+                  ))}
+                </div>
 
                 <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700">
                   <Link

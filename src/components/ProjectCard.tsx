@@ -56,14 +56,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* Links (Source & Live Demo) */}
         <div className="flex gap-4">
-          <a
-            href={sourceCodeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-md font-medium text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            Source Code
-          </a>
+          {sourceCodeUrl && (
+            <a
+              href={sourceCodeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-md font-medium text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Source Code
+            </a>
+          )}
 
           {liveSiteUrl && (
             <a

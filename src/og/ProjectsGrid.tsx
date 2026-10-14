@@ -21,7 +21,7 @@ const Cell = ({ title }: { title: string }) => (
 );
 
 export default function ProjectsGrid({
-  items = ['Pollyglot', 'LambdaVision', 'StockCentral', 'MovieFlex'],
+  items = ['SREAI', 'Fashion Finder', 'StockCentral', 'Pollyglot'],
 }: { items?: string[] }) {
   return (
     <Container>

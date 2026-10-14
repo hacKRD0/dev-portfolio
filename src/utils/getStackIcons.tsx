@@ -1,5 +1,6 @@
 // src/utils/getStackIcons.tsx
 import React from 'react';
+import type { IconType } from 'react-icons';
 import {
   FaReact,
   FaNodeJs,
@@ -10,11 +11,10 @@ import {
   FaEye,
   FaGitAlt,
   FaLinkedin,
-  FaServer,
-  FaCode,
   FaHtml5,
   FaCss3Alt,
   FaJira,
+  FaCode,
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -48,146 +48,270 @@ import {
   SiGithubactions,
   SiPostman,
   SiMaildotru,
-  SiMeta
+  SiMeta,
+  SiFastapi,
+  SiRedis,
+  SiGooglebigquery,
+  SiOpentelemetry,
+  SiStreamlit,
+  SiVercel,
+  SiSlack,
+  SiTwilio,
+  SiSendgrid,
+  SiNginx,
+  SiLinux,
+  SiSupabase,
+  SiOpencv,
+  SiAwslambda,
+  SiAmazons3,
+  SiAmazonsqs,
+  SiAmazonec2,
+  SiAmazonrds,
+  SiMariadb,
+  SiWordpress,
+  SiGoogle,
+  SiLangchain,
+  SiNumpy,
+  SiScikitlearn,
+  SiMermaid,
+  SiMarkdown,
+  SiTypeorm,
+  SiZoom,
+  SiGooglepubsub,
+  SiGooglecloudstorage,
+  SiGithub,
 } from 'react-icons/si';
-import { PiGearFine } from "react-icons/pi";
-import { VscVscode } from "react-icons/vsc";
+import {
+  LuActivity,
+  LuBraces,
+  LuDatabase,
+  LuGauge,
+  LuGitBranch,
+  LuKeyRound,
+  LuLibrary,
+  LuMessageSquare,
+  LuNetwork,
+  LuPlug,
+  LuScale,
+  LuScanSearch,
+  LuScrollText,
+  LuSettings,
+  LuSlidersHorizontal,
+  LuTable,
+  LuUserCheck,
+  LuLoader,
+  LuWorkflow,
+  LuWrench,
+} from 'react-icons/lu';
+import { PiGearFine } from 'react-icons/pi';
+import { VscVscode } from 'react-icons/vsc';
+
+const icons: Record<string, IconType> = {
+  react: FaReact,
+  'react.js': FaReact,
+  reactjs: FaReact,
+  node: FaNodeJs,
+  'node.js': FaNodeJs,
+  nodejs: FaNodeJs,
+  typescript: SiTypescript,
+  javascript: SiJavascript,
+  python: FaPython,
+  pandas: SiPandas,
+  geopandas: SiPandas,
+  pytorch: SiPytorch,
+  'py torch': SiPytorch,
+  flask: SiFlask,
+  aws: FaAws,
+  'amazon web services': FaAws,
+  'amazon bedrock': FaAws,
+  bedrock: FaAws,
+  gcp: SiGooglecloud,
+  'google cloud': SiGooglecloud,
+  'google cloud platform': SiGooglecloud,
+  'cloud run': SiGooglecloud,
+  'vertex ai': SiGooglecloud,
+  'cloud sql': SiGooglecloud,
+  'agent engine': SiGooglecloud,
+  'google adk': SiGoogle,
+  docker: FaDocker,
+  java: FaJava,
+  git: FaGitAlt,
+  github: SiGithub,
+  huggingface: SiHuggingface,
+  'hugging face': SiHuggingface,
+  'huggingface models': SiHuggingface,
+  'huggingface datasets': SiHuggingface,
+  transformers: SiHuggingface,
+  bart: SiHuggingface,
+  'gpt-2': SiOpenai,
+  'next.js': SiNextdotjs,
+  nextjs: SiNextdotjs,
+  tailwind: SiTailwindcss,
+  tailwindcss: SiTailwindcss,
+  'tailwind css': SiTailwindcss,
+  postgresql: SiPostgresql,
+  postgres: SiPostgresql,
+  neon: SiPostgresql,
+  pgvector: SiPostgresql,
+  mongodb: SiMongodb,
+  mysql: SiMysql,
+  mariadb: SiMariadb,
+  kafka: SiApachekafka,
+  'spring boot': SiSpringboot,
+  springboot: SiSpringboot,
+  php: SiPhp,
+  cloudflare: SiCloudflare,
+  'cloudflare r2': SiCloudflare,
+  r2: SiCloudflare,
+  'cloudflare d1': SiCloudflare,
+  d1: SiCloudflare,
+  'cloudflare kv': SiCloudflare,
+  kv: SiCloudflare,
+  'cloudflare ai gateway': SiCloudflare,
+  'cloudflare-workers': SiCloudflareworkers,
+  'cloudflare workers': SiCloudflareworkers,
+  'cloudflare worker': SiCloudflareworkers,
+  'cloudflare-pages': SiCloudflarepages,
+  'cloudflare pages': SiCloudflarepages,
+  yolo: FaEye,
+  yolov5: FaEye,
+  yolov6: FaEye,
+  yolov7: FaEye,
+  yolov8: FaEye,
+  clip: SiOpenai,
+  openai: SiOpenai,
+  'openai api': SiOpenai,
+  'openai sdk': SiOpenai,
+  go: SiGo,
+  golang: SiGo,
+  gorm: SiGo,
+  express: SiExpress,
+  'express.js': SiExpress,
+  expressjs: SiExpress,
+  gin: SiGin,
+  redux: SiRedux,
+  'redux toolkit': SiRedux,
+  rtk: SiRedux,
+  'rtk query': SiRedux,
+  mailjet: SiMaildotru,
+  'linkedin oauth': FaLinkedin,
+  vite: SiVite,
+  sequelize: SiSequelize,
+  'sequelize orm': SiSequelize,
+  firebase: SiFirebase,
+  firestore: SiFirebase,
+  clerk: SiClerk,
+  ec2: SiAmazonec2,
+  'aws ec2': SiAmazonec2,
+  'amazon ec2': SiAmazonec2,
+  lambda: SiAwslambda,
+  'aws lambda': SiAwslambda,
+  s3: SiAmazons3,
+  'aws s3': SiAmazons3,
+  'amazon s3': SiAmazons3,
+  sqs: SiAmazonsqs,
+  'aws sqs': SiAmazonsqs,
+  'amazon sqs': SiAmazonsqs,
+  rds: SiAmazonrds,
+  'aws rds': SiAmazonrds,
+  'amazon rds': SiAmazonrds,
+  c: SiCplusplus,
+  'c++': SiCplusplus,
+  'c/c++': SiCplusplus,
+  html: FaHtml5,
+  html5: FaHtml5,
+  'html/css': FaHtml5,
+  css: FaCss3Alt,
+  css3: FaCss3Alt,
+  'github actions': SiGithubactions,
+  jira: FaJira,
+  postman: SiPostman,
+  vscode: VscVscode,
+  'vs code': VscVscode,
+  'visual studio code': VscVscode,
+  tqdm: LuLoader,
+  meta: SiMeta,
+  faiss: SiMeta,
+  finetune: PiGearFine,
+  lora: LuSlidersHorizontal,
+  'peft / lora': LuSlidersHorizontal,
+  peft: LuSlidersHorizontal,
+  fastapi: SiFastapi,
+  redis: SiRedis,
+  bigquery: SiGooglebigquery,
+  'google bigquery': SiGooglebigquery,
+  opentelemetry: SiOpentelemetry,
+  streamlit: SiStreamlit,
+  vercel: SiVercel,
+  'vercel ai sdk': SiVercel,
+  'ai sdk': SiVercel,
+  slack: SiSlack,
+  twilio: SiTwilio,
+  sendgrid: SiSendgrid,
+  nginx: SiNginx,
+  linux: SiLinux,
+  supabase: SiSupabase,
+  opencv: SiOpencv,
+  wordpress: SiWordpress,
+  langchain: SiLangchain,
+  numpy: SiNumpy,
+  'scikit-learn': SiScikitlearn,
+  sklearn: SiScikitlearn,
+  dbscan: SiScikitlearn,
+  mermaid: SiMermaid,
+  markdown: SiMarkdown,
+  typeorm: SiTypeorm,
+  zoom: SiZoom,
+  'zoom sdk': SiZoom,
+  'pub/sub': SiGooglepubsub,
+  'google pub/sub': SiGooglepubsub,
+  pubsub: SiGooglepubsub,
+  'cloud storage': SiGooglecloudstorage,
+  'google cloud storage': SiGooglecloudstorage,
+  langfuse: LuActivity,
+  sql: LuDatabase,
+  'rest api': LuBraces,
+  'rest api design': LuBraces,
+  rest: LuBraces,
+  jwt: LuKeyRound,
+  hydra: LuSettings,
+  accelerate: SiHuggingface,
+  rag: LuLibrary,
+  mcp: LuPlug,
+  'vector search': LuScanSearch,
+  'vector search & embeddings': LuScanSearch,
+  embeddings: LuScanSearch,
+  'agentic ai': LuNetwork,
+  'multi-agent systems': LuNetwork,
+  'multi-agent': LuNetwork,
+  'structured tool calling': LuWrench,
+  'tool calling': LuWrench,
+  'prompt engineering': LuMessageSquare,
+  'prompt & context engineering': LuMessageSquare,
+  'llm evaluation': LuScale,
+  'llm-as-judge': LuScale,
+  'human-in-the-loop': LuUserCheck,
+  'human-in-the-loop evaluation': LuUserCheck,
+  'data modeling': LuTable,
+  'sql optimization': LuGauge,
+  'cdc/data pipelines': LuWorkflow,
+  cdc: LuWorkflow,
+  'data pipelines': LuWorkflow,
+  'ci/cd': LuGitBranch,
+  winston: LuScrollText,
+};
+
+export const getStackIcon = (tech: string): IconType | null => {
+  return icons[tech.trim().toLowerCase()] ?? null;
+};
 
 export const getStackIcons = (techStack: string[]): React.ReactNode[] => {
   return techStack.map((tech) => {
-    switch (tech.toLowerCase()) {
-      case 'react':
-        return <FaReact key={tech} title={tech} />;
-      case 'node':
-      case 'node.js':
-      case 'nodejs':
-        return <FaNodeJs key={tech} title={tech} />;
-      case 'typescript':
-        return <SiTypescript key={tech} title={tech} />;
-      case 'javascript':
-        return <SiJavascript key={tech} title={tech} />;
-      case 'python':
-        return <FaPython key={tech} title={tech} />;
-      case 'pandas':
-        return <SiPandas key={tech} title={tech} />;
-      case 'pytorch':
-      case 'py torch':
-        return <SiPytorch key={tech} title={tech} />;
-      case 'flask':
-        return <SiFlask key={tech} title={tech} />;
-      case 'aws':
-        return <FaAws key={tech} title={tech} />;
-      case 'gcp':
-      case 'google cloud':
-        return <SiGooglecloud key={tech} title={tech} />;
-      case 'docker':
-        return <FaDocker key={tech} title={tech} />;
-      case 'java':
-        return <FaJava key={tech} title={tech} />;
-      case 'git':
-        return <FaGitAlt key={tech} title={tech} />;
-      case 'huggingface':
-        return <SiHuggingface key={tech} title={tech} />;
-      case 'next.js':
-      case 'nextjs':
-        return <SiNextdotjs key={tech} title={tech} />;
-      case 'tailwind':
-      case 'tailwindcss':
-        return <SiTailwindcss key={tech} title={tech} />;
-      case 'postgresql':
-        return <SiPostgresql key={tech} title={tech} />;
-      case 'mongodb':
-        return <SiMongodb key={tech} title={tech} />;
-      case 'mysql':
-        return <SiMysql key={tech} title={tech} />;
-      case 'kafka':
-        return <SiApachekafka key={tech} title={tech} />;
-      case 'spring boot':
-      case 'springboot':
-        return <SiSpringboot key={tech} title={tech} />;
-      case 'php':
-        return <SiPhp key={tech} title={tech} />;
-      case 'cloudflare':
-        return <SiCloudflare key={tech} title={tech} />;
-      case 'cloudflare-workers':
-        return <SiCloudflareworkers key={tech} title={tech} />;
-      case 'cloudflare-pages':
-        return <SiCloudflarepages key={tech} title={tech} />;
-      // Computer Vision Models
-      case 'yolo':
-      case 'yolov5':
-      case 'yolov6':
-      case 'yolov7':
-      case 'yolov8':
-        return <FaEye key={tech} title={tech} />;
-      case 'clip':
-        return <SiOpenai key={tech} title={tech} />;
-      // Go and related
-      case 'go':
-      case 'golang':
-        return <SiGo key={tech} title={tech} />;
-      case 'express':
-      case 'express.js':
-      case 'expressjs':
-        return <SiExpress key={tech} title={tech} />;
-      case 'gin':
-        return <SiGin key={tech} title={tech} />;
-      // State management
-      case 'redux':
-      case 'redux toolkit':
-      case 'rtk':
-      case 'rtk query':
-        return <SiRedux key={tech} title={tech} />;
-      case 'mailjet':
-        return <SiMaildotru key={tech} title={tech} />;
-      case 'linkedin oauth':
-        return <FaLinkedin key={tech} title={tech} />;
-      // Build tools
-      case 'vite':
-        return <SiVite key={tech} title={tech} />;
-      case 'sequelize':
-      case 'sequelize orm':
-        return <SiSequelize key={tech} title={tech} />;
-      // Authentication services
-      case 'firebase':
-        return <SiFirebase key={tech} title={tech} />;
-      case 'clerk':
-        return <SiClerk key={tech} title={tech} />;
-      case 'ec2':
-        return <FaServer key={tech} title={tech} />;
-      // Programming Languages
-      case 'c':
-      case 'c++':
-      case 'c/c++':
-        return <SiCplusplus key={tech} title={tech} />;
-      // Web Technologies
-      case 'html':
-      case 'html5':
-      case 'html/css':
-        return <FaHtml5 key={tech} title={tech} />;
-      case 'css':
-      case 'css3':
-        return <FaCss3Alt key={tech} title={tech} />;
-      // Tools
-      case 'github actions':
-        return <SiGithubactions key={tech} title={tech} />;
-      case 'jira':
-        return <FaJira key={tech} title={tech} />;
-      case 'postman':
-        return <SiPostman key={tech} title={tech} />;
-      case 'vscode':
-      case 'visual studio code':
-        return <VscVscode key={tech} title={tech} />;
-      // Default fallback
-      case 'meta':
-      case 'faiss':
-        return <SiMeta key={tech} title={tech} />;
-      case 'finetune':
-      case 'lora':
-        return <PiGearFine key={tech} title={tech} />;
-      default:
-        console.warn(`No icon found for technology: ${tech}`);
-        return <FaCode key={tech} title={tech} />;
+    const Icon = getStackIcon(tech);
+    if (!Icon) {
+      console.warn(`No icon found for technology: ${tech}`);
+      return <FaCode key={tech} title={tech} aria-label={tech} />;
     }
+    return <Icon key={tech} title={tech} aria-label={tech} />;
   });
 };

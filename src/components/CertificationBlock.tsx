@@ -17,9 +17,11 @@ const CertificationBlock: React.FC<CertificationBlockProps> = ({
           <h3 className="text-lg sm:text-xl font-bold text-gray-800 dark:text-gray-100 leading-tight">
             {certification.title}
           </h3>
-          <span className="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/50 px-2 py-1 rounded-full whitespace-nowrap h-fit">
-            {certification.dateIssued}
-          </span>
+          {certification.dateIssued && (
+            <span className="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-700/50 px-2 py-1 rounded-full whitespace-nowrap h-fit">
+              {certification.dateIssued}
+            </span>
+          )}
         </div>
 
         {/* Issuer and Link */}

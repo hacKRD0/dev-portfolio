@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../assets/projectDetails.json';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
+import TechPill from '../components/TechPill';
 
 const ProjectDetails: React.FC = () => {
   const { projectId } = useParams();
@@ -93,14 +94,9 @@ const ProjectDetails: React.FC = () => {
           {/* Tech Stack */}
           <div className="mb-6 max-w-3xl text-center">
             <h2 className="text-lg font-semibold mb-4">Tech Stack Used:</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {project.techStack.map((tech, idx) => (
-                <div
-                  key={idx}
-                  className="text-md font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-md shadow-sm"
-                >
-                  {tech}
-                </div>
+            <div className="flex flex-wrap justify-center gap-2">
+              {project.techStack.map((tech) => (
+                <TechPill key={tech} tech={tech} size="md" />
               ))}
             </div>
           </div>
@@ -198,14 +194,16 @@ const ProjectDetails: React.FC = () => {
 
           {/* Links (GitHub, Live Site) */}
           <div className="flex items-center justify-center gap-4 mb-6">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              GitHub Repo
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                GitHub Repo
+              </a>
+            )}
             {project.liveSiteUrl && (
               <a
                 href={project.liveSiteUrl}
